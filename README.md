@@ -1,14 +1,16 @@
 # The Interacting Species Database (ISDB)
 This database gathers available information about possible species interactions from 21 resources.
 
-# download
+# Download ISDB
 
 
 # Rebuilding the database 
+To rebuild the ISDB, an internet connection is required
+git clone 
+File paths should be adjusted inside the *main/updateDB.sh* script. To build the database the main script *main/updateDB.sh* should be executed inside the *main* directory.  
 
+# List of resources 
 
-# list of resources 
-## (Re-)building the database
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
 - Bat Eco-Interactions (https://www.batbase.org/explore)
 - BV-BRC (https://www.bv-brc.org)
@@ -18,7 +20,7 @@ The database can be built automatically. However, some resources need to be down
 - PHISTO (https://parasites.nunn-lab.org/data/)
 - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
-File paths should be adjusted inside the *main/updateDB.sh* script. To build the database the main script *main/updateDB.sh* should be executed inside the *main* directory. An Internet connection is required. 
+
 
 ## Resources
 - BV-BRC
