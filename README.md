@@ -4,7 +4,7 @@ This database gathers available information about possible species interactions 
 # Download ISDB
 
 
-# Rebuilding the database 
+# Rebuilding the ISDB
 The database can be built automatically. 
 To rebuild the ISDB, Please follow these steps:
 
