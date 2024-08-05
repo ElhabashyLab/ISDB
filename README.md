@@ -1,5 +1,13 @@
 # The Interacting Species Database (ISDB)
 This database gathers available information about possible species interactions from 21 resources.
+
+# download
+
+
+# Rebuilding the database 
+
+
+# list of resources 
 ## (Re-)building the database
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
 - Bat Eco-Interactions (https://www.batbase.org/explore)
