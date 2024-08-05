@@ -1,2 +1,2 @@
-# ISDB
-The Interacting Specis Database 
+# The Interacting Species Database (ISDB)
+
