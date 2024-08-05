@@ -5,20 +5,41 @@ This database gathers available information about possible species interactions 
 
 
 # Rebuilding the database 
-To rebuild the ISDB, an internet connection is required
-git clone 
-File paths should be adjusted inside the *main/updateDB.sh* script. To build the database the main script *main/updateDB.sh* should be executed inside the *main* directory.  
+The database can be built automatically. 
+To rebuild the ISDB, Please follow these steps:
+
+1. You computer should be connect to the internet.
+
+2. Download resources
+   ISDB parces the most of the databases automatically. However, some resources need to be manually downloaded
+   - Bat Eco-Interactions (https://www.batbase.org/explore)
+   - BV-BRC (https://www.bv-brc.org)
+   - DIP (https://dip.doe-mbi.ucla.edu/dip/)
+   - GMPD (https://parasites.nunn-lab.org/data/)
+   - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
+   - PHISTO (https://parasites.nunn-lab.org/data/)
+   - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
+     
+
+3. Clone this repository and cd into it.
+```
+git clone
+```
+
+5. Edit the paths to the database in the  ~main/updateDB.sh script.
+
+6. Finally build the ISDB database
+   To build the database the main script *main/updateDB.sh* should be executed inside the *main* directory.
+   ```
+   cd main
+   ./updateDB.sh
+   ```
+ 
 
 # List of resources 
 
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
-- Bat Eco-Interactions (https://www.batbase.org/explore)
-- BV-BRC (https://www.bv-brc.org)
-- DIP (https://dip.doe-mbi.ucla.edu/dip/)
-- GMPD (https://parasites.nunn-lab.org/data/)
-- PHILM2Web (https://phim2web.lailab.info/pages/index.html)
-- PHISTO (https://parasites.nunn-lab.org/data/)
-- FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
+
 
 
 
