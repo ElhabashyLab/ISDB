@@ -19,12 +19,11 @@ To rebuild the ISDB, Please follow these steps:
    - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
    - PHISTO (https://parasites.nunn-lab.org/data/)
    - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
-     
 
 3. Clone this repository and cd into it.
-```
-git clone
-```
+    ```
+   git clone
+   ```
 
 5. Edit the paths to the database in the  ~main/updateDB.sh script.
 
