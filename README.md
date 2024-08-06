@@ -25,20 +25,19 @@ To rebuild the ISDB, Please follow these steps:
    git clone
    ```
 
-5. Edit the paths to the database in the  ~main/updateDB.sh script.
+5. Edit the paths to the database in the  ~main/builtDB.sh script.
 
 6. Finally build the ISDB database
-   To build the database the main script *main/updateDB.sh* should be executed inside the *main* directory.
+   To build the database the main script *main/builtDB.sh* should be executed inside the *main* directory.
    ```
    cd main
-   ./updateDB.sh
+   .bash /builtDB.sh
    ```
  
 
 # List of resources 
 
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
-
 
 
 
@@ -64,3 +63,9 @@ The database can be built automatically. However, some resources need to be down
 - Protist Interaction DAtabase (PIDA)
 - Virus / Host protein-protein interactions Network (VirHostNet) 
 - Web of Life database
+
+# Cite
+- Contact:
+- ```
+   Reference
+   ```
