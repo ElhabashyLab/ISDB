@@ -31,8 +31,11 @@ def join_unique(values: list) -> list:
     """
     Returns a unique list of items of a list of "|" separated strings
     """
+    values = [
+        str(v).replace(":", "|").replace(", ", "|").replace("/", "|") for v in values
+    ]
     unique_values = np.unique([i for v in values for i in v.split("|")])
-    return "|".join(unique_values)
+    return "|".join(unique_values).strip("-|")
 
 
 def main():
@@ -68,22 +71,27 @@ def main():
             frames.append(pd.read_csv(file, dtype=str))
     db = pd.concat(frames)
     # remove redundancy
+    print(db[db["database"].apply(lambda x: "Intact" in x)].shape)
     db = db.fillna("")
+    print(db[db["database"].apply(lambda x: "Intact" in x)].shape, "na")
     db = (
         db.groupby(["sourceTaxId", "targetTaxId", "sourceUid", "targetUid"])
         .agg(lambda x: join_unique(x))
         .reset_index()
     )
+    print(db[db["database"].apply(lambda x: "Intact" in x)].shape, "drop_dup")
     db = db[
         db[["sourceTaxId", "targetTaxId"]].apply(
             lambda x: all([int(i) > 1 for i in x]), axis=1
         )
     ]
-    db["direction"] = db[["sourceTaxId", "targetTaxId"]].apply(
-        lambda x: tuple(set(x.values)), axis=1
-    )
+    print(db[db["database"].apply(lambda x: "Intact" in x)].shape, ">1")
+    db["direction"] = db[
+        ["sourceTaxId", "targetTaxId", "sourceUid", "targetUid"]
+    ].apply(lambda x: tuple(set(x.values)), axis=1)
     db = db.drop_duplicates(subset=["direction"])
     db = db.drop("direction", axis=1)
+    print(db[db["database"].apply(lambda x: "Intact" in x)].shape, "dir")
 
     # export db csv
     db.to_csv(

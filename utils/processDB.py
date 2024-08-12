@@ -16,9 +16,14 @@ import requests
 sys.path.insert(1, "./")
 from uniprot_api import uniprot_request
 
-global tempory_directory, overwrite
+global tempory_directory
 tempory_directory = os.getenv("tempory_directory")
+global overwrite
 overwrite = os.getenv("overwrite")
+if overwrite.lower() == "true":
+    overwrite = True
+else:
+    overwrite = False
 
 
 def is_float(value: str) -> bool:
@@ -58,7 +63,7 @@ def clean_dataframe(dataFrame: pd.DataFrame) -> pd.DataFrame:
     """
 
     def join_unique(values: list) -> list:
-        unique_values = np.unique([i for v in values for i in v.split("|")])
+        unique_values = np.unique([i for v in values for i in str(v).split("|")])
         return "|".join(unique_values)
 
     dataFrame = dataFrame.dropna(subset=["sourceTaxId", "targetTaxId"])
@@ -76,6 +81,9 @@ def clean_dataframe(dataFrame: pd.DataFrame) -> pd.DataFrame:
 
 
 def getSourceTargetNames(dataFrame: pd.DataFrame) -> pd.DataFrame:
+    """
+    Retrieves scientific names for source and target via their TaxId
+    """
     uniprot = uniprot_request()
     # get Scientific Name
     dataFrame["sourceName"] = dataFrame["sourceTaxId"].apply(
@@ -88,6 +96,9 @@ def getSourceTargetNames(dataFrame: pd.DataFrame) -> pd.DataFrame:
 
 
 def get_taxonomic_identifier(uniprot_id):
+    """
+    Retrieves TaxId for source and target via their Uniprot Id
+    """
     query = uniprot_id.split("-")[0]
     requestURL = (
         "https://www.ebi.ac.uk/proteins/api/proteins?offset=0&size=100&accession="
@@ -266,19 +277,19 @@ def clean_globi() -> None:
     data.to_csv(tempory_directory + "/" + "globi_out.tsv", sep="\t", index=False)
 
 
-def clean_biogrid(file: str):
+def clean_biogrid(path: str):
     """Cleaning biogrid"""
     col = [
-        "Organism ID Interactor A",
-        "SWISS-PROT Accessions Interactor A",
-        "Organism ID Interactor B",
-        "SWISS-PROT Accessions Interactor B",
-        "Ontology Term Names",
-        "Ontology Term IDs",
-        "Publication Source",
+        "Taxid Interactor A",
+        "Alt IDs Interactor A",  # uniprot/swiss-prot:
+        "Taxid Interactor B",
+        "Alt IDs Interactor B",
+        "Interaction Types",  # Split
+        "Publication Identifiers",
     ]
+    file = os.listdir(tempory_directory + path)[0]
     data = pd.read_csv(
-        tempory_directory + file,
+        tempory_directory + path + "/" + file,
         sep="\t",
         usecols=col,
     )
@@ -288,10 +299,21 @@ def clean_biogrid(file: str):
         "sourceUid",
         "targetTaxId",
         "targetUid",
-        "interactionType",
         "ontology",
         "reference",
     ]
+    data["sourceTaxId"] = data["sourceTaxId"].apply(lambda x: x.replace("taxid:", ""))
+    data["targetTaxId"] = data["targetTaxId"].apply(lambda x: x.replace("taxid:", ""))
+    data["interactionType"] = data["ontology"].apply(
+        lambda x: "(".join(x.split("(")[1:]).strip('("')
+    )
+    data["ontology"] = data["ontology"].apply(lambda x: x.split("(")[0])
+    data["sourceUid"] = data["sourceUid"].apply(
+        lambda x: x.split("uniprot/swiss-prot:")[-1].split("|")[0]
+    )
+    data["targetUid"] = data["targetUid"].apply(
+        lambda x: x.split("uniprot/swiss-prot:")[-1].split("|")[0]
+    )
     # clean data
     data = clean_dataframe(data)
     # get Scientific Name
@@ -324,7 +346,6 @@ def clean_DIP(prefix: str):
     data = []
     for file in os.listdir(path):
         if file.endswith(".txt"):
-            # print(pd.read_csv(path +"\\"+ file, sep="\t").columns)
             tmp = pd.read_csv(
                 path + "/" + file,
                 sep="\t",
@@ -702,7 +723,6 @@ def clean_iwdb():
                 .apply(lambda x: " ".join(x.values[0]))
                 .reset_index()[0]
             )
-            # print('|'.join(parasite))
             for row in data.iloc[2:, :].values:
                 for j, p in enumerate(parasite):
                     if j > 2 and int(row[j]) == 0:
@@ -910,7 +930,7 @@ def clean_virHostNet():
     data = pd.read_csv(
         tempory_directory + "/vir_host_net.tsv", sep="\t", names=range(15)
     )[
-        [5, 6, 8, 9, 10, 11]
+        [0, 1, 8, 9, 10, 11]
     ]  # 8,9,10,11
     data.columns = [
         "targetUid",
@@ -921,8 +941,12 @@ def clean_virHostNet():
         "interactionType",
     ]
     # clean TaxId
-    data["targetUid"] = data["targetUid"].apply(lambda x: x.replace("uniprotkb:", ""))
-    data["sourceUid"] = data["sourceUid"].apply(lambda x: x.replace("uniprotkb:", ""))
+    data["targetUid"] = data["targetUid"].apply(
+        lambda x: x.replace("uniprotkb:", "").split("-")[0]
+    )
+    data["sourceUid"] = data["sourceUid"].apply(
+        lambda x: x.replace("uniprotkb:", "").split("-")[0]
+    )
     data["sourceTaxId"] = data["sourceTaxId"].apply(lambda x: x.replace("taxid:", ""))
     data["targetTaxId"] = data["targetTaxId"].apply(lambda x: x.replace("taxid:", ""))
     data["ontology"] = data["interactionType"].apply(lambda x: x.split("(")[0])
@@ -1007,8 +1031,9 @@ def clean_eid2():
 
 def clean_siad():
     """Cleaning raw data from siad"""
-    col = ["name", "interaction", "host name", "source"]
-    data = pd.read_csv(tempory_directory + "/siad.txt", sep="\t", usecols=col)
+    data = pd.read_csv(
+        tempory_directory + "/siad.txt", sep="\t", index_col=6
+    ).reset_index()
     # get names and TaxIds
     uniprot = uniprot_request()
     tax_ids = []
@@ -1125,7 +1150,7 @@ def clean_bat_eco(file: str):
     data.to_csv(tempory_directory + "/" + "bat_eco_out.tsv", sep="\t", index=False)
 
 
-def clean_gmpd(dir: str):  # TODO use dir instead of gmpd/
+def clean_gmpd(dir: str):
     """Cleaning Global mammal parasite database"""
     files = []
     for file in os.listdir(tempory_directory + dir):
@@ -1441,24 +1466,21 @@ def main():
     print("### Processing data ###")
     exceptions = []
 
-    overwrite = int(overwrite)
-
     try:
         file_exists("/bvbrc")
         print("bvbrc")
         if not check_out_exists("bvbrc") or overwrite:
             clean_bvbrc("/bvbrc")
     except Exception as e:
-        exceptions.append(str(e))
+        exceptions.append(str(e) + "\nbvbrc")
 
     try:
-        file_exists("/biogird_all_latest")
-        name = os.listdir(tempory_directory + "/biogird_all_latest")[0]
+        file_exists("/biogrid_all_latest")
         print("biogrid")
         if not check_out_exists("biogrid_latest") or overwrite:
-            clean_biogrid("/biogird_all_latest/" + name)
+            clean_biogrid("/biogrid_all_latest")
     except Exception as e:
-        exceptions.append(str(e))
+        exceptions.append(str(e) + "\nbiogrid")
 
     try:
         file_exists("/dip")
@@ -1466,7 +1488,7 @@ def main():
         if not check_out_exists("dip") or overwrite:
             clean_DIP("/dip")
     except Exception as e:
-        exceptions.append(str(e))
+        exceptions.append(str(e) + "\ndip")
 
     try:
         file_exists("/FGSCdb_data.csv")
@@ -1530,7 +1552,7 @@ def main():
         if not check_out_exists("philm2web") or overwrite:
             clean_PHILM2Web("/philm2web.csv")
     except Exception as e:
-        exceptions.append(str(e))
+        exceptions.append(str(e) + "\nphilm2web")
 
     try:
         file_exists("/pida.tsv")
@@ -1538,7 +1560,7 @@ def main():
         if not check_out_exists("pida") or overwrite:
             clean_pida()
     except Exception as e:
-        exceptions.append(str(e))
+        exceptions.append(str(e) + "\npida")
 
     try:
         file_exists("/vir_host_net.tsv")
@@ -1554,7 +1576,7 @@ def main():
         if not check_out_exists("eid2") or overwrite:
             clean_eid2()
     except Exception as e:
-        exceptions.append(str(e))
+        exceptions.append(str(e) + "\neid2")
 
     try:
         file_exists("/siad.txt")
@@ -1562,7 +1584,7 @@ def main():
         if not check_out_exists("siad") or overwrite:
             clean_siad()
     except Exception as e:
-        exceptions.append(str(e))
+        exceptions.append(str(e) + "\nSiad")
 
     try:
         file_exists("/BatEco-InteractionRecords.csv")
@@ -1570,7 +1592,7 @@ def main():
         if not check_out_exists("bat_eco") or overwrite:
             clean_bat_eco("/BatEco-InteractionRecords.csv")
     except Exception as e:
-        exceptions.append(str(e))
+        exceptions.append(str(e) + "\nBatEco")
 
     try:
         file_exists("/gmpd")
