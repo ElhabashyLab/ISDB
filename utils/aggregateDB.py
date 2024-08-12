@@ -32,10 +32,15 @@ def join_unique(values: list) -> list:
     Returns a unique list of items of a list of "|" separated strings
     """
     values = [
-        str(v).replace(":", "|").replace(", ", "|").replace("/", "|") for v in values
+        (
+            str(v).replace(", ", "|")
+            if "http" in v
+            else str(v).replace(":", "|").replace("/", "|").replace(", ", "|")
+        )
+        for v in values
     ]
     unique_values = np.unique([i for v in values for i in v.split("|")])
-    return "|".join(unique_values).strip("-|")
+    return "|".join(unique_values).replace("nan", "").strip("-|")
 
 
 def main():
