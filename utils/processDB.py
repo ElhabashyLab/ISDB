@@ -512,6 +512,7 @@ def clean_web_of_life(dir: str):
                         )
     data = pd.DataFrame(species_pairs, columns=species_columns).astype(str)
     data["reference"] = ref
+    data["reference"] = data["reference"].apply(lambda x: x.replace("\n", ""))
     # Taxon IDs
     tax_ids = []
     names = []
