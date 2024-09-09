@@ -96,6 +96,9 @@ def main():
     ].apply(lambda x: tuple(set(x.values)), axis=1)
     db = db.drop_duplicates(subset=["direction"])
     db = db.drop("direction", axis=1)
+
+    # Add a serial number column at position 1
+    db.insert(0, 'SerialNumber', range(1, len(db) + 1))
     print(db[db["database"].apply(lambda x: "Intact" in x)].shape, "dir")
 
     # export db csv
