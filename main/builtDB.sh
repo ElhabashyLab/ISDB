@@ -3,6 +3,8 @@
 export tempory_directory="/vol/michael_data/db_interspecies/data_prot"
 # Overwrite existing out files: false, true
 export overwrite=false
+# Addtional data (optional): e.g. filepath: <myFile.csv> or directory: <myFiles/> 
+export addtional_data=""
 ### Delete tempory files
 delete=false
 export current_dir=$(pwd)
