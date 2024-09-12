@@ -12,7 +12,7 @@ import os
 from datetime import date
 
 tempory_directory = os.getenv("tempory_directory") + "/"
-additional_data = os.getenv("tempory_directory")
+additional_data = os.getenv("additional__data")
 
 
 def check_dataframe(file: str) -> pd.DataFrame:
@@ -49,7 +49,7 @@ def get_additional_frames() -> list:
         return [check_dataframe(additional_data)]
     elif os.path.isdir(additional_data):
         frames = []
-        for file in [f.endswith(".csv") for f in os.listdir(additional_data)]:
+        for file in [f for f in os.listdir(additional_data) if file.endswith(".csv")]:
             data = check_dataframe(additional_data + file)
             frames.append(data)
         return frames
