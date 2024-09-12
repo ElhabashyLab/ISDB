@@ -8,13 +8,68 @@ if users know what they are doing.
 
 import pandas as pd
 import numpy as np
-
-# import sqlite3
 import os
 from datetime import date
 
 tempory_directory = os.getenv("tempory_directory") + "/"
+additional_data = os.getenv("tempory_directory")
 
+
+def check_dataframe(file: str) -> pd.DataFrame:
+    columns = [
+        "TaxIdA",
+        "ScientificNameA",
+        "UidA",
+        "TaxIdB",
+        "ScientificNameB",
+        "UidB",
+        "interactionType",
+        "ontology",
+        "reference",
+        "database",
+    ]
+    data = pd.read_csv(file)
+    missing_columns = [c for c in data.columns if c not in columns]
+    usable_columns = [c for c in data.columns if c in columns]
+    if usable_columns == []:
+        print(f"Error: {file} has no matching columns")
+        return pd.DataFrame(columns=columns)
+    else:
+        data = data["usable_columns"]
+        for column in missing_columns:
+            data[column] = ""
+        return data
+
+
+def get_additional_frames() -> list:
+    """
+    Returns a list of valid pandas Dataframes provided by the user
+    """
+    if os.path.isfile(additional_data):
+        return [check_dataframe(additional_data)]
+    elif os.path.isdir(additional_data):
+        frames = []
+        for file in [f.endswith(".csv") for f in os.listdir(additional_data)]:
+            data = check_dataframe(additional_data + file)
+            frames.append(data)
+        return frames
+    else:
+        [
+            pd.DataFrame(
+                columns=[
+                    "TaxIdA",
+                    "ScientificNameA",
+                    "UidA",
+                    "TaxIdB",
+                    "ScientificNameB",
+                    "UidB",
+                    "interactionType",
+                    "ontology",
+                    "reference",
+                    "database",
+                ]
+            )
+        ]
 
 def not_float(value: str) -> bool:
     """
@@ -31,14 +86,7 @@ def join_unique(values: list) -> list:
     """
     Returns a unique list of items of a list of "|" separated strings
     """
-    values = [
-        (
-            str(v).replace(", ", "|")
-            if "http" in v
-            else str(v).replace(":", "|").replace("/", "|").replace(", ", "|")
-        )
-        for v in values
-    ]
+    values = [(str(v).replace(", ", "|")) for v in values]
     unique_values = np.unique([i for v in values for i in v.split("|")])
     return "|".join(unique_values).replace("nan", "").strip("-|")
 
@@ -75,6 +123,38 @@ def main():
                 print(file)
             frames.append(pd.read_csv(file, dtype=str))
     db = pd.concat(frames)
+    # rename columns TODO rename initial names in processDB.py
+    db = db[
+        [
+            "sourceTaxId",
+            "sourceName",
+            "sourceUid",
+            "targetTaxId",
+            "targetName",
+            "targetUid",
+            "interactionType",
+            "ontology",
+            "reference",
+            "database",
+        ]
+    ]
+    db.columns = [
+        "TaxIdA",
+        "ScientificNameA",
+        "UidA",
+        "TaxIdB",
+        "ScientificNameB",
+        "UidB",
+        "interactionType",
+        "ontology",
+        "reference",
+        "database",
+    ]
+    # incorporate users data
+    if additional_data:
+        files = get_additional_frames()
+        files.append(db)
+        db = pd.concat(files)
     # remove redundancy
     print(db[db["database"].apply(lambda x: "Intact" in x)].shape)
     db = db.fillna("")
@@ -106,30 +186,6 @@ def main():
         tempory_directory + "db_" + str(date.today()).replace("-", "_") + ".csv",
         index=False,
     )
-
-    # export sql-lite
-    # db = db[["targetTaxId", "sourceTaxId"]]
-    # db.columns = ["species1", "species2"]
-    # # Connect to SQLite database (create it if it doesn't exist)
-    # conn = sqlite3.connect(
-    #     tempory_directory + "db_" + str(date.today()).replace("-", "_") + ".db"
-    # )
-    # cursor = conn.cursor()
-
-    # # Create a table and import data from CSV
-    # cursor.execute(
-    #     """
-    #     CREATE TABLE IF NOT EXISTS species_species (
-    #         species1 INTEGER,
-    #         species2 INTEGER
-    #     )
-    # """
-    # )
-
-    # db.to_sql("species_species", conn, if_exists="replace", index=False)
-
-    # conn.commit()
-    # conn.close
 
 
 if __name__ == "__main__":
