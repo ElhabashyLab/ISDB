@@ -41,7 +41,7 @@ To rebuild the ISDB, Please follow these steps:
 - interactionType: Phrase describing the interaction
 - ontology: Interaction identifier of the coresponding ontology
 - reference: Reference as defined by data source
-- databank: Databank source of the interaction
+- database: Databank source of the interaction
 
 # List of resources 
 
