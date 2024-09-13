@@ -33,7 +33,15 @@ To rebuild the ISDB, Please follow these steps:
    cd main
    .bash /builtDB.sh
    ```
- 
+# Column description
+- SerialNumber: Interaction identifier inside ISDB
+- TaxId(A/B): NCBI Taxonomical identifer
+- Uid(A/B): UniProt protein identifier
+- ScientificName(A/B): Sientifc species name
+- interactionType: Phrase describing the interaction
+- ontology: Interaction identifier of the coresponding ontology
+- reference: Reference as defined by data source
+- databank: Databank source of the interaction
 
 # List of resources 
 
