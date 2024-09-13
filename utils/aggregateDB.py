@@ -12,10 +12,13 @@ import os
 from datetime import date
 
 tempory_directory = os.getenv("tempory_directory") + "/"
-additional_data = os.getenv("additional__data")
+additional_data = os.getenv("additional_data")
 
 
 def check_dataframe(file: str) -> pd.DataFrame:
+    """
+    Checks if file has necessary columns and returns full dataframe.
+    """
     columns = [
         "TaxIdA",
         "ScientificNameA",
@@ -171,16 +174,18 @@ def main():
         )
     ]
     print(db[db["database"].apply(lambda x: "Intact" in x)].shape, ">1")
+    # clean TaxIds
+    db["TaxIdA"] = db["TaxIdA"].apply(lambda x: str(x).replace("uniprotkb:", ""))
+    db["TaxIdB"] = db["TaxIdB"].apply(lambda x: str(x).replace("uniprotkb:", ""))
+    # single direction
     db["direction"] = db[
         ["sourceTaxId", "targetTaxId", "sourceUid", "targetUid"]
     ].apply(lambda x: tuple(set(x.values)), axis=1)
     db = db.drop_duplicates(subset=["direction"])
     db = db.drop("direction", axis=1)
-
-    # Add a serial number column at position 1 09/Sep/2024
+    # Add a serial number column at position 1 
     db.insert(0, 'SerialNumber', range(1, len(db) + 1))
     print(db[db["database"].apply(lambda x: "Intact" in x)].shape, "dir")
-
     # export db csv
     db.to_csv(
         tempory_directory + "db_" + str(date.today()).replace("-", "_") + ".csv",
