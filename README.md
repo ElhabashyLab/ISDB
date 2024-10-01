@@ -100,7 +100,8 @@ BV-BRC
 - Web of Life database
 
 # Cite
-- Contact:
-- ```
-   Reference
-   ```
+
+# Authors
+- Michael Mederer
+- Anupam Guatam
+- Hadeer Elhabashy
