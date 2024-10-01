@@ -6,7 +6,10 @@ The ISDB compiles data on species interactions from 21 resources, including scie
 ISDB web interface can be found here (www.elhabashylab.org/ISDB) which is hosted by the German Network for Bioinformatics Infrastructure (de.NBI).
 The web interface provides functionalities for batch downloads, data search, result download, and data deposition.
 
-# Rebuilding the ISDB locally
+# How to download the ISDB? 
+<Something>
+
+# How to build the ISDB locally? 
 To rebuild the ISDB locally, Please follow these steps:
 
 1. Successful execution requires the following dependencies: Python 3.11.7, Pandas 2.0.3, NumPy 1.24.3, and Requests 2.31.0.
@@ -48,56 +51,37 @@ The generated database will be available in CSV and TSV formats, with the follow
 - reference: Reference as defined by data source
 - database: Databank source of the interaction
 
+
+# How to deposite data to the ISDB?
+
 # List of resources 
 
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
 
 | Database | #Species | #Specie Pairs | #PPIs | Interaction Type | Batch download  | Citation |
 |----------|--|--|--|--|--|--|
-|Bat Eco-Interactions | 3,099 | 8,101 | 0 |   :heavy_check_mark: |  X  | |cite{BEI} | 
-|BioGRID | 83 | 359 | 2,228,610 | X  |  :heavy_check_mark:  |   |cite{biogrid} |
+|Bat Eco-Interactions | 3,099 | 8,101 | 0 |   :heavy_check_mark: |  X  | | 
+|BioGRID | 83 | 359 | 2,228,610 | X  |  :heavy_check_mark:  |  |
 |BV-BRC | 133,835 | 142,666 | 0 | X  |   X  | |cite{BVBRC,BVBRC_homepage} |
-|DIP | 210 | 423 | 73,852 |  :heavy_check_mark:  |   X  | |cite{DIP} |
-|EID2 | 12,486 | 18,086 | 0 |  :heavy_check_mark:  |    :heavy_check_mark:  | |cite{EID2} |
-|FGSCdb | 19 | 15 | 0 |  :heavy_check_mark:  |   X  | |cite{FGSCdb} |
-|GloBI | 89,994 | 461,385 | 0 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{GloBI} |
-|GMPD | 1,558 | 5,444 | 0 | X  |  X  | |cite{global_mammal_parasite, global_mammal_parasite_2} |
-|HPIDB | 734 | 967 | 54,879 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{HPIDB, HPIDB_2} |
-|IntAct | 1,819 | 3,575 | 1,079,255 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{intact} |
-|Interactome | 264 | 263 | 4,154 | :heavy_check_mark:  | :heavy_check_mark:  | |cite{Interactome} |
-|IWDB | 594 | 3,449 | 0 | X  | X  | |cite{IWDB} |
-|MINT | 698 | 1,331 | 100,048 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{MINT} |
-|PHI-base | 539 | 1,062 | 0 | X  |  :heavy_check_mark:  | |cite{phi_base} |
-|PHILM2Web | 460 | 1,506 | 0 | :heavy_check_mark:  |  X  | |cite{hilm2web} |
-|PHISTO | 589 | 589 | 47,920 | X  |  X  | |cite{PHISTO} |
-|PIDA | 647 | 836 | 0 | X  |  :heavy_check_mark: | |cite{PIDA} |
-|Signor | 7 | 10 | 17,400 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{SIGNOR} |
-|SIAD | 3,744 | 5,049 | 0 |  :heavy_check_mark:  |  :heavy_check_mark:  | |cite{SIAD} |
-|VirHostNet | 332 | 494 | 47,182 |  :heavy_check_mark:  |  :heavy_check_mark:  | |cite{VirHostNet} |
-|Web of Life database | 172 | 1,007 | 0 | X  |    :heavy_check_mark: | |cite{WOF, WOF_hompage} |
+|Database of Interacting Proteins (DIP) | 210 | 423 | 73,852 |  :heavy_check_mark:  |   X  | |
+|The Enhanced Infectious Diseases (EID2) | 12,486 | 18,086 | 0 |  :heavy_check_mark:  |    :heavy_check_mark:  | |
+|Fusarium graminearum species complex database (FGSCdb) | 19 | 15 | 0 |  :heavy_check_mark:  |   X  |  |
+|Global Biotic Interactions (GloBI) | 89,994 | 461,385 | 0 | :heavy_check_mark:  |  :heavy_check_mark:  ||
+|Global Mammal Parasite Database (GMPD) | 1,558 | 5,444 | 0 | X  |  X  |  |
+|Host-pathogen interactions database (HPIDB)  | 734 | 967 | 54,879 | :heavy_check_mark:  |  :heavy_check_mark:  |  |
+|IntAct | 1,819 | 3,575 | 1,079,255 | :heavy_check_mark:  |  :heavy_check_mark:  | |
+|Interactome | 264 | 263 | 4,154 | :heavy_check_mark:  | :heavy_check_mark:  | |
+|Interaction Web Database (IWDB) | 594 | 3,449 | 0 | X  | X  | |
+|MINT | 698 | 1,331 | 100,048 | :heavy_check_mark:  |  :heavy_check_mark:  |  |
+|PHI-base | 539 | 1,062 | 0 | X  |  :heavy_check_mark:  |  |
+|PHILM2Web | 460 | 1,506 | 0 | :heavy_check_mark:  |  X  |  |
+|Pathogen-Host Interaction Search Tool (PHISTO)  | 589 | 589 | 47,920 | X  |  X  | |cite{PHISTO} |
+|Protist Interaction DAtabase (PIDA) | 647 | 836 | 0 | X  |  :heavy_check_mark: |  |
+|Signaling Network Open Resource (Signor) | 7 | 10 | 17,400 | :heavy_check_mark:  |  :heavy_check_mark:  | |
+|Species Interactions of Australia Database (SIAD) | 3,744 | 5,049 | 0 |  :heavy_check_mark:  |  :heavy_check_mark:  |  |
+|Virus / Host protein-protein interactions Network (VirHostNet)  | 332 | 494 | 47,182 |  :heavy_check_mark:  |  :heavy_check_mark:  |  |
+|Web of Life database | 172 | 1,007 | 0 | X  |    :heavy_check_mark: |  |
 
-
-BV-BRC
-- Bat Eco-Interactions
-- BioGRID
-- Database of Interacting Proteins (DIP) 
-- The Enhanced Infectious Diseases (EID2)
-- Fusarium graminearum species complex database (FGSCdb)
-- Global Biotic Interactions (GloBI)
-- Global Mammal Parasite Database (GMPD) 
-- Host-pathogen interactions database (HPIDB) 
-- IntAct 
-- Interactome of co-evolving viruses with humans (https://doi.org/10.1093/molbev/msad012)
-- Interaction Web Database (IWDB) 
-- MINT
-- Species Interactions of Australia Database (SIAD)
-- Signaling Network Open Resource (Signor)
-- PHI-base
-- Pathogen-Host Interaction Search Tool (PHISTO) 
-- PHILM2Web
-- Protist Interaction DAtabase (PIDA)
-- Virus / Host protein-protein interactions Network (VirHostNet) 
-- Web of Life database
 
 # Cite
 
