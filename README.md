@@ -11,7 +11,7 @@ To rebuild the ISDB locally, Please follow these steps:
 
 1. Successful execution requires the following dependencies: Python 3.11.7, Pandas 2.0.3, NumPy 1.24.3, and Requests 2.31.0.
 
-2. You computer should be connect to the internet.
+2. You computer should be connected to the internet.
 
 3. Download resources. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in \texttt{updateDB.sh}. 
    ISDB parces the most of the databases automatically. However, some resources need to be manually downloaded
@@ -39,18 +39,6 @@ To rebuild the ISDB locally, Please follow these steps:
 Additional parameters, such as whether to overwrite existing files, remove intermediate files, or incorporate user-provided data, can also be configured within this script. More details can be found on the documentation on GitHub.
 
 The generated database will be available in CSV and TSV formats, with the following column descriptions:
-
-- SerialNumber: Unique interaction identifier within ISDB.
-TaxId(A/B): NCBI Taxonomical identifier for species A/B.
-Uid(A/B): UniProt protein identifier for species A/B.
-ScientificName(A/B): Scientific species name for species A/B.
-interactionType: Phrase describing the nature of the interaction.
-ontology: Interaction identifier based on the corresponding ontology.
-reference: Reference as defined by the data source.
-database: Source database of the interaction.
-
-The generated database will come in CSV and TSV format and the following are the columns descriobtions:
-# Column description
 - SerialNumber: Interaction identifier inside ISDB
 - TaxId(A/B): NCBI Taxonomical identifer
 - Uid(A/B): UniProt protein identifier
