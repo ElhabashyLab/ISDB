@@ -65,7 +65,7 @@ The database can be built automatically. However, some resources need to be down
 |HPIDB | 734 | 967 | 54,879 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{HPIDB, HPIDB_2} |
 |IntAct | 1,819 | 3,575 | 1,079,255 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{intact} |
 |Interactome | 264 | 263 | 4,154 | :heavy_check_mark:  | :heavy_check_mark:  | |cite{Interactome} |
-|IWDB | 594 | 3,449 | 0 | X  | X  | :heavy_check_mark: | |cite{IWDB} |
+|IWDB | 594 | 3,449 | 0 | X  | X  | |cite{IWDB} |
 |MINT | 698 | 1,331 | 100,048 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{MINT} |
 |PHI-base | 539 | 1,062 | 0 | X  |  :heavy_check_mark:  | |cite{phi_base} |
 |PHILM2Web | 460 | 1,506 | 0 | :heavy_check_mark:  |  X  | |cite{hilm2web} |
