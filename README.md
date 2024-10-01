@@ -48,29 +48,28 @@ To rebuild the ISDB, Please follow these steps:
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
 
 | Database | #Species | #Specie Pairs | #PPIs | Interaction Type | Batch download  | Citation |
-|--|--|--|--|--|--|--|
-
+|----------|--|--|--|--|--|--|
 |Bat Eco-Interactions | 3,099 | 8,101 | 0 |   :heavy_check_mark: |  X  | |cite{BEI} | 
-BioGRID | 83 | 359 | 2,228,610 | X  |  :heavy_check_mark:  |   |cite{biogrid} |
-BV-BRC | 133,835 | 142,666 | 0 | X  |   X  | |cite{BVBRC,BVBRC_homepage} |
-DIP | 210 | 423 | 73,852 |  :heavy_check_mark:  |   X  | |cite{DIP} |
-EID2 | 12,486 | 18,086 | 0 |  :heavy_check_mark:  |    :heavy_check_mark:  | |cite{EID2} |
-FGSCdb | 19 | 15 | 0 |  :heavy_check_mark:  |   X  | |cite{FGSCdb} |
-GloBI | 89,994 | 461,385 | 0 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{GloBI} |
-GMPD | 1,558 | 5,444 | 0 | X  |  X  | |cite{global_mammal_parasite, global_mammal_parasite_2} |
-HPIDB | 734 | 967 | 54,879 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{HPIDB, HPIDB_2} |
-IntAct | 1,819 | 3,575 | 1,079,255 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{intact} |
-Interactome | 264 | 263 | 4,154 | :heavy_check_mark:  | :heavy_check_mark:  | |cite{Interactome} |
-IWDB | 594 | 3,449 | 0 | X  | X  | :heavy_check_mark: | |cite{IWDB} |
-MINT | 698 | 1,331 | 100,048 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{MINT} |
-PHI-base | 539 | 1,062 | 0 | X  |  :heavy_check_mark:  | |cite{phi_base} |
-PHILM2Web | 460 | 1,506 | 0 | :heavy_check_mark:  |  X  | |cite{hilm2web} |
-PHISTO | 589 | 589 | 47,920 | X  |  X  | |cite{PHISTO} |
-PIDA | 647 | 836 | 0 | X  |  :heavy_check_mark: | |cite{PIDA} |
-Signor | 7 | 10 | 17,400 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{SIGNOR} |
-SIAD | 3,744 | 5,049 | 0 |  :heavy_check_mark:  |  :heavy_check_mark:  | |cite{SIAD} |
-VirHostNet | 332 | 494 | 47,182 |  :heavy_check_mark:  |  :heavy_check_mark:  | |cite{VirHostNet} |
-Web of Life database | 172 | 1,007 | 0 | X  |    :heavy_check_mark: | |cite{WOF, WOF_hompage} |
+|BioGRID | 83 | 359 | 2,228,610 | X  |  :heavy_check_mark:  |   |cite{biogrid} |
+|BV-BRC | 133,835 | 142,666 | 0 | X  |   X  | |cite{BVBRC,BVBRC_homepage} |
+|DIP | 210 | 423 | 73,852 |  :heavy_check_mark:  |   X  | |cite{DIP} |
+|EID2 | 12,486 | 18,086 | 0 |  :heavy_check_mark:  |    :heavy_check_mark:  | |cite{EID2} |
+|FGSCdb | 19 | 15 | 0 |  :heavy_check_mark:  |   X  | |cite{FGSCdb} |
+|GloBI | 89,994 | 461,385 | 0 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{GloBI} |
+|GMPD | 1,558 | 5,444 | 0 | X  |  X  | |cite{global_mammal_parasite, global_mammal_parasite_2} |
+|HPIDB | 734 | 967 | 54,879 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{HPIDB, HPIDB_2} |
+|IntAct | 1,819 | 3,575 | 1,079,255 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{intact} |
+|Interactome | 264 | 263 | 4,154 | :heavy_check_mark:  | :heavy_check_mark:  | |cite{Interactome} |
+|IWDB | 594 | 3,449 | 0 | X  | X  | :heavy_check_mark: | |cite{IWDB} |
+|MINT | 698 | 1,331 | 100,048 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{MINT} |
+|PHI-base | 539 | 1,062 | 0 | X  |  :heavy_check_mark:  | |cite{phi_base} |
+|PHILM2Web | 460 | 1,506 | 0 | :heavy_check_mark:  |  X  | |cite{hilm2web} |
+|PHISTO | 589 | 589 | 47,920 | X  |  X  | |cite{PHISTO} |
+|PIDA | 647 | 836 | 0 | X  |  :heavy_check_mark: | |cite{PIDA} |
+|Signor | 7 | 10 | 17,400 | :heavy_check_mark:  |  :heavy_check_mark:  | |cite{SIGNOR} |
+|SIAD | 3,744 | 5,049 | 0 |  :heavy_check_mark:  |  :heavy_check_mark:  | |cite{SIAD} |
+|VirHostNet | 332 | 494 | 47,182 |  :heavy_check_mark:  |  :heavy_check_mark:  | |cite{VirHostNet} |
+|Web of Life database | 172 | 1,007 | 0 | X  |    :heavy_check_mark: | |cite{WOF, WOF_hompage} |
 
 
 BV-BRC
