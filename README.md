@@ -1,32 +1,19 @@
 # The Interacting Species Database (ISDB)
 A Comprehensive Resource for Ecological Interactions at the Molecular Level.
-The ISDB compiles data on species interactions from 21 resources, including scientific names, Taxon IDs, UniProt IDs, interaction types, ontology identifiers, references, and original database sources.
+The ISDB compiles data on species interactions from 21 resources, including scientific names, Taxon IDs, UniProt IDs, interaction types, ontology identifiers, references, and original database sources. ISDB is developed using Python and Bash scripts and is available as an open-source under the MIT License.
 
 # Web interface
 ISDB web interface can be found here (www.elhabashylab.org/ISDB) which is hosted by the German Network for Bioinformatics Infrastructure (de.NBI).
 The web interface provides functionalities for batch downloads, data search, result download, and data deposition.
 
-# Open-source code
-ISDB is developed using Python and Bash scripts and is available as an open-source project on GitHub under the MIT License \github.
- It includes both pre-built versions of the database in CSV and TSV format and the code needed to create a database.
+# Rebuilding the ISDB locally
+To rebuild the ISDB locally, Please follow these steps:
 
-# Execution 
-Users can compile the database locally by executing the following command: 
+1. Successful execution requires the following dependencies: Python 3.11.7, Pandas 2.0.3, NumPy 1.24.3, and Requests 2.31.0.
 
-> bash updateDB.sh} 
+2. You computer should be connect to the internet.
 
-Successful execution requires the following dependencies: Python 3.11.7, Pandas 2.0.3, NumPy 1.24.3, and Requests 2.31.0. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in \texttt{updateDB.sh}. Additional parameters, such as whether to overwrite existing files, remove intermediate files, or incorporate user-provided data, can also be configured within this script. More details can be found on the documentation on GitHub.
-
-# Download ISDB
-
-
-# Rebuilding the ISDB
-The database can be built automatically. 
-To rebuild the ISDB, Please follow these steps:
-
-1. You computer should be connect to the internet.
-
-2. Download resources
+3. Download resources. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in \texttt{updateDB.sh}. 
    ISDB parces the most of the databases automatically. However, some resources need to be manually downloaded
    - Bat Eco-Interactions (https://www.batbase.org/explore)
    - BV-BRC (https://www.bv-brc.org)
@@ -36,7 +23,7 @@ To rebuild the ISDB, Please follow these steps:
    - PHISTO (https://parasites.nunn-lab.org/data/)
    - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
-3. Clone this repository and cd into it.
+4. Clone this repository and cd into it.
     ```
    git clone
    ```
@@ -44,11 +31,25 @@ To rebuild the ISDB, Please follow these steps:
 5. Edit the paths to the database in the  ~main/builtDB.sh script.
 
 6. Finally build the ISDB database
-   To build the database the main script *main/builtDB.sh* should be executed inside the *main* directory.
+   To compile the database locally, the main script *main/builtDB.sh* should be executed inside the *main* directory.
    ```
    cd main
    .bash /builtDB.sh
    ```
+Additional parameters, such as whether to overwrite existing files, remove intermediate files, or incorporate user-provided data, can also be configured within this script. More details can be found on the documentation on GitHub.
+
+The generated database will be available in CSV and TSV formats, with the following column descriptions:
+
+- SerialNumber: Unique interaction identifier within ISDB.
+TaxId(A/B): NCBI Taxonomical identifier for species A/B.
+Uid(A/B): UniProt protein identifier for species A/B.
+ScientificName(A/B): Scientific species name for species A/B.
+interactionType: Phrase describing the nature of the interaction.
+ontology: Interaction identifier based on the corresponding ontology.
+reference: Reference as defined by the data source.
+database: Source database of the interaction.
+
+The generated database will come in CSV and TSV format and the following are the columns descriobtions:
 # Column description
 - SerialNumber: Interaction identifier inside ISDB
 - TaxId(A/B): NCBI Taxonomical identifer
