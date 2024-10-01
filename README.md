@@ -2,6 +2,20 @@
 A Comprehensive Resource for Ecological Interactions at the Molecular Level.
 The ISDB compiles data on species interactions from 21 resources, including scientific names, Taxon IDs, UniProt IDs, interaction types, ontology identifiers, references, and original database sources.
 
+#Web interface
+ISDB web server is hosted by the German Network for Bioinformatics Infrastructure (de.NBI) and is accessible at \homepage[]. It provides functionalities for batch downloads, data search, result download, and data deposition.
+
+#Open-source code
+ISDB is developed using Python and Bash scripts and is available as an open-source project on GitHub under the MIT License \github.
+ It includes both pre-built versions of the database in CSV and TSV format and the code needed to create a database.
+
+#Execution 
+Users can compile the database locally by executing the following command: 
+
+> bash updateDB.sh} 
+
+Successful execution requires the following dependencies: Python 3.11.7, Pandas 2.0.3, NumPy 1.24.3, and Requests 2.31.0. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in \texttt{updateDB.sh}. Additional parameters, such as whether to overwrite existing files, remove intermediate files, or incorporate user-provided data, can also be configured within this script. More details can be found on the documentation on GitHub.
+
 # Download ISDB
 
 
