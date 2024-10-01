@@ -76,7 +76,7 @@ BV-BRC
 - Bat Eco-Interactions
 - BioGRID
 - Database of Interacting Proteins (DIP) 
-- EID2 (host-pathogen)
+- The Enhanced Infectious Diseases (EID2)
 - Fusarium graminearum species complex database (FGSCdb)
 - Global Biotic Interactions (GloBI)
 - Global Mammal Parasite Database (GMPD) 
