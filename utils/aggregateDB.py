@@ -188,8 +188,12 @@ def main():
     print(db[db["database"].apply(lambda x: "Intact" in x)].shape, "dir")
     # export db csv
     db.to_csv(
-        tempory_directory + "db_" + str(date.today()).replace("-", "_") + ".csv",
+        tempory_directory + "ISDB_" + str(date.today()).replace("-", "_") + ".csv",
         index=False,
+    )
+    db.to_csv(
+        tempory_directory + "ISDB_" + str(date.today()).replace("-", "_") + ".tsv",
+        index=False, sep="\t",
     )
 
 
