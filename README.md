@@ -1,5 +1,6 @@
 # The Interacting Species Database (ISDB)
-This database gathers available information about possible species interactions from 21 resources.
+A Comprehensive Resource for Ecological Interactions at the Molecular Level.
+The ISDB compiles data on species interactions from 21 resources, including scientific names, Taxon IDs, UniProt IDs, interaction types, ontology identifiers, references, and original database sources.
 
 # Download ISDB
 
