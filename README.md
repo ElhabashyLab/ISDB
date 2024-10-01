@@ -47,10 +47,10 @@ To rebuild the ISDB, Please follow these steps:
 
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
 
+| Database | #Species | #Specie Pairs | #PPIs | Interaction Type | Batch download  | Citation |
+|--|--|--|--|--|--|--|
 
-
-## Resources
-- BV-BRC
+BV-BRC
 - Bat Eco-Interactions
 - BioGRID
 - Database of Interacting Proteins (DIP) 
