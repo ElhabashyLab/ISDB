@@ -6,11 +6,14 @@ The ISDB compiles data on species interactions from 21 resources, including scie
 ISDB web interface can be found here (www.elhabashylab.org/ISDB) which is hosted by the German Network for Bioinformatics Infrastructure (de.NBI).
 The web interface provides functionalities for batch downloads, data search, result download, and data deposition.
 
-# How to download the ISDB? 
-<Something>
+# How to download ISDB? 
+Built versions of ISDB can be found under the directory `versions` and be downloaded either through GitHubs user-interface, the ISDB web interface, or through command line via:
+```
+wget https://github.com/ElhabashyLab/ISDB/tree/main/versions/ISDB_2024_09_13.<tsv/csv>.gz
+```
 
-# How to build the ISDB locally? 
-To rebuild the ISDB locally, Please follow these steps:
+# How to build ISDB locally? 
+To rebuild ISDB locally, Please follow these steps:
 
 1. Successful execution requires the following dependencies: Python 3.11.7, Pandas 2.0.3, NumPy 1.24.3, and Requests 2.31.0.
 
@@ -31,10 +34,16 @@ To rebuild the ISDB locally, Please follow these steps:
    git clone
    ```
 
-5. Edit the paths to the database in the  ~main/builtDB.sh script.
+5. Edit the paths to the downloaded databases in the  `main/builtDB.sh` script. Further parameters are:
+   
+   1. `tempory_directory`: Direction in which ISDB is build,
+   2. `overwrite`: Wether to overwrite pre-existing stages,
+   3. `addtional_data`: File path or directory path of additional data files. Each file should at least include two species columns,
+   4. `delete`: If intermediate stages should be deleted afterwards,
+   5. `manualDatabases`: Exclude or include database which could not be downloaded automatically. If 'true' the user has specify their paths in the following section.
 
-6. Finally build the ISDB database
-   To compile the database locally, the main script *main/builtDB.sh* should be executed inside the *main* directory.
+6. Finally build ISDB database
+   To compile the database locally, the main script `main/builtDB.sh` should be executed inside the `main` directory.
    ```
    cd main
    .bash /builtDB.sh
@@ -53,6 +62,8 @@ The generated database will be available in CSV and TSV formats, with the follow
 
 
 # How to deposite data to the ISDB?
+
+To submit data for inclusion in our system, please contact our [team](#authors) directly. To incorporate your own data into the database locally please follow the instruction on [*How to build ISDB locally?*](#how-to-build-isdb-locally)
 
 # List of resources 
 
@@ -87,5 +98,5 @@ The database can be built automatically. However, some resources need to be down
 
 # Authors
 - Michael Mederer
-- Anupam Guatam
+- Anupam Gautam
 - Hadeer Elhabashy

@@ -7,12 +7,14 @@ export overwrite=false
 export addtional_data=""
 ### Delete tempory files
 delete=false
+### For manually downloaded database files:
+# "false" -> no manual downloaded databases
+# "true" -> includes manual downloaded databases (file path need to be specified)
+manualDatabases=false
+
 export current_dir=$(pwd)
 
-### For manually downloaded files:
-# "false" -> no manual files
-# "true" -> includes manual files (file path need to be specified)
-if false; then
+if manualDatabases; then
     ## Bat Eco-Interactions
     # no static link -> https://www.batbase.org/explore
     mv $tempory_directory/manualDownload/BatEco-InteractionRecords.csv $tempory_directory
