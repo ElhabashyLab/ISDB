@@ -19,7 +19,7 @@ To rebuild ISDB locally, Please follow these steps:
 
 2. You computer should be connected to the internet.
 
-3. Download resources. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in \texttt{updateDB.sh}. 
+3. Download resources. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in `updateDB.sh`. 
    ISDB parces the most of the databases automatically. However, some resources need to be manually downloaded
    - Bat Eco-Interactions (https://www.batbase.org/explore)
    - BV-BRC (https://www.bv-brc.org)
