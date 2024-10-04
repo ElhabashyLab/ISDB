@@ -95,8 +95,12 @@ The database can be built automatically. However, some resources need to be down
 
 
 # Cite
+Mederer, M., Gautam, A., Kohlbacher, O., Lupas, A., Elhabashy, H. Interacting Species Database (ISDB): A Comprehensive Resource for Ecological Interactions at the Molecular Level. Manuscript in preparation.
 
 # Authors
 - Michael Mederer
 - Anupam Gautam
 - Hadeer Elhabashy
+
+# Contact
+If you have any questions or inquiries, please feel free to contact Hadeer Elhabashy at (Hadeer.elhabashy@tuebingen.mpg.de)
