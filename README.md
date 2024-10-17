@@ -69,13 +69,13 @@ To submit data for inclusion in our system, please contact our [team](#authors) 
 
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
 
-| Database | #Species | #Specie Pairs | #PPIs | Interaction Type | Batch download  | Citation |
+| Database | #Species | #Specie Pairs | #PPIs | Interaction Type | Batch download  |URL |
 |----------|--|--|--|--|--|--|
-|Bat Eco-Interactions | 3,099 | 8,101 | 0 |   :heavy_check_mark: |  X  | | 
-|BioGRID | 83 | 359 | 2,228,610 | X  |  :heavy_check_mark:  |  |
-|BV-BRC | 133,835 | 142,666 | 0 | X  |   X  | |cite{BVBRC,BVBRC_homepage} |
-|Database of Interacting Proteins (DIP) | 210 | 423 | 73,852 |  :heavy_check_mark:  |   X  | |
-|The Enhanced Infectious Diseases (EID2) | 12,486 | 18,086 | 0 |  :heavy_check_mark:  |    :heavy_check_mark:  | |
+|[Bat Eco-Interactions](#https://www.batbase.org/) | 3,099 | 8,101 | 0 |   :heavy_check_mark: |  X  | https://www.batbase.org/| 
+|BioGRID | 83 | 359 | 2,228,610 | X  |  :heavy_check_mark:  |  https://thebiogrid.org/ |
+|BV-BRC | 133,835 | 142,666 | 0 | X  |   X  | | https://www.bv-brc.org/ |
+|Database of Interacting Proteins (DIP) | 210 | 423 | 73,852 |  :heavy_check_mark:  |   X  | https://dip.doe-mbi.ucla.edu/dip/Main.cgi |
+|The Enhanced Infectious Diseases (EID2) | 12,486 | 18,086 | 0 |  :heavy_check_mark:  |    :heavy_check_mark:  | https://eid2.liverpool.ac.uk/ |
 |Fusarium graminearum species complex database (FGSCdb) | 19 | 15 | 0 |  :heavy_check_mark:  |   X  |  |
 |Global Biotic Interactions (GloBI) | 89,994 | 461,385 | 0 | :heavy_check_mark:  |  :heavy_check_mark:  ||
 |Global Mammal Parasite Database (GMPD) | 1,558 | 5,444 | 0 | X  |  X  |  |
