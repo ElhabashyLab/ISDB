@@ -71,27 +71,27 @@ The database can be built automatically. However, some resources need to be down
 
 | Database | #Species | #Specie Pairs | #PPIs | Interaction Type | Batch download  |URL |
 |----------|--|--|--|--|--|--|
-|[Bat Eco-Interactions](#https://www.batbase.org/) | 3,099 | 8,101 | 0 |   :heavy_check_mark: |  X  | https://www.batbase.org/| 
-|BioGRID | 83 | 359 | 2,228,610 | X  |  :heavy_check_mark:  |  https://thebiogrid.org/ |
-|BV-BRC | 133,835 | 142,666 | 0 | X  |   X  | | https://www.bv-brc.org/ |
-|Database of Interacting Proteins (DIP) | 210 | 423 | 73,852 |  :heavy_check_mark:  |   X  | https://dip.doe-mbi.ucla.edu/dip/Main.cgi |
-|The Enhanced Infectious Diseases (EID2) | 12,486 | 18,086 | 0 |  :heavy_check_mark:  |    :heavy_check_mark:  | https://eid2.liverpool.ac.uk/ |
-|Fusarium graminearum species complex database (FGSCdb) | 19 | 15 | 0 |  :heavy_check_mark:  |   X  |  |
-|Global Biotic Interactions (GloBI) | 89,994 | 461,385 | 0 | :heavy_check_mark:  |  :heavy_check_mark:  ||
-|Global Mammal Parasite Database (GMPD) | 1,558 | 5,444 | 0 | X  |  X  |  |
-|Host-pathogen interactions database (HPIDB)  | 734 | 967 | 54,879 | :heavy_check_mark:  |  :heavy_check_mark:  |  |
-|IntAct | 1,819 | 3,575 | 1,079,255 | :heavy_check_mark:  |  :heavy_check_mark:  | |
+| [Bat Eco-Interactions](https://www.batbase.org/)| 3,099 | 8,101 | 0 |   :heavy_check_mark: |  X  | | 
+|[BioGRID](https://thebiogrid.org/) | 83 | 359 | 2,228,610 | X  |  :heavy_check_mark:  |  |
+|[BV-BRC](https://www.bv-brc.org/) | 133,835 | 142,666 | 0 | X  |   X  | | |
+|[Database of Interacting Proteins (DIP)](https://dip.doe-mbi.ucla.edu/dip/Main.cgi) | 210 | 423 | 73,852 |  :heavy_check_mark:  |   X  |  |
+|[The Enhanced Infectious Diseases (EID2)](https://eid2.liverpool.ac.uk/) | 12,486 | 18,086 | 0 |  :heavy_check_mark:  |  :heavy_check_mark: | |
+|[Fusarium graminearum species complex database (FGSCdb)](https://emdelponte.github.io/FGSC/#:~:text=FGSCdb%20is%20a%20database%20of,and%20panicle%20blight%20in%20rice.) | 19 | 15 | 0 |  :heavy_check_mark:  |   X  |  |
+|[Global Biotic Interactions (GloBI)](https://www.globalbioticinteractions.org/) | 89,994 | 461,385 | 0 | :heavy_check_mark:  |  :heavy_check_mark:  ||
+|[Global Mammal Parasite Database (GMPD)](https://globalhealth.duke.edu/projects/global-mammal-parasite-database#:~:text=The%20Global%20Mammal%20Parasite%20Database,2700%20published%20scientific%20literature%20sources.) | 1,558 | 5,444 | 0 | X  |  X  |  |
+|[Host-pathogen interactions database (HPIDB)](https://hpidb.igbb.msstate.edu/)  | 734 | 967 | 54,879 | :heavy_check_mark:  |  :heavy_check_mark:  |  |
+|[IntAct](https://www.ebi.ac.uk/intact/home) | 1,819 | 3,575 | 1,079,255 | :heavy_check_mark:  |  :heavy_check_mark:  | |
 |Interactome | 264 | 263 | 4,154 | :heavy_check_mark:  | :heavy_check_mark:  | |
-|Interaction Web Database (IWDB) | 594 | 3,449 | 0 | X  | X  | |
-|MINT | 698 | 1,331 | 100,048 | :heavy_check_mark:  |  :heavy_check_mark:  |  |
-|PHI-base | 539 | 1,062 | 0 | X  |  :heavy_check_mark:  |  |
+|[Interaction Web Database (IWDB)](https://iwdb.nceas.ucsb.edu/whoweare.html) | 594 | 3,449 | 0 | X  | X  | |
+|[MINT](https://mint.bio.uniroma2.it/) | 698 | 1,331 | 100,048 | :heavy_check_mark:  |  :heavy_check_mark:  |  |
+|[PHI-base](http://www.phi-base.org/) | 539 | 1,062 | 0 | X  |  :heavy_check_mark:  |  |
 |PHILM2Web | 460 | 1,506 | 0 | :heavy_check_mark:  |  X  |  |
-|Pathogen-Host Interaction Search Tool (PHISTO)  | 589 | 589 | 47,920 | X  |  X  | |cite{PHISTO} |
-|Protist Interaction DAtabase (PIDA) | 647 | 836 | 0 | X  |  :heavy_check_mark: |  |
-|Signaling Network Open Resource (Signor) | 7 | 10 | 17,400 | :heavy_check_mark:  |  :heavy_check_mark:  | |
-|Species Interactions of Australia Database (SIAD) | 3,744 | 5,049 | 0 |  :heavy_check_mark:  |  :heavy_check_mark:  |  |
-|Virus / Host protein-protein interactions Network (VirHostNet)  | 332 | 494 | 47,182 |  :heavy_check_mark:  |  :heavy_check_mark:  |  |
-|Web of Life database | 172 | 1,007 | 0 | X  |    :heavy_check_mark: |  |
+|[Pathogen-Host Interaction Search Tool (PHISTO)](https://www.phisto.org/browse.xhtml)  | 589 | 589 | 47,920 | X  |  X  | |cite{PHISTO} |
+|[Protist Interaction DAtabase (PIDA)](https://github.com/ramalok/PIDA) | 647 | 836 | 0 | X  |  :heavy_check_mark: |  |
+|[Signaling Network Open Resource (Signor)](https://signor.uniroma2.it/) | 7 | 10 | 17,400 | :heavy_check_mark:  |  :heavy_check_mark:  | |
+|[Species Interactions of Australia Database (SIAD)](https://www.discoverlife.org/siad/) | 3,744 | 5,049 | 0 |  :heavy_check_mark:  |  :heavy_check_mark:  |  |
+|[Virus / Host protein-protein interactions Network (VirHostNet)](https://virhostnet.prabi.fr/)  | 332 | 494 | 47,182 |  :heavy_check_mark:  |  :heavy_check_mark:  |  |
+|[Web of Life database](https://www.web-of-life.es/) | 172 | 1,007 | 0 | X  |    :heavy_check_mark: |  |
 
 
 # Cite
