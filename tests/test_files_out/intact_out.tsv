@@ -1,0 +1,2 @@
+sourceTaxId	sourceName	sourceUid	targetTaxId	targetName	targetUid	interactionType	ontology	reference	database
+9606	Homo sapiens (Human)	O43426	9606	Homo sapiens (Human)	P49418	direct interaction	psi-mi:MI:0407	mint:MINT-5211933|pubmed:10542231	Intact

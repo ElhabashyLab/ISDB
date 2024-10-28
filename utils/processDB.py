@@ -17,13 +17,17 @@ sys.path.insert(1, "./")
 from uniprot_api import uniprot_request
 
 global tempory_directory
-tempory_directory = os.getenv("tempory_directory")
-global overwrite
-overwrite = os.getenv("overwrite")
-if overwrite.lower() == "true":
-    overwrite = True
+if os.getenv("tempory_directory"):
+    tempory_directory = os.getenv("tempory_directory")
+    global overwrite
+    overwrite = os.getenv("overwrite")
+    if overwrite.lower() == "true":
+        overwrite = True
+    else:
+        overwrite = False
 else:
-    overwrite = False
+    print("Caution! Please check main/builtDB.sh")
+    tempory_directory = "/mock/temp/dir"
 
 
 def is_float(value: str) -> bool:
@@ -66,7 +70,7 @@ def clean_dataframe(dataFrame: pd.DataFrame) -> pd.DataFrame:
         unique_values = np.unique([i for v in values for i in str(v).split("|")])
         return "|".join(unique_values)
 
-    dataFrame = dataFrame.dropna(subset=["sourceTaxId", "targetTaxId"])
+    dataFrame = dataFrame.dropna(subset=["sourceTaxId", "targetTaxId"]).astype(str)
     # TODO include same - same mappings
     # dataFrame = dataFrame[dataFrame["sourceTaxId"] != dataFrame["targetTaxId"]]
     dataFrame = (
@@ -188,7 +192,7 @@ def clean_bvbrc(prefix: str):
     data.to_csv(tempory_directory + "/" + "bvbrc_out.csv", index=False)
 
 
-def clean_globi() -> None:
+def clean_globi(file: str = "/globi.tsv") -> None:
     """Cleaning raw data from GloBI"""
     # load data
     col = [
@@ -206,7 +210,7 @@ def clean_globi() -> None:
     for i in range(2):
         if i + 1 % 2 == 0:
             data = pd.read_csv(
-                tempory_directory + "/globi.tsv",
+                tempory_directory + file,
                 usecols=col,
                 sep="\t",
                 header=0,
@@ -292,7 +296,7 @@ def clean_biogrid(path: str):
         tempory_directory + path + "/" + file,
         sep="\t",
         usecols=col,
-    )
+    ).astype(str)
     data = data[col]
     data.columns = [
         "sourceTaxId",
@@ -304,6 +308,13 @@ def clean_biogrid(path: str):
     ]
     data["sourceTaxId"] = data["sourceTaxId"].apply(lambda x: x.replace("taxid:", ""))
     data["targetTaxId"] = data["targetTaxId"].apply(lambda x: x.replace("taxid:", ""))
+    data = data[
+        data[["sourceTaxId", "targetTaxId"]].apply(
+            lambda x: all([is_float(i) for i in x]), axis=1
+        )
+    ]
+    data = data[(data["sourceTaxId"] != "nan") | (data["targetTaxId"] != "nan")]
+
     data["interactionType"] = data["ontology"].apply(
         lambda x: "(".join(x.split("(")[1:]).strip('("')
     )
@@ -441,8 +452,6 @@ def clean_fgscdb(file: str):
         names.append(name)
     data["targetTaxId"] = tax_ids
     data["targetName"] = names
-    data["sourceTaxId"] = tax_ids
-    data["sourceName"] = names
     tax_ids = []
     names = []
     for i, row in data.iterrows():
@@ -512,7 +521,7 @@ def clean_web_of_life(dir: str):
                         )
     data = pd.DataFrame(species_pairs, columns=species_columns).astype(str)
     data["reference"] = ref
-    data["reference"] = data["reference"].apply(lambda x: x.replace("\n", ""))
+    data["reference"] = data["reference"].apply(lambda x: str(x).replace("\n", ""))
     # Taxon IDs
     tax_ids = []
     names = []
@@ -633,7 +642,7 @@ def clean_HPIDB(dir: str = "/hpidb"):
     data.to_csv(tempory_directory + "/" + "HPIDB_out.tsv", sep="\t", index=False)
 
 
-def clean_intact():
+def clean_intact(file: str = "/intact.txt"):
     """Cleaning raw data from intact"""
     # import data
     col = [
@@ -644,7 +653,7 @@ def clean_intact():
         "Taxid interactor B",
         "Interaction type(s)",
     ]
-    data = pd.read_csv(tempory_directory + "/intact.txt", sep="\t", usecols=col)
+    data = pd.read_csv(tempory_directory + file, sep="\t", usecols=col)
     data = data[col]
     data.columns = [
         "reference",
@@ -696,7 +705,7 @@ def clean_intact():
     data.to_csv(tempory_directory + "/" + "intact_out.tsv", sep="\t", index=False)
 
 
-def clean_iwdb():
+def clean_iwdb(dir: str = "/iwdb") -> None:
     """Cleaning raw data iwdb"""
 
     def get_pairs(frame: pd.DataFrame) -> list:
@@ -710,7 +719,7 @@ def clean_iwdb():
                         pairs.append([a, b])
         return pairs
 
-    path = tempory_directory + "/iwdb"
+    path = tempory_directory + dir
     species_columns = ["Host", "Parasite"]
     species_pairs = []
     for file in os.listdir(path):
@@ -781,11 +790,11 @@ def clean_iwdb():
     data.to_csv(tempory_directory + "/" + "iwdb_out.tsv", sep="\t", index=False)
 
 
-def clean_phi_base():
+def clean_phi_base(file: str = "/phi_base.csv"):
     """Cleaning raw data PHI base"""
     col = ["Pathogen ID", "Host ID", "PMID", "DOI", "Protein ID"]
     data = pd.read_csv(
-        tempory_directory + "/phi_base.csv", header=1, usecols=col, dtype=str
+        tempory_directory + file, header=1, usecols=col, dtype=str
     ).astype(str)
     # clean TaxId
     data = data[data["Host ID"].apply(lambda x: x.isdigit())]
@@ -865,10 +874,10 @@ def clean_PHILM2Web(file: str):
     data.to_csv(tempory_directory + "/" + "philm2web_out.tsv", sep="\t", index=False)
 
 
-def clean_pida():
+def clean_pida(file: str = "/pida.tsv"):
     """Cleaning raw data from pida"""
     data = pd.read_csv(
-        tempory_directory + "/pida.tsv", sep="\t", skiprows=2
+        tempory_directory + file, sep="\t", skiprows=2
     )  # TODO check header and direction
     # get TaxIds
     uniprot = uniprot_request()
@@ -926,11 +935,9 @@ def clean_pida():
     data.to_csv(tempory_directory + "/" + "pida_out.tsv", sep="\t", index=False)
 
 
-def clean_virHostNet():
+def clean_virHostNet(file: str = "/vir_host_net.tsv"):
     """Cleaning raw data from VirHostNet"""
-    data = pd.read_csv(
-        tempory_directory + "/vir_host_net.tsv", sep="\t", names=range(15)
-    )[
+    data = pd.read_csv(tempory_directory + file, sep="\t", names=range(15))[
         [0, 1, 8, 9, 10, 11]
     ]  # 8,9,10,11
     data.columns = [
@@ -977,9 +984,9 @@ def clean_virHostNet():
     data.to_csv(tempory_directory + "/" + "vir_host_net_out.tsv", sep="\t", index=False)
 
 
-def clean_eid2():
+def clean_eid2(file: str = "/eid2.csv"):
     """Cleaning EID2 (Publication)"""
-    data = pd.read_csv(tempory_directory + "/eid2.csv")
+    data = pd.read_csv(tempory_directory + file)
     # Name cleaning
     data["Cargo"] = data["Cargo"].apply(lambda x: x.replace("[", "").replace("]", ""))
     # Retrieve names and TaxIds
@@ -1030,11 +1037,9 @@ def clean_eid2():
     data.to_csv(tempory_directory + "/" + "eid2_out.tsv", sep="\t", index=False)
 
 
-def clean_siad():
+def clean_siad(file: str = "/siad.txt"):
     """Cleaning raw data from siad"""
-    data = pd.read_csv(
-        tempory_directory + "/siad.txt", sep="\t", index_col=6
-    ).reset_index()
+    data = pd.read_csv(tempory_directory + file, sep="\t", index_col=6).reset_index()
     # get names and TaxIds
     uniprot = uniprot_request()
     tax_ids = []
@@ -1307,9 +1312,9 @@ def clean_phisto(file: str):
     data.to_csv(tempory_directory + "/" + "phisto_out.tsv", sep="\t", index=False)
 
 
-def clean_mint():
+def clean_mint(file: str = "/mint.tsv"):
     """Cleaning mint database"""
-    data = pd.read_csv(tempory_directory + "/mint.tsv", sep="\t", names=range(15))
+    data = pd.read_csv(tempory_directory + file, sep="\t", names=range(15))
     data = data.loc[:, [0, 1, 8, 9, 10, 11]]
     data.columns = [
         "sourceUid",
@@ -1341,7 +1346,6 @@ def clean_mint():
     data = data[
         (data["sourceTaxId"].astype(int) > 0) & (data["targetTaxId"].astype(int) > 0)
     ]
-    data.to_csv(tempory_directory + "/" + "mint_temp2.tsv", sep="\t", index=False)
     # export
     data["database"] = "mint"
     data = data[
@@ -1361,10 +1365,10 @@ def clean_mint():
     data.to_csv(tempory_directory + "/" + "mint_out.tsv", sep="\t", index=False)
 
 
-def clean_interactome():
+def clean_interactome(dir: str = "/viral_interactome"):
     """Cleaning a viral interactome (PMC9897028)"""
     data = pd.read_excel(
-        tempory_directory + "/viral_interactome/supplementary_table_S1.xls"
+        tempory_directory + dir + "/supplementary_table_S1.xls"
     ).astype(str)
     rows = []
     for i, row in data.iterrows():
@@ -1423,7 +1427,7 @@ def clean_interactome():
     data.to_csv(tempory_directory + "/" + "interactome_out.tsv", sep="\t", index=False)
 
 
-def clean_signor():
+def clean_signor(file: str = "/signor.tsv"):
     """Cleaning signor"""
     data = pd.read_csv(tempory_directory + "/signor.tsv", sep="\t")
     data = data[(data["DATABASEA"] == "UNIPROT") & (data["DATABASEB"] == "UNIPROT")]

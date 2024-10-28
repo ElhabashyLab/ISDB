@@ -1,0 +1,96 @@
+sourceTaxId	sourceName	sourceUid	targetTaxId	targetName	targetUid	interactionType	ontology	reference	database
+100448	Proteocephalus filicollis		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+100448	Proteocephalus filicollis		43956	Catostomus catostomus (longnose sucker)					IWDB
+100448	Proteocephalus filicollis		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+100448	Proteocephalus filicollis		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+100448	Proteocephalus filicollis		8010	Esox lucius (Northern pike)					IWDB
+100448	Proteocephalus filicollis		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+100448	Proteocephalus filicollis		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+108243	Hunterella nodulosa		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+108243	Hunterella nodulosa		43956	Catostomus catostomus (longnose sucker)					IWDB
+108243	Hunterella nodulosa		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+108243	Hunterella nodulosa		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+108243	Hunterella nodulosa		8010	Esox lucius (Northern pike)					IWDB
+108243	Hunterella nodulosa		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+116847	Discocotyle sagittata		43956	Catostomus catostomus (longnose sucker)					IWDB
+116847	Discocotyle sagittata		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+116847	Discocotyle sagittata		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+116847	Discocotyle sagittata		8010	Esox lucius (Northern pike)					IWDB
+116847	Discocotyle sagittata		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+116847	Discocotyle sagittata		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+125895	Eubothrium salvelini		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+125895	Eubothrium salvelini		43956	Catostomus catostomus (longnose sucker)					IWDB
+125895	Eubothrium salvelini		8010	Esox lucius (Northern pike)					IWDB
+125895	Eubothrium salvelini		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+125895	Eubothrium salvelini		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+1658469	Proteocephalus pinguis		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+1658469	Proteocephalus pinguis		43956	Catostomus catostomus (longnose sucker)					IWDB
+1658469	Proteocephalus pinguis		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+1658469	Proteocephalus pinguis		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+1658469	Proteocephalus pinguis		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+1658469	Proteocephalus pinguis		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+183647	Diplostomum spathaceum		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+183647	Diplostomum spathaceum		43956	Catostomus catostomus (longnose sucker)					IWDB
+183647	Diplostomum spathaceum		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+183647	Diplostomum spathaceum		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+183647	Diplostomum spathaceum		8010	Esox lucius (Northern pike)					IWDB
+183647	Diplostomum spathaceum		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+183647	Diplostomum spathaceum		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+194858	Eubothrium rugosum		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+194858	Eubothrium rugosum		43956	Catostomus catostomus (longnose sucker)					IWDB
+194858	Eubothrium rugosum		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+194858	Eubothrium rugosum		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+194858	Eubothrium rugosum		8010	Esox lucius (Northern pike)					IWDB
+194858	Eubothrium rugosum		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+194858	Eubothrium rugosum		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+214005	Cystidicola farionis		43956	Catostomus catostomus (longnose sucker)					IWDB
+214005	Cystidicola farionis		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+214005	Cystidicola farionis		8010	Esox lucius (Northern pike)					IWDB
+214005	Cystidicola farionis		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+290552	Raphidascaris acus		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+290552	Raphidascaris acus		43956	Catostomus catostomus (longnose sucker)					IWDB
+290552	Raphidascaris acus		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+290552	Raphidascaris acus		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+290552	Raphidascaris acus		8010	Esox lucius (Northern pike)					IWDB
+290552	Raphidascaris acus		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+290552	Raphidascaris acus		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+317556	Pomphorhynchus bulbocolli		43956	Catostomus catostomus (longnose sucker)					IWDB
+317556	Pomphorhynchus bulbocolli		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+317556	Pomphorhynchus bulbocolli		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+317556	Pomphorhynchus bulbocolli		8010	Esox lucius (Northern pike)					IWDB
+317556	Pomphorhynchus bulbocolli		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+317556	Pomphorhynchus bulbocolli		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+406072	Triaenophorus crassus		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+406072	Triaenophorus crassus		43956	Catostomus catostomus (longnose sucker)					IWDB
+406072	Triaenophorus crassus		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+406072	Triaenophorus crassus		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+406072	Triaenophorus crassus		8010	Esox lucius (Northern pike)					IWDB
+406072	Triaenophorus crassus		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+406072	Triaenophorus crassus		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+53704	Proteocephalus exiguus		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+53704	Proteocephalus exiguus		43956	Catostomus catostomus (longnose sucker)					IWDB
+53704	Proteocephalus exiguus		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+53704	Proteocephalus exiguus		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+53704	Proteocephalus exiguus		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+53704	Proteocephalus exiguus		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+56557	Triaenophorus nodulosus		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+56557	Triaenophorus nodulosus		43956	Catostomus catostomus (longnose sucker)					IWDB
+56557	Triaenophorus nodulosus		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+56557	Triaenophorus nodulosus		8010	Esox lucius (Northern pike)					IWDB
+70624	Cyathocephalus truncatus		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+70624	Cyathocephalus truncatus		43956	Catostomus catostomus (longnose sucker)					IWDB
+70624	Cyathocephalus truncatus		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+70624	Cyathocephalus truncatus		8010	Esox lucius (Northern pike)					IWDB
+70624	Cyathocephalus truncatus		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+70624	Cyathocephalus truncatus		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB
+83196	Gyrodactylus sp.		134920	Pungitius pungitius (ninespine stickleback)					IWDB
+83196	Gyrodactylus sp.		43956	Catostomus catostomus (longnose sucker)					IWDB
+83196	Gyrodactylus sp.		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+83196	Gyrodactylus sp.		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+83196	Gyrodactylus sp.		8010	Esox lucius (Northern pike)					IWDB
+984080	Crepidostomum farionis		43956	Catostomus catostomus (longnose sucker)					IWDB
+984080	Crepidostomum farionis		59861	Coregonus clupeaformis (Lake whitefish)					IWDB
+984080	Crepidostomum farionis		69944	Lota lota (Burbot) (Gadus lota)					IWDB
+984080	Crepidostomum farionis		8010	Esox lucius (Northern pike)					IWDB
+984080	Crepidostomum farionis		8019	Oncorhynchus kisutch (Coho salmon) (Salmo kisutch)					IWDB
+984080	Crepidostomum farionis		8040	Salvelinus namaycush (Lake trout) (Salmo namaycush)					IWDB

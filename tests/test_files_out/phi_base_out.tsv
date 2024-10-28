@@ -1,0 +1,9 @@
+sourceTaxId	sourceName	sourceUid	targetTaxId	targetName	targetUid	interactionType	ontology	reference	database
+318829	Pyricularia oryzae (Rice blast fungus) (Magnaporthe oryzae)	P52751	4530	Oryza sativa (Rice)		pathogenHost		10.1105/tpc.5.11.1575|8312740	PHI-base
+5017	Cochliobolus carbonum (Maize leaf spot fungus) (Bipolaris zeicola)	P26215	4577	Zea mays (Maize)		pathogenHost		10.1105/tpc.2.12.1191|2152162	PHI-base
+5017	Cochliobolus carbonum (Maize leaf spot fungus) (Bipolaris zeicola)	Q01886	4577	Zea mays (Maize)		pathogenHost		11607305|no data found	PHI-base
+5207	Cryptococcus neoformans (Filobasidiella neoformans)	P0C017	6239	Caenorhabditis elegans		pathogenHost		10.1073/pnas.232568599|12438649	PHI-base
+5207	Cryptococcus neoformans (Filobasidiella neoformans)	P0C017	9986	Oryctolagus cuniculus (Rabbit)		pathogenHost		10.1073/pnas.232568599|12438649	PHI-base
+5482	Candida tropicalis (Yeast)	Q00663	10090	Mus musculus (Mouse)		pathogenHost		7983570|no data found	PHI-base
+5499	Passalora fulva (Tomato leaf mold) (Cladosporium fulvum)	P22287	4081	Solanum lycopersicum (Tomato) (Lycopersicon esculentum)		pathogenHost		1799694|no data found	PHI-base
+5499	Passalora fulva (Tomato leaf mold) (Cladosporium fulvum)	Q00363	4081	Solanum lycopersicum (Tomato) (Lycopersicon esculentum)		pathogenHost		10.1038/367384a0|8114941	PHI-base

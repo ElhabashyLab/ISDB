@@ -1,5 +1,11 @@
 """
-Package for Uniprot taxonomical services
+Package for UniProt API services
+
+General Remark:
+- Functions including the word 'fast' safe each quired name into a dictionary in the
+cache to limit send requests.
+- If returned answers from the UniProt services are not unique, the returned value
+will be None even if there are multiple feasible solutions.
 
 Author: Michael
 """
@@ -18,6 +24,15 @@ class uniprot_request:
 
     @staticmethod
     def _get_name(tax: dict) -> str:
+        """Creates full taxonomical name using all annotated naming fields:
+        Scientific name, Common name, Synonymes (see UniProt Taxonomy);
+
+        Args:
+            tax (dict): Dictionary holding all names
+
+        Returns:
+            str: Full taxonomical name
+        """
         if "commonName" in tax.keys() and "synonym" in tax.keys():
             return f"{tax['scientificName']} ({tax['commonName']}) ({tax['synonym']})"
         elif "commonName" in tax.keys():
@@ -27,7 +42,15 @@ class uniprot_request:
         else:
             return f"{tax['scientificName']}"
 
-    def uid_request(self, uid: str) -> str:
+    def uid_request(self, uid: str) -> dict:
+        """Querries information about a single UniProt protein ID
+
+        Args:
+            uid (str): UniProt protein ID string
+
+        Returns:
+            dict: Dictionary of xml response holding all information
+        """
         requestURL = "https://www.ebi.ac.uk/proteins/api/proteins?offset=0&size=100&"
         requestURL += "keywords=" + uid
 
@@ -39,7 +62,16 @@ class uniprot_request:
         tax = xmltodict.parse(r.text)
         return tax
 
-    def fast_tax_request(self, id) -> str:
+    def fast_tax_request(self, id: int) -> str:
+        """Returns full taxonomical name for a given taxonomical ID
+        with reusing already quired IDs
+
+        Args:
+            id (int): NCBI taxonomical ID
+
+        Returns:
+            str: Full taxonomical name
+        """
         if id in self.names.keys():
             return self.names[id]
         else:
@@ -48,6 +80,14 @@ class uniprot_request:
             return value
 
     def tax_request(self, id: int) -> str:
+        """Returns full taxonomical name for a given taxonomical ID
+
+        Args:
+            id (int): NCBI taxonomical ID
+
+        Returns:
+            str: Full taxonomical name
+        """
         requestURL = "https://www.ebi.ac.uk/proteins/api/taxonomy/id/" + str(id)
 
         try:
@@ -63,7 +103,16 @@ class uniprot_request:
             return None
 
     @dispatch(dict)
-    def fast_tax_name_request(self, ids: dict) -> str:
+    def fast_tax_name_request(self, ids: dict) -> tuple:
+        """Returns for dictionary with Keys 'Host Name', 'Host Common Name'
+        a tuple of (Taxon ID, Full scientific name) with reusing already quired IDs
+
+        Args:
+            ids (dict): Dictionary with Keys 'Host Name', 'Host Common Name'
+
+        Returns:
+            dict: (Taxon ID, Full scientific name)
+        """
         id = ids["Host Name"]
         if id in self.ids.keys():
             return self.ids[id]
@@ -74,6 +123,16 @@ class uniprot_request:
 
     @dispatch(dict)
     def tax_name_request(self, names: dict) -> tuple:
+        """Returns for dictionary with Keys 'Host Name', 'Host Common Name'
+        a tuple of (Taxon ID, Full scientific name)
+
+        Args:
+            ids (dict): Dictionary with Keys 'Host Name', 'Host Common Name'
+
+        Returns:
+            dict: (Taxon ID, Full scientific name)
+        """
+
         def send(name: str, fieldname: str = "SCIENTIFICNAME"):
             requestURL = "https://www.ebi.ac.uk/proteins/api/taxonomy/name/"
             requestURL += name.strip().replace(" ", "%20")
@@ -110,7 +169,16 @@ class uniprot_request:
         return name, id
 
     @dispatch(str)
-    def fast_tax_name_request(self, id: str) -> str:
+    def fast_tax_name_request(self, id: str) -> dict:
+        """Returns for incomplete or common names of a species a
+        a tuple of (Taxon ID, Full scientific name) with reusing already quired IDs
+
+        Args:
+            id (str): Incomplete name or common name of a species
+
+        Returns:
+            dict: (Taxon ID, Full scientific name)
+        """
         if id in self.ids.keys():
             return self.ids[id]
         else:
@@ -120,6 +188,16 @@ class uniprot_request:
 
     @dispatch(str)
     def tax_name_request(self, name: str) -> tuple:
+        """Returns for incomplete or common names of a species a
+        a tuple of (Taxon ID, Full scientific name)
+
+        Args:
+            id (str): Incomplete name or common name of a species
+
+        Returns:
+            dict: (Taxon ID, Full scientific name)
+        """
+
         def send(name: str, fieldname: str = "SCIENTIFICNAME"):
             requestURL = "https://www.ebi.ac.uk/proteins/api/taxonomy/name/"
             requestURL += name.strip().replace(" ", "%20")
@@ -151,7 +229,16 @@ class uniprot_request:
         id = tax["taxonomyId"]
         return name, id
 
-    def fast_proteome_request(self, id) -> str:
+    def fast_proteome_request(self, id: int) -> str:
+        """Returns the proteome ID of a given Taxon ID
+        with reusing quired IDs
+
+        Args:
+            id (int): Taxon ID
+
+        Returns:
+            str: Proteome ID
+        """
         if id in self.proteomes.keys():
             return self.proteomes[id]
         else:
@@ -160,6 +247,14 @@ class uniprot_request:
             return value
 
     def proteome_request(self, id: int) -> str:
+        """Returns the proteome ID of a given Taxon ID
+
+        Args:
+            id (int): Taxon ID
+
+        Returns:
+            str: Proteome ID
+        """
         requestURL = (
             "https://www.ebi.ac.uk/proteins/api/proteomes?offset=0&taxid=" + str(id)
         )
@@ -183,6 +278,4 @@ class uniprot_request:
             # else highest scoring
             return proteomes["proteome"][0]["@upid"]
         except Exception as e:
-            # print(e, id)
-            # print(xmltodict.parse(r.text))
-            return
+            return None

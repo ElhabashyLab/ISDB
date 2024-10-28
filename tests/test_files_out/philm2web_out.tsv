@@ -1,0 +1,4 @@
+sourceTaxId	sourceName	sourceUid	targetTaxId	targetName	targetUid	interactionType	ontology	reference	database
+9606	Homo sapiens (Human)		10298	Human herpesvirus 1 (HHV-1) (Human herpes simplex virus 1)		bound		PMID:14506283	PHILM2Web
+9606	Homo sapiens (Human)		10381	Saimiriine herpesvirus 2 (SaHV-2) (Herpesvirus saimiri)		mediated		PMID:17005671	PHILM2Web
+9606	Homo sapiens (Human)		11103	Hepacivirus hominis		interacts		PMID:15113910	PHILM2Web

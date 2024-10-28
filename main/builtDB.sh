@@ -14,7 +14,7 @@ manualDatabases=false
 
 export current_dir=$(pwd)
 
-if manualDatabases; then
+if $manualDatabases; then
     ## Bat Eco-Interactions
     # no static link -> https://www.batbase.org/explore
     mv $tempory_directory/manualDownload/BatEco-InteractionRecords.csv $tempory_directory

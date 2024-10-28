@@ -1,0 +1,8 @@
+sourceTaxId	targetTaxId	sourceUid	targetUid	reference	interactionType	ontology	sourceName	targetName
+10585	9606	P17386	P04637	mint:MINT-5220747|pubmed:8207801	direct interaction	psi-mi:MI:0407	Human papillomavirus 31	Homo sapiens (Human)
+333760	9031	P03126	P49024	mint:MINT-5221904|pubmed:9467941	direct interaction|physical association	psi-mi:MI:0407|psi-mi:MI:0915	Human papillomavirus type 16	Gallus gallus (Chicken)
+333760	9606	P03126	Q05086	mint:MINT-5221904|pubmed:9467941	physical association	psi-mi:MI:0915	Human papillomavirus type 16	Homo sapiens (Human)
+337052	9031	P06931	P49024	mint:MINT-5221904|pubmed:9467941	direct interaction	psi-mi:MI:0407	Bovine papillomavirus type 1	Gallus gallus (Chicken)
+337052	9606	P06931	Q05086	mint:MINT-5221904|pubmed:9467941	physical association	psi-mi:MI:0915	Bovine papillomavirus type 1	Homo sapiens (Human)
+9031	337052	P49024	P06931	mint:MINT-5221904|pubmed:9467941	direct interaction|physical association	psi-mi:MI:0407|psi-mi:MI:0915	Gallus gallus (Chicken)	Bovine papillomavirus type 1
+9606	337052	Q05086	P06933	mint:MINT-5221904|pubmed:9467941	physical association	psi-mi:MI:0915	Homo sapiens (Human)	Bovine papillomavirus type 1

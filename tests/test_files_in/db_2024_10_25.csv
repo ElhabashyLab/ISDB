@@ -1,0 +1,234 @@
+SerialNumber,TaxIdA,TaxIdB,UidA,UidB,ScientificNameA,ScientificNameB,interactionType,ontology,reference,database
+1,1000288,9615,,,Influenza A virus (A/canine/Zhejiang/1/2010(H3N2)),Canis lupus familiaris (Dog) (Canis familiaris),,,23107656,BVBRC
+2,1000289,9606,,,Influenza A virus (A/Korea/NAP-1/2009(H1N1)),Homo sapiens (Human),,,,BVBRC
+3,100053,9365,,,Leptospira alexanderi,Erinaceus europaeus (Western European hedgehog),,,,BVBRC
+4,100053,9606,,,Leptospira alexanderi,Homo sapiens (Human),,,Representative,BVBRC
+5,100053,9913,,,Leptospira alexanderi,Bos taurus (Bovine),,,,BVBRC
+6,1000561,9606,,,Pseudomonas aeruginosa AES-1R,Homo sapiens (Human),,,,BVBRC
+7,10036,83333,P04273,P0A6F5,Mesocricetus auratus (Golden hamster),Escherichia coli (strain K12),physical interaction,MI:0218,pubmed:8676499|pubmed:DIP-98S,DIP
+8,100448,134920,,,Proteocephalus filicollis,Pungitius pungitius (ninespine stickleback),,,,IWDB
+9,100448,43956,,,Proteocephalus filicollis,Catostomus catostomus (longnose sucker),,,,IWDB
+10,100448,59861,,,Proteocephalus filicollis,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+11,100448,69944,,,Proteocephalus filicollis,Lota lota (Burbot) (Gadus lota),,,,IWDB
+12,100448,8010,,,Proteocephalus filicollis,Esox lucius (Northern pike),,,,IWDB
+13,100448,8019,,,Proteocephalus filicollis,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+14,100448,8040,,,Proteocephalus filicollis,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+15,1005933,1975053,,,uncultured Methanoregula sp.,Urostomides striatus,,,,BVBRC
+16,1005933,35101,,,uncultured Methanoregula sp.,Cyclidium porcatum,,,,BVBRC
+17,1005933,5965,,,uncultured Methanoregula sp.,Heterometopus palaeformis,,,,BVBRC
+18,10090,10036,P03995,P04273,Mus musculus (Mouse),Mesocricetus auratus (Golden hamster),physical interaction,MI:0218,pubmed:1974464|pubmed:DIP-311S,DIP
+19,10090,10090,P10417,P04925,Mus musculus (Mouse),Mus musculus (Mouse),physical interaction,MI:0218,pubmed:8738158|pubmed:DIP-243S,DIP
+20,10090,10090,P46414,DIP-559N,Mus musculus (Mouse),Mus musculus (Mouse),physical interaction,MI:0218,pubmed:9067571|pubmed:DIP-5S,DIP
+21,10090,10116,P29387,P26769,Mus musculus (Mouse),Rattus norvegicus (Rat),physical interaction,MI:0218,pubmed:7761832|pubmed:DIP-43S,DIP
+22,10090,10116,Q60760,P09759,Mus musculus (Mouse),Rattus norvegicus (Rat),physical interaction,MI:0218,pubmed:8798570|pubmed:DIP-400S,DIP
+23,10090,272624,uniprotkb:P22518,uniprotkb:Q5ZRQ0,Mus musculus (Mouse),Legionella pneumophila subsp. pneumophila (strain Philadelphia 1 / ATCC 33152 / DSM 7513),physical association,psi-mi:MI:0915,PMID:pubmed:18284575|imex:IM-18184,HPIDB
+24,10090,5476,P46414,P43063,Mus musculus (Mouse),Candida albicans (Yeast),physical interaction,MI:0218,pubmed:9067571|pubmed:DIP-5S,DIP
+25,10090,9606,P17095,P17947,Mus musculus (Mouse),Homo sapiens (Human),physical interaction,MI:0218,pubmed:7594592|pubmed:DIP-403S,DIP
+26,10090,9606,P39429,P19438,Mus musculus (Mouse),Homo sapiens (Human),physical interaction,MI:0218,pubmed:9129204|pubmed:DIP-72S,DIP
+27,10090,9606,P70380,P01579,Mus musculus (Mouse),Homo sapiens (Human),physical interaction,MI:0218,pubmed:8999548|pubmed:DIP-452S,DIP
+28,10090,9606,P70380,P29466,Mus musculus (Mouse),Homo sapiens (Human),physical interaction,MI:0218,pubmed:8999548|pubmed:DIP-452S,DIP
+29,10090,9606,Q62311,P21675,Mus musculus (Mouse),Homo sapiens (Human),physical interaction,MI:0218,pubmed:7667268|pubmed:DIP-231S,DIP
+30,10116,10090,P09759,Q60631,Rattus norvegicus (Rat),Mus musculus (Mouse),physical interaction,MI:0218,pubmed:8798570|pubmed:DIP-400S,DIP
+31,10116,10116,Q6P7B6,P09759,Rattus norvegicus (Rat),Rattus norvegicus (Rat),physical interaction,MI:0218,pubmed:8798570|pubmed:DIP-400S,DIP
+32,10116,9606,Q62622,P06730,Rattus norvegicus (Rat),Homo sapiens (Human),physical interaction,MI:0218,pubmed:7939721|pubmed:DIP-407S,DIP
+33,10116,9606,Q63755,P06400,Rattus norvegicus (Rat),Homo sapiens (Human),physical interaction,MI:0218,pubmed:7538672|pubmed:DIP-191S,DIP
+34,1035942,40674,,,Corallus grenadensis,Mammalia (mammals),eats,http://purl.obolibrary.org/obo/RO_0002470,,GloBI
+35,1035942,8523,,,Corallus grenadensis,Lacerta,eats,http://purl.obolibrary.org/obo/RO_0002470,,GloBI
+36,10585,9606,P17386,P04637,Human papillomavirus 31,Homo sapiens (Human),direct interaction,psi-mi:MI:0407,mint:MINT-5220747|pubmed:8207801,mint
+37,10710,83333,P03702,P13458,Lambdavirus lambda,Escherichia coli (strain K12),genetic interference,MI:0254,pubmed:2531105|pubmed:DIP-240S,DIP
+38,108243,134920,,,Hunterella nodulosa,Pungitius pungitius (ninespine stickleback),,,,IWDB
+39,108243,43956,,,Hunterella nodulosa,Catostomus catostomus (longnose sucker),,,,IWDB
+40,108243,59861,,,Hunterella nodulosa,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+41,108243,69944,,,Hunterella nodulosa,Lota lota (Burbot) (Gadus lota),,,,IWDB
+42,108243,8010,,,Hunterella nodulosa,Esox lucius (Northern pike),,,,IWDB
+43,108243,8040,,,Hunterella nodulosa,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+44,11053,9606,Q91NH1,Q96EQ8,dengue virus type 1,Homo sapiens (Human),physical association,"psi-mi:""MI:0915""",pubmed:22014111,VirHostNet
+45,11084,9606,Q88489,Q96EQ8,Tick-borne encephalitis virus,Homo sapiens (Human),physical association,"psi-mi:""MI:0915""",pubmed:22014111,VirHostNet
+46,11137,9606,P19739,Q96ER3,Human coronavirus 229E (HCoV-229E),Homo sapiens (Human),physical association,"psi-mi:""MI:0915""",pubmed:33845483,VirHostNet
+47,116847,43956,,,Discocotyle sagittata,Catostomus catostomus (longnose sucker),,,,IWDB
+48,116847,59861,,,Discocotyle sagittata,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+49,116847,69944,,,Discocotyle sagittata,Lota lota (Burbot) (Gadus lota),,,,IWDB
+50,116847,8010,,,Discocotyle sagittata,Esox lucius (Northern pike),,,,IWDB
+51,116847,8019,,,Discocotyle sagittata,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+52,116847,8040,,,Discocotyle sagittata,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+53,125895,134920,,,Eubothrium salvelini,Pungitius pungitius (ninespine stickleback),,,,IWDB
+54,125895,43956,,,Eubothrium salvelini,Catostomus catostomus (longnose sucker),,,,IWDB
+55,125895,8010,,,Eubothrium salvelini,Esox lucius (Northern pike),,,,IWDB
+56,125895,8019,,,Eubothrium salvelini,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+57,125895,8040,,,Eubothrium salvelini,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+58,1658469,134920,,,Proteocephalus pinguis,Pungitius pungitius (ninespine stickleback),,,,IWDB
+59,1658469,43956,,,Proteocephalus pinguis,Catostomus catostomus (longnose sucker),,,,IWDB
+60,1658469,59861,,,Proteocephalus pinguis,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+61,1658469,69944,,,Proteocephalus pinguis,Lota lota (Burbot) (Gadus lota),,,,IWDB
+62,1658469,8019,,,Proteocephalus pinguis,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+63,1658469,8040,,,Proteocephalus pinguis,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+64,183647,134920,,,Diplostomum spathaceum,Pungitius pungitius (ninespine stickleback),,,,IWDB
+65,183647,43956,,,Diplostomum spathaceum,Catostomus catostomus (longnose sucker),,,,IWDB
+66,183647,59861,,,Diplostomum spathaceum,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+67,183647,69944,,,Diplostomum spathaceum,Lota lota (Burbot) (Gadus lota),,,,IWDB
+68,183647,8010,,,Diplostomum spathaceum,Esox lucius (Northern pike),,,,IWDB
+69,183647,8019,,,Diplostomum spathaceum,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+70,183647,8040,,,Diplostomum spathaceum,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+71,194858,134920,,,Eubothrium rugosum,Pungitius pungitius (ninespine stickleback),,,,IWDB
+72,194858,43956,,,Eubothrium rugosum,Catostomus catostomus (longnose sucker),,,,IWDB
+73,194858,59861,,,Eubothrium rugosum,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+74,194858,69944,,,Eubothrium rugosum,Lota lota (Burbot) (Gadus lota),,,,IWDB
+75,194858,8010,,,Eubothrium rugosum,Esox lucius (Northern pike),,,,IWDB
+76,194858,8019,,,Eubothrium rugosum,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+77,194858,8040,,,Eubothrium rugosum,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+78,2017972,116115,,,Abbreviata,Ctenophorus nuchalis (Central netted dragon),Associate:Consumer:Parasite,,http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01,Siad
+79,2017972,239752,,,Abbreviata,Acanthophis pyrrhus,Associate:Consumer:Parasite,,http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01,Siad
+80,2017972,283338,,,Abbreviata,Liasis olivaceus (Olive python) (Morelia olivacea),Associate:Consumer:Parasite,,http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01,Siad
+81,2017972,340908,,,Abbreviata,Pseudonaja affinis,Associate:Consumer:Parasite,,http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01,Siad
+82,2017972,340912,,,Abbreviata,Pseudonaja modesta,Associate:Consumer:Parasite,,http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01,Siad
+83,2017972,52198,,,Abbreviata,Moloch horridus (Thorny devil),Associate:Consumer:Parasite,,http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01,Siad
+84,2017972,529692,,,Abbreviata,Echiopsis curta,Associate:Consumer:Parasite,,http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01,Siad
+85,2017972,8605,,,Abbreviata,Acanthophis antarcticus (Common death adder),Associate:Consumer:Parasite,,http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01,Siad
+86,2017972,8670,,,Abbreviata,Pseudechis australis (Mulga snake) (King brown snake),Associate:Consumer:Parasite,,http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01,Siad
+87,214005,43956,,,Cystidicola farionis,Catostomus catostomus (longnose sucker),,,,IWDB
+88,214005,69944,,,Cystidicola farionis,Lota lota (Burbot) (Gadus lota),,,,IWDB
+89,214005,8010,,,Cystidicola farionis,Esox lucius (Northern pike),,,,IWDB
+90,214005,8019,,,Cystidicola farionis,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+91,2697049,9606,P0DTC5,Q96ER3,Severe acute respiratory syndrome coronavirus 2 (2019-nCoV) (SARS-CoV-2),Homo sapiens (Human),physical association,"psi-mi:""MI:0915""",pubmed:32353859|pubmed:33060197,VirHostNet
+92,2697049,9606,P0DTD1,Q96EP5,Severe acute respiratory syndrome coronavirus 2 (2019-nCoV) (SARS-CoV-2),Homo sapiens (Human),physical association,"psi-mi:""MI:0915""",pubmed:34709727,VirHostNet
+93,290552,134920,,,Raphidascaris acus,Pungitius pungitius (ninespine stickleback),,,,IWDB
+94,290552,43956,,,Raphidascaris acus,Catostomus catostomus (longnose sucker),,,,IWDB
+95,290552,59861,,,Raphidascaris acus,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+96,290552,69944,,,Raphidascaris acus,Lota lota (Burbot) (Gadus lota),,,,IWDB
+97,290552,8010,,,Raphidascaris acus,Esox lucius (Northern pike),,,,IWDB
+98,290552,8019,,,Raphidascaris acus,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+99,290552,8040,,,Raphidascaris acus,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+100,295027,9606,F5HC33,Q96ER3,Human cytomegalovirus (strain Merlin) (HHV-5) (Human herpesvirus 5),Homo sapiens (Human),physical association,"psi-mi:""MI:0915""",pubmed:31873071,VirHostNet
+101,3158377,228183,,,abaca bunchy top virus,Musa textilis (Manila hemp) (Abaca),,,PMID:,EID2
+102,317556,43956,,,Pomphorhynchus bulbocolli,Catostomus catostomus (longnose sucker),,,,IWDB
+103,317556,59861,,,Pomphorhynchus bulbocolli,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+104,317556,69944,,,Pomphorhynchus bulbocolli,Lota lota (Burbot) (Gadus lota),,,,IWDB
+105,317556,8010,,,Pomphorhynchus bulbocolli,Esox lucius (Northern pike),,,,IWDB
+106,317556,8019,,,Pomphorhynchus bulbocolli,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+107,317556,8040,,,Pomphorhynchus bulbocolli,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+108,318829,4530,P52751,,Pyricularia oryzae (Rice blast fungus) (Magnaporthe oryzae),Oryza sativa (Rice),pathogenHost,,10.1105/tpc.5.11.1575|8312740,PHI-base
+109,333760,9031,P03126,P49024,Human papillomavirus type 16,Gallus gallus (Chicken),direct interaction|physical association,psi-mi:MI:0407|psi-mi:MI:0915,mint:MINT-5221904|pubmed:9467941,mint
+110,333760,9606,P03126,Q05086,Human papillomavirus type 16,Homo sapiens (Human),physical association,psi-mi:MI:0915,mint:MINT-5221904|pubmed:9467941,mint
+111,337052,9031,P06931,P49024,Bovine papillomavirus type 1,Gallus gallus (Chicken),direct interaction,psi-mi:MI:0407,mint:MINT-5221904|pubmed:9467941,mint
+112,337052,9606,P06931,Q05086,Bovine papillomavirus type 1,Homo sapiens (Human),physical association,psi-mi:MI:0915,mint:MINT-5221904|pubmed:9467941,mint
+113,381518,9606,P05780,Q96ER3,Influenza A virus (strain A/Wilson-Smith/1933 H1N1) (Influenza A virus (strain A/WS/1933 H1N1)),Homo sapiens (Human),physical association,"psi-mi:""MI:0915""",pubmed:25464832,VirHostNet
+114,381518,9606,Q1K9H2,Q96EP5,Influenza A virus (strain A/Wilson-Smith/1933 H1N1) (Influenza A virus (strain A/WS/1933 H1N1)),Homo sapiens (Human),physical association,"psi-mi:""MI:0915""",pubmed:26651948,VirHostNet
+115,381518,9606,Q1K9H5,Q96EQ0,Influenza A virus (strain A/Wilson-Smith/1933 H1N1) (Influenza A virus (strain A/WS/1933 H1N1)),Homo sapiens (Human),physical association,"psi-mi:""MI:0915""",pubmed:26651948,VirHostNet
+116,406072,134920,,,Triaenophorus crassus,Pungitius pungitius (ninespine stickleback),,,,IWDB
+117,406072,43956,,,Triaenophorus crassus,Catostomus catostomus (longnose sucker),,,,IWDB
+118,406072,59861,,,Triaenophorus crassus,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+119,406072,69944,,,Triaenophorus crassus,Lota lota (Burbot) (Gadus lota),,,,IWDB
+120,406072,8010,,,Triaenophorus crassus,Esox lucius (Northern pike),,,,IWDB
+121,406072,8019,,,Triaenophorus crassus,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+122,406072,8040,,,Triaenophorus crassus,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+123,46125,9606,,,Abiotrophia defectiva (Streptococcus defectivus),Homo sapiens (Human),,,PMID:10405400;11095068;21503231,EID2
+124,4932,4932,P06782,P38717,Saccharomyces cerevisiae (Baker's yeast),Saccharomyces cerevisiae (Baker's yeast),physical interaction,MI:0218,pubmed:8127709|pubmed:DIP-255S,DIP
+125,4932,4932,P07269,P22035,Saccharomyces cerevisiae (Baker's yeast),Saccharomyces cerevisiae (Baker's yeast),physical interaction,MI:0218,pubmed:10931295|pubmed:11095676|pubmed:11689683|pubmed:DIP-1790S|pubmed:DIP-1803S|pubmed:DIP-1858S,DIP
+126,4932,4932,P07278,P06244,Saccharomyces cerevisiae (Baker's yeast),Saccharomyces cerevisiae (Baker's yeast),physical association,MI:0915,pubmed:10688190|pubmed:11283351|pubmed:11805837|pubmed:16924114|pubmed:8386630|pubmed:DIP-1102S|pubmed:DIP-17259S|pubmed:DIP-1767S|pubmed:DIP-284S|pubmed:DIP-513S,DIP
+127,4932,4932,P07342,P25605,Saccharomyces cerevisiae (Baker's yeast),Saccharomyces cerevisiae (Baker's yeast),physical interaction,MI:0218,pubmed:10213630|pubmed:11463345|pubmed:DIP-2091S|pubmed:DIP-2092S,DIP
+128,4932,4932,P09798,P09798,Saccharomyces cerevisiae (Baker's yeast),Saccharomyces cerevisiae (Baker's yeast),physical interaction,MI:0218,pubmed:7925276|pubmed:DIP-246S,DIP
+129,4932,4932,P38930,P15790,Saccharomyces cerevisiae (Baker's yeast),Saccharomyces cerevisiae (Baker's yeast),physical association,MI:0218,pubmed:10688190|pubmed:11805826|pubmed:11805837|pubmed:7768894|pubmed:DIP-1767S|pubmed:DIP-1768S|pubmed:DIP-339S|pubmed:DIP-513S,DIP
+130,4932,7227,P23255,P20227,Saccharomyces cerevisiae (Baker's yeast),Drosophila melanogaster (Fruit fly),physical interaction,MI:0218,pubmed:8178153|pubmed:DIP-31S,DIP
+131,4932,9606,P32561,P25490,Saccharomyces cerevisiae (Baker's yeast),Homo sapiens (Human),physical interaction,MI:0218,pubmed:8917507|pubmed:DIP-447S,DIP
+132,4932,9606,P39958,P20338,Saccharomyces cerevisiae (Baker's yeast),Homo sapiens (Human),physical interaction,MI:0218,pubmed:9184135|pubmed:DIP-381S,DIP
+133,5017,4577,P26215,,Cochliobolus carbonum (Maize leaf spot fungus) (Bipolaris zeicola),Zea mays (Maize),pathogenHost,,10.1105/tpc.2.12.1191|2152162,PHI-base
+134,5017,4577,Q01886,,Cochliobolus carbonum (Maize leaf spot fungus) (Bipolaris zeicola),Zea mays (Maize),pathogenHost,,11607305|no data found,PHI-base
+135,5207,6239,P0C017,,Cryptococcus neoformans (Filobasidiella neoformans),Caenorhabditis elegans,pathogenHost,,10.1073/pnas.232568599|12438649,PHI-base
+136,5207,9986,P0C017,,Cryptococcus neoformans (Filobasidiella neoformans),Oryctolagus cuniculus (Rabbit),pathogenHost,,10.1073/pnas.232568599|12438649,PHI-base
+137,53704,134920,,,Proteocephalus exiguus,Pungitius pungitius (ninespine stickleback),,,,IWDB
+138,53704,43956,,,Proteocephalus exiguus,Catostomus catostomus (longnose sucker),,,,IWDB
+139,53704,59861,,,Proteocephalus exiguus,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+140,53704,69944,,,Proteocephalus exiguus,Lota lota (Burbot) (Gadus lota),,,,IWDB
+141,53704,8019,,,Proteocephalus exiguus,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+142,53704,8040,,,Proteocephalus exiguus,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+143,5482,10090,Q00663,,Candida tropicalis (Yeast),Mus musculus (Mouse),pathogenHost,,7983570|no data found,PHI-base
+144,5499,4081,P22287,,Passalora fulva (Tomato leaf mold) (Cladosporium fulvum),Solanum lycopersicum (Tomato) (Lycopersicon esculentum),pathogenHost,,1799694|no data found,PHI-base
+145,5499,4081,Q00363,,Passalora fulva (Tomato leaf mold) (Cladosporium fulvum),Solanum lycopersicum (Tomato) (Lycopersicon esculentum),pathogenHost,,10.1038/367384a0|8114941,PHI-base
+146,56557,134920,,,Triaenophorus nodulosus,Pungitius pungitius (ninespine stickleback),,,,IWDB
+147,56557,43956,,,Triaenophorus nodulosus,Catostomus catostomus (longnose sucker),,,,IWDB
+148,56557,69944,,,Triaenophorus nodulosus,Lota lota (Burbot) (Gadus lota),,,,IWDB
+149,56557,8010,,,Triaenophorus nodulosus,Esox lucius (Northern pike),,,,IWDB
+150,6239,6239,DIP-24569N,Q23312,Caenorhabditis elegans,Caenorhabditis elegans,physical interaction,MI:0218,pubmed:14704431|pubmed:DIP-3921S,DIP
+151,6239,6239,DIP-26496N,DIP-24569N,Caenorhabditis elegans,Caenorhabditis elegans,physical interaction,MI:0218,pubmed:14704431|pubmed:DIP-3921S,DIP
+152,6239,6239,O01497,DIP-24569N,Caenorhabditis elegans,Caenorhabditis elegans,physical interaction,MI:0218,pubmed:14704431|pubmed:DIP-3921S,DIP
+153,6239,6239,O18657,P41941,Caenorhabditis elegans,Caenorhabditis elegans,physical interaction,MI:0218,pubmed:14704431|pubmed:DIP-3921S,DIP
+154,6239,6239,P24348,Q19019,Caenorhabditis elegans,Caenorhabditis elegans,physical interaction,MI:0218,pubmed:7652556|pubmed:DIP-453S,DIP
+155,6239,6239,P41958,P30429,Caenorhabditis elegans,Caenorhabditis elegans,physical association,MI:0915,pubmed:9027312|pubmed:DIP-17986S,DIP
+156,6239,6239,P42573,P30429,Caenorhabditis elegans,Caenorhabditis elegans,physical association,MI:0915,pubmed:16938876|pubmed:9027312|pubmed:DIP-17266S|pubmed:DIP-17986S,DIP
+157,6239,6239,Q17446,Q95QC2,Caenorhabditis elegans,Caenorhabditis elegans,physical interaction,MI:0218,pubmed:14704431|pubmed:DIP-3921S,DIP
+158,6239,6239,Q22886,Q21746,Caenorhabditis elegans,Caenorhabditis elegans,physical interaction,MI:0218,pubmed:14704431|pubmed:DIP-3921S,DIP
+159,644147,29668,,,Abacarus acutatus,Calamagrostis epigeios (Wood small-reed grass) (Arundo epigeios),,,PMID:,EID2
+160,644148,52152,,,Abacarus hystrix,Elymus repens (Quackgrass) (Agropyron repens),,,PMID:,EID2
+161,704156,4522,,,Abacarus lolii,Lolium perenne (Perennial ryegrass),,,PMID:,EID2
+162,70589,8049,,,Abothrium gadi,Gadus morhua (Atlantic cod),,,PMID:,EID2
+163,70624,134920,,,Cyathocephalus truncatus,Pungitius pungitius (ninespine stickleback),,,,IWDB
+164,70624,43956,,,Cyathocephalus truncatus,Catostomus catostomus (longnose sucker),,,,IWDB
+165,70624,69944,,,Cyathocephalus truncatus,Lota lota (Burbot) (Gadus lota),,,,IWDB
+166,70624,8010,,,Cyathocephalus truncatus,Esox lucius (Northern pike),,,,IWDB
+167,70624,8019,,,Cyathocephalus truncatus,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+168,70624,8040,,,Cyathocephalus truncatus,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB
+169,7227,7227,P07713,P07713,Drosophila melanogaster (Fruit fly),Drosophila melanogaster (Fruit fly),physical interaction,MI:0218,pubmed:1692958|pubmed:DIP-321S,DIP
+170,7227,7227,P09775,Q01068,Drosophila melanogaster (Fruit fly),Drosophila melanogaster (Fruit fly),physical interaction,MI:0218,pubmed:9371806|pubmed:DIP-326S,DIP
+171,7227,7227,P10083,Q01070,Drosophila melanogaster (Fruit fly),Drosophila melanogaster (Fruit fly),physical interaction,MI:0218,pubmed:9371806|pubmed:DIP-326S,DIP
+172,7227,7227,P14003,P16371,Drosophila melanogaster (Fruit fly),Drosophila melanogaster (Fruit fly),direct interaction,MI:0218,pubmed:17898168|pubmed:19805071|pubmed:9371806|pubmed:DIP-12903S|pubmed:DIP-16862S|pubmed:DIP-326S,DIP
+173,7227,7227,P20227,P51123,Drosophila melanogaster (Fruit fly),Drosophila melanogaster (Fruit fly),physical association,MI:0218,pubmed:8170939|pubmed:8464492|pubmed:DIP-17395S|pubmed:DIP-347S|pubmed:DIP-414S|pubmed:rtd:8464492,DIP
+174,7227,7227,P20227,Q27272,Drosophila melanogaster (Fruit fly),Drosophila melanogaster (Fruit fly),physical interaction,MI:0218,pubmed:7545910|pubmed:DIP-412S,DIP
+175,7227,7227,Q01069,Q01070,Drosophila melanogaster (Fruit fly),Drosophila melanogaster (Fruit fly),physical interaction,MI:0218,pubmed:9371806|pubmed:DIP-326S,DIP
+176,7227,7227,Q27272,P49847,Drosophila melanogaster (Fruit fly),Drosophila melanogaster (Fruit fly),physical association,MI:0915,pubmed:16895980|pubmed:DIP-17231S,DIP
+177,83196,134920,,,Gyrodactylus sp.,Pungitius pungitius (ninespine stickleback),,,,IWDB
+178,83196,43956,,,Gyrodactylus sp.,Catostomus catostomus (longnose sucker),,,,IWDB
+179,83196,59861,,,Gyrodactylus sp.,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+180,83196,69944,,,Gyrodactylus sp.,Lota lota (Burbot) (Gadus lota),,,,IWDB
+181,83196,8010,,,Gyrodactylus sp.,Esox lucius (Northern pike),,,,IWDB
+182,83333,10710,P08394,P03702,Escherichia coli (strain K12),Lambdavirus lambda,genetic interference,MI:0254,pubmed:2966143|pubmed:DIP-331S,DIP
+183,83333,10754,P08394,P11191,Escherichia coli (strain K12),Salmonella phage P22 (Bacteriophage P22),genetic interference,MI:0254,pubmed:2966143|pubmed:DIP-331S,DIP
+184,83333,83333,P00968,P00907,Escherichia coli (strain K12),Escherichia coli (strain K12),direct interaction,MI:0407,pubmed:10089390|pubmed:10587438|pubmed:11551199|pubmed:11821039|pubmed:15690043|pubmed:9174345|pubmed:DIP-196S|pubmed:DIP-2037S|pubmed:DIP-2050S|pubmed:DIP-2051S|pubmed:DIP-4168S|pubmed:DIP-4305S,DIP
+185,83333,83333,P02928,P07622,Escherichia coli (strain K12),Escherichia coli (strain K12),genetic interference,MI:0254,pubmed:8411172|pubmed:DIP-177S,DIP
+186,83333,83333,P07001,P0AB67,Escherichia coli (strain K12),Escherichia coli (strain K12),direct interaction,MI:0407,pubmed:15511529|pubmed:2198073|pubmed:DIP-179S|pubmed:DIP-4094S,DIP
+187,83333,83333,P0A7H6,P15027,Escherichia coli (strain K12),Escherichia coli (strain K12),physical interaction,MI:0407,pubmed:7962001|pubmed:DIP-220S,DIP
+188,83333,83333,P0A8P6,P21891,Escherichia coli (strain K12),Escherichia coli (strain K12),direct interaction,MI:0218,pubmed:9220013|pubmed:DIP-390S,DIP
+189,8574,40674,,,Boa constrictor (Boa),Mammalia (mammals),eats,http://purl.obolibrary.org/obo/RO_0002470,,GloBI
+190,8574,8523,,,Boa constrictor (Boa),Lacerta,eats,http://purl.obolibrary.org/obo/RO_0002470,,GloBI
+191,9031,337052,P49024,P06931,Gallus gallus (Chicken),Bovine papillomavirus type 1,direct interaction|physical association,psi-mi:MI:0407|psi-mi:MI:0915,mint:MINT-5221904|pubmed:9467941,mint
+192,9397,130377,,,Chiroptera (bats),Piper aduncum,Seed Dispersal,,D. L.|Gorchov|et al. 1993. The role of seed dispersal in the natural regeneration of rain forest after strip-cutting in the Peruvian Amazon. Vegetatio 107/108: 393-349.,BatEco-Interactions
+193,9397,163100,,,Chiroptera (bats),Parmentiera cereifera,Visitation,,A. H. 1974. Coevolutionary patterns in Central American Bignoniaceae. Annals of the Missouri Botanical Garden 61 (3): 728-759.|Gentry,BatEco-Interactions
+194,9397,22986,,,Chiroptera (bats),Licania,Seed Dispersal,,Huber|J. 1910. Mattas e madeiras amazonicas. Boletim do Museu Paraense Para Emilio Goeldi de História Natural e Ethnographia 6: 91-225.,BatEco-Interactions
+195,9397,53873,,,Chiroptera (bats),Dipteryx odorata,Seed Dispersal,,Huber|J. 1910. Mattas e madeiras amazonicas. Boletim do Museu Paraense Para Emilio Goeldi de História Natural e Ethnographia 6: 91-225.,BatEco-Interactions
+196,9397,58848,,,Chiroptera (bats),Vantanea,Seed Dispersal,,Huber|J. 1910. Mattas e madeiras amazonicas. Boletim do Museu Paraense Para Emilio Goeldi de História Natural e Ethnographia 6: 91-225.,BatEco-Interactions
+197,9397,82156,,,Chiroptera (bats),Parinari,Seed Dispersal,,Huber|J. 1910. Mattas e madeiras amazonicas. Boletim do Museu Paraense Para Emilio Goeldi de História Natural e Ethnographia 6: 91-225.,BatEco-Interactions
+198,9606,10116,DIP-666N,P09759,Homo sapiens (Human),Rattus norvegicus (Rat),physical interaction,MI:0218,pubmed:8798570|pubmed:DIP-400S,DIP
+199,9606,10116,P01350,P35570,Homo sapiens (Human),Rattus norvegicus (Rat),physical interaction,MI:0218,pubmed:8824290|pubmed:DIP-237S,DIP
+200,9606,10116,P35609,P35439,Homo sapiens (Human),Rattus norvegicus (Rat),physical interaction,MI:0218,pubmed:9009191|pubmed:DIP-290S,DIP
+201,9606,10298,,,Homo sapiens (Human),Human herpesvirus 1 (HHV-1) (Human herpes simplex virus 1),bound,,PMID:14506283,PHILM2Web
+202,9606,10310,TF2B_HUMAN ,Q69113_HHV2 ,Homo sapiens (Human),Human herpesvirus 2 (HHV-2) (Human herpes simplex virus 2),,,PMID:7642611,PHISTO
+203,9606,10381,,,Homo sapiens (Human),Saimiriine herpesvirus 2 (SaHV-2) (Herpesvirus saimiri),mediated,,PMID:17005671,PHILM2Web
+204,9606,10559,BRD4_HUMAN ,VE2_BPV1 ,Homo sapiens (Human),Bovine papillomavirus type 1,,,PMID:15109495,PHISTO
+205,9606,10580,H10_HUMAN ,VE1_HPV11 ,Homo sapiens (Human),Human papillomavirus 11,,,PMID:9499053,PHISTO
+206,9606,11103,,,Homo sapiens (Human),Hepacivirus hominis,interacts,,PMID:15113910,PHILM2Web
+207,9606,1280,THRB_HUMAN ,Q846V4_STAAU ,Homo sapiens (Human),Staphylococcus aureus,,,PMID:16230339,PHISTO
+208,9606,1891767,RFA2_HUMAN ,LT_SV40 ,Homo sapiens (Human),Simian virus 40 (SV40),,,PMID:15793585,PHISTO
+209,9606,243243,uniprotkb:P60953,uniprotkb:A0A0H2ZTM2,Homo sapiens (Human),Mycobacterium avium (strain 104),physical association,psi-mi:MI:0915,PMID:pubmed:19060135|imex:IM-18257,HPIDB
+210,9606,243243,uniprotkb:P60953,uniprotkb:A0A0H3A1L5,Homo sapiens (Human),Mycobacterium avium (strain 104),physical association,psi-mi:MI:0915,PMID:pubmed:19060135|imex:IM-18257,HPIDB
+211,9606,243243,uniprotkb:P60953,uniprotkb:A0A0H3A2T3,Homo sapiens (Human),Mycobacterium avium (strain 104),physical association,psi-mi:MI:0915,PMID:pubmed:19060135|imex:IM-18257,HPIDB
+212,9606,272624,uniprotkb:P62820,uniprotkb:Q5ZWZ3,Homo sapiens (Human),Legionella pneumophila subsp. pneumophila (strain Philadelphia 1 / ATCC 33152 / DSM 7513),physical association,psi-mi:MI:0915,PMID:pubmed:22228731|imex:IM-18443,HPIDB
+213,9606,301452,uniprotkb:P08603,uniprotkb:P16946,Homo sapiens (Human),Streptococcus pyogenes serotype M49,physical association,psi-mi:MI:0915,PMID:pubmed:18627465|imex:IM-18214,HPIDB
+214,9606,333760,E2F1_HUMAN ,VE7_HPV16 ,Homo sapiens (Human),Human papillomavirus type 16,,,PMID:16061792,PHISTO
+215,9606,333760,RBL1_HUMAN ,VE7_HPV16 ,Homo sapiens (Human),Human papillomavirus type 16,,,PMID:16061792,PHISTO
+216,9606,333760,RB_HUMAN ,VE7_HPV16 ,Homo sapiens (Human),Human papillomavirus type 16,,,PMID:16061792,PHISTO
+217,9606,337052,Q05086,P06933,Homo sapiens (Human),Bovine papillomavirus type 1,physical association,psi-mi:MI:0915,mint:MINT-5221904|pubmed:9467941,mint
+218,9606,623,uniprotkb:P06400,uniprotkb:Q6XW12,Homo sapiens (Human),Shigella flexneri,physical association,psi-mi:MI:0915,PMID:pubmed:19017275|imex:IM-18243,HPIDB
+219,9606,623,uniprotkb:P06400,uniprotkb:Q8VSP9,Homo sapiens (Human),Shigella flexneri,direct interaction|physical association,psi-mi:MI:0407|psi-mi:MI:0915,PMID:pubmed:19017275|imex:IM-18243,HPIDB
+220,9606,632,OTUB1_HUMAN ,YPKA_YERPE ,Homo sapiens (Human),Yersinia pestis,,,PMID:16364312,PHISTO
+221,9606,9606,O43426,P49418,Homo sapiens (Human),Homo sapiens (Human),direct interaction,psi-mi:MI:0407,mint:MINT-5211933|pubmed:10542231,Intact
+222,9606,9606,P45983,Q00613,Homo sapiens (Human),Homo sapiens (Human),phosphorylation,,PMID:10747973,Signor
+223,9606,9606,P68400,P35568,Homo sapiens (Human),Homo sapiens (Human),phosphorylation,,PMID:8349691,Signor
+224,9606,9606,Q16566,P56524,Homo sapiens (Human),Homo sapiens (Human),phosphorylation,,PMID:11470791,Signor
+225,9606,9606,Q5TA89,Q92886,Homo sapiens (Human),Homo sapiens (Human),transcriptional regulation,,PMID:30030829,Signor
+226,9606,9606,Q969Q1,P55036,Homo sapiens (Human),Homo sapiens (Human),polyubiquitination,,PMID:19240029,Signor
+227,9606,9606,Q96GD4,Q9NQG5,Homo sapiens (Human),Homo sapiens (Human),phosphorylation,,PMID:30518842,Signor
+228,984080,43956,,,Crepidostomum farionis,Catostomus catostomus (longnose sucker),,,,IWDB
+229,984080,59861,,,Crepidostomum farionis,Coregonus clupeaformis (Lake whitefish),,,,IWDB
+230,984080,69944,,,Crepidostomum farionis,Lota lota (Burbot) (Gadus lota),,,,IWDB
+231,984080,8010,,,Crepidostomum farionis,Esox lucius (Northern pike),,,,IWDB
+232,984080,8019,,,Crepidostomum farionis,Oncorhynchus kisutch (Coho salmon) (Salmo kisutch),,,,IWDB
+233,984080,8040,,,Crepidostomum farionis,Salvelinus namaycush (Lake trout) (Salmo namaycush),,,,IWDB

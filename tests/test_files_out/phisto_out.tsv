@@ -1,0 +1,10 @@
+sourceTaxId	sourceName	sourceUid	targetTaxId	targetName	targetUid	interactionType	ontology	reference	database
+9606	Homo sapiens (Human)	OTUB1_HUMAN 	632	Yersinia pestis	YPKA_YERPE 			PMID:16364312	PHISTO
+9606	Homo sapiens (Human)	THRB_HUMAN 	1280	Staphylococcus aureus	Q846V4_STAAU 			PMID:16230339	PHISTO
+9606	Homo sapiens (Human)	TF2B_HUMAN 	10310	Human herpesvirus 2 (HHV-2) (Human herpes simplex virus 2)	Q69113_HHV2 			PMID:7642611	PHISTO
+9606	Homo sapiens (Human)	BRD4_HUMAN 	10559	Bovine papillomavirus type 1	VE2_BPV1 			PMID:15109495	PHISTO
+9606	Homo sapiens (Human)	H10_HUMAN 	10580	Human papillomavirus 11	VE1_HPV11 			PMID:9499053	PHISTO
+9606	Homo sapiens (Human)	E2F1_HUMAN 	333760	Human papillomavirus type 16	VE7_HPV16 			PMID:16061792	PHISTO
+9606	Homo sapiens (Human)	RBL1_HUMAN 	333760	Human papillomavirus type 16	VE7_HPV16 			PMID:16061792	PHISTO
+9606	Homo sapiens (Human)	RB_HUMAN 	333760	Human papillomavirus type 16	VE7_HPV16 			PMID:16061792	PHISTO
+9606	Homo sapiens (Human)	RFA2_HUMAN 	1891767	Simian virus 40 (SV40)	LT_SV40 			PMID:15793585	PHISTO

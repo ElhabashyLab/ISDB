@@ -1,0 +1,10 @@
+sourceTaxId	sourceName	sourceUid	targetTaxId	targetName	targetUid	interactionType	ontology	reference	database
+2017972	Abbreviata		116115	Ctenophorus nuchalis (Central netted dragon)		Associate:Consumer:Parasite		http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	Siad
+2017972	Abbreviata		239752	Acanthophis pyrrhus		Associate:Consumer:Parasite		http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	Siad
+2017972	Abbreviata		283338	Liasis olivaceus (Olive python) (Morelia olivacea)		Associate:Consumer:Parasite		http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	Siad
+2017972	Abbreviata		340908	Pseudonaja affinis		Associate:Consumer:Parasite		http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	Siad
+2017972	Abbreviata		340912	Pseudonaja modesta		Associate:Consumer:Parasite		http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	Siad
+2017972	Abbreviata		52198	Moloch horridus (Thorny devil)		Associate:Consumer:Parasite		http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	Siad
+2017972	Abbreviata		529692	Echiopsis curta		Associate:Consumer:Parasite		http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	Siad
+2017972	Abbreviata		8605	Acanthophis antarcticus (Common death adder)		Associate:Consumer:Parasite		http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	Siad
+2017972	Abbreviata		8670	Pseudechis australis (Mulga snake) (King brown snake)		Associate:Consumer:Parasite		http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	Siad

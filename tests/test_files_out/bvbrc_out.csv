@@ -1,0 +1,10 @@
+sourceTaxId,sourceName,sourceUid,targetTaxId,targetName,targetUid,interactionType,ontology,reference,database
+1000288,Influenza A virus (A/canine/Zhejiang/1/2010(H3N2)),,9615,Canis lupus familiaris (Dog) (Canis familiaris),,,,23107656|nan,BVBRC
+1000289,Influenza A virus (A/Korea/NAP-1/2009(H1N1)),,9606,Homo sapiens (Human),,,,nan,BVBRC
+100053,Leptospira alexanderi,,9365,Erinaceus europaeus (Western European hedgehog),,,,nan,BVBRC
+100053,Leptospira alexanderi,,9606,Homo sapiens (Human),,,,Representative|nan,BVBRC
+100053,Leptospira alexanderi,,9913,Bos taurus (Bovine),,,,nan,BVBRC
+1000561,Pseudomonas aeruginosa AES-1R,,9606,Homo sapiens (Human),,,,nan,BVBRC
+1005933,uncultured Methanoregula sp.,,1975053,Urostomides striatus,,,,nan,BVBRC
+1005933,uncultured Methanoregula sp.,,35101,Cyclidium porcatum,,,,nan,BVBRC
+1005933,uncultured Methanoregula sp.,,5965,Heterometopus palaeformis,,,,nan,BVBRC

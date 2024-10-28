@@ -1,0 +1,10 @@
+name	family	interaction	host name	host family	source
+Abbreviata	Heterakidae	Associate:Consumer:Parasite	Acanthophis antarcticus	Elapidae	http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	
+Abbreviata	Heterakidae	Associate:Consumer:Parasite	Acanthophis pyrrhus	Elapidae	http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	
+Abbreviata	Heterakidae	Associate:Consumer:Parasite	Ctenophorus nuchalis	Agamidae	http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	
+Abbreviata	Heterakidae	Associate:Consumer:Parasite	Echiopsis curta	Elapidae	http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	
+Abbreviata	Heterakidae	Associate:Consumer:Parasite	Liasis olivaceus	Boidae	http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	
+Abbreviata	Heterakidae	Associate:Consumer:Parasite	Moloch horridus	Agamidae	http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	
+Abbreviata	Heterakidae	Associate:Consumer:Parasite	Pseudechis australis	Elapidae	http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	
+Abbreviata	Heterakidae	Associate:Consumer:Parasite	Pseudonaja affinis	Elapidae	http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	
+Abbreviata	Heterakidae	Associate:Consumer:Parasite	Pseudonaja modesta	Elapidae	http://biodiversity.org.au/afd/taxa/596f90e3-bd09-4733-bacc-c587540e5e01	

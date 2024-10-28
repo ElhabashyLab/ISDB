@@ -1,0 +1,5 @@
+sourceTaxId	targetTaxId	sourceUid	targetUid	sourceName	targetName	interactionType	ontology	reference	database
+1035942	40674			Corallus grenadensis	Mammalia (mammals)	eats	http://purl.obolibrary.org/obo/RO_0002470	nan	GloBI
+1035942	8523			Corallus grenadensis	Lacerta	eats	http://purl.obolibrary.org/obo/RO_0002470	nan	GloBI
+8574	40674			Boa constrictor (Boa)	Mammalia (mammals)	eats	http://purl.obolibrary.org/obo/RO_0002470	nan	GloBI
+8574	8523			Boa constrictor (Boa)	Lacerta	eats	http://purl.obolibrary.org/obo/RO_0002470	nan	GloBI

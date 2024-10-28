@@ -1,0 +1,10 @@
+sourceTaxId	sourceName	sourceUid	targetTaxId	targetName	targetUid	interactionType	ontology	reference	database
+11053	dengue virus type 1	Q91NH1	9606	Homo sapiens (Human)	Q96EQ8	physical association	"psi-mi:""MI:0915"""	pubmed:22014111	VirHostNet
+11084	Tick-borne encephalitis virus	Q88489	9606	Homo sapiens (Human)	Q96EQ8	physical association	"psi-mi:""MI:0915"""	pubmed:22014111	VirHostNet
+11137	Human coronavirus 229E (HCoV-229E)	P19739	9606	Homo sapiens (Human)	Q96ER3	physical association	"psi-mi:""MI:0915"""	pubmed:33845483	VirHostNet
+2697049	Severe acute respiratory syndrome coronavirus 2 (2019-nCoV) (SARS-CoV-2)	P0DTC5	9606	Homo sapiens (Human)	Q96ER3	physical association	"psi-mi:""MI:0915"""	pubmed:32353859|pubmed:33060197	VirHostNet
+2697049	Severe acute respiratory syndrome coronavirus 2 (2019-nCoV) (SARS-CoV-2)	P0DTD1	9606	Homo sapiens (Human)	Q96EP5	physical association	"psi-mi:""MI:0915"""	pubmed:34709727	VirHostNet
+295027	Human cytomegalovirus (strain Merlin) (HHV-5) (Human herpesvirus 5)	F5HC33	9606	Homo sapiens (Human)	Q96ER3	physical association	"psi-mi:""MI:0915"""	pubmed:31873071	VirHostNet
+381518	Influenza A virus (strain A/Wilson-Smith/1933 H1N1) (Influenza A virus (strain A/WS/1933 H1N1))	P05780	9606	Homo sapiens (Human)	Q96ER3	physical association	"psi-mi:""MI:0915"""	pubmed:25464832	VirHostNet
+381518	Influenza A virus (strain A/Wilson-Smith/1933 H1N1) (Influenza A virus (strain A/WS/1933 H1N1))	Q1K9H2	9606	Homo sapiens (Human)	Q96EP5	physical association	"psi-mi:""MI:0915"""	pubmed:26651948	VirHostNet
+381518	Influenza A virus (strain A/Wilson-Smith/1933 H1N1) (Influenza A virus (strain A/WS/1933 H1N1))	Q1K9H5	9606	Homo sapiens (Human)	Q96EQ0	physical association	"psi-mi:""MI:0915"""	pubmed:26651948	VirHostNet

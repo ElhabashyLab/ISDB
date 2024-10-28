@@ -1,0 +1,7 @@
+sourceTaxId	sourceName	sourceUid	targetTaxId	targetName	targetUid	interactionType	ontology	reference	database
+9606	Homo sapiens (Human)	P45983	9606	Homo sapiens (Human)	Q00613	phosphorylation		PMID:10747973	Signor
+9606	Homo sapiens (Human)	P68400	9606	Homo sapiens (Human)	P35568	phosphorylation		PMID:8349691	Signor
+9606	Homo sapiens (Human)	Q16566	9606	Homo sapiens (Human)	P56524	phosphorylation		PMID:11470791	Signor
+9606	Homo sapiens (Human)	Q5TA89	9606	Homo sapiens (Human)	Q92886	transcriptional regulation		PMID:30030829	Signor
+9606	Homo sapiens (Human)	Q969Q1	9606	Homo sapiens (Human)	P55036	polyubiquitination		PMID:19240029	Signor
+9606	Homo sapiens (Human)	Q96GD4	9606	Homo sapiens (Human)	Q9NQG5	phosphorylation		PMID:30518842	Signor

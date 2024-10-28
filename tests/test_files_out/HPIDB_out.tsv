@@ -1,0 +1,9 @@
+sourceTaxId	sourceName	sourceUid	targetTaxId	targetName	targetUid	interactionType	ontology	reference	database
+10090	Mus musculus (Mouse)	uniprotkb:P22518	272624	Legionella pneumophila subsp. pneumophila (strain Philadelphia 1 / ATCC 33152 / DSM 7513)	uniprotkb:Q5ZRQ0	physical association	psi-mi:MI:0915	PMID:pubmed:18284575|imex:IM-18184	HPIDB
+9606	Homo sapiens (Human)	uniprotkb:P60953	243243	Mycobacterium avium (strain 104)	uniprotkb:A0A0H2ZTM2	physical association	psi-mi:MI:0915	PMID:pubmed:19060135|imex:IM-18257	HPIDB
+9606	Homo sapiens (Human)	uniprotkb:P60953	243243	Mycobacterium avium (strain 104)	uniprotkb:A0A0H3A1L5	physical association	psi-mi:MI:0915	PMID:pubmed:19060135|imex:IM-18257	HPIDB
+9606	Homo sapiens (Human)	uniprotkb:P60953	243243	Mycobacterium avium (strain 104)	uniprotkb:A0A0H3A2T3	physical association	psi-mi:MI:0915	PMID:pubmed:19060135|imex:IM-18257	HPIDB
+9606	Homo sapiens (Human)	uniprotkb:P62820	272624	Legionella pneumophila subsp. pneumophila (strain Philadelphia 1 / ATCC 33152 / DSM 7513)	uniprotkb:Q5ZWZ3	physical association	psi-mi:MI:0915	PMID:pubmed:22228731|imex:IM-18443	HPIDB
+9606	Homo sapiens (Human)	uniprotkb:P08603	301452	Streptococcus pyogenes serotype M49	uniprotkb:P16946	physical association	psi-mi:MI:0915	PMID:pubmed:18627465|imex:IM-18214	HPIDB
+9606	Homo sapiens (Human)	uniprotkb:P06400	623	Shigella flexneri	uniprotkb:Q6XW12	physical association	psi-mi:MI:0915	PMID:pubmed:19017275|imex:IM-18243	HPIDB
+9606	Homo sapiens (Human)	uniprotkb:P06400	623	Shigella flexneri	uniprotkb:Q8VSP9	direct interaction|physical association	psi-mi:MI:0407|psi-mi:MI:0915	PMID:pubmed:19017275|imex:IM-18243	HPIDB
