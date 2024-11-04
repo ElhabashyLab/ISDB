@@ -1,6 +1,6 @@
 #! /bin/bash
 # Please adjust "tempory_directory" to the path in which the database can be built
-export tempory_directory="/vol/michael_data/db_interspecies/data_prot"
+export tempory_directory="/etc/ISDB"
 # Overwrite existing out files: false, true
 export overwrite=false
 # Addtional data (optional): e.g. filepath: <myFile.csv> or directory: <myFiles/> 
@@ -14,6 +14,8 @@ manualDatabases=false
 
 export current_dir=$(pwd)
 
+# Please specify the path to the manual downloaded databases in the following section
+# 'mv <please-adjust-path> $tmepory_directory/<please-keep-as-is>'
 if $manualDatabases; then
     ## Bat Eco-Interactions
     # no static link -> https://www.batbase.org/explore
