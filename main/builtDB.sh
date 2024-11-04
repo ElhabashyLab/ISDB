@@ -17,13 +17,13 @@ export current_dir=$(pwd)
 if $manualDatabases; then
     ## Bat Eco-Interactions
     # no static link -> https://www.batbase.org/explore
-    mv $tempory_directory/manualDownload/BatEco-InteractionRecords.csv $tempory_directory
+    mv $tempory_directory/manualDownload/BatEco-InteractionRecords.csv $tempory_directory/BatEco-InteractionRecords.csv
     ## BV-BRC 
     # no static link -> https://www.bv-brc.org
     mkdir $tempory_directory/bvbrc/
-    mv $tempory_directory/manualDownload/BVBRC_genome_bacteria.csv $tempory_directory/bvbrc/
-    mv $tempory_directory/manualDownload/BVBRC_genome_viruses.csv $tempory_directory/bvbrc/
-    mv $tempory_directory/manualDownload/BVBRC_genome_archaea.csv $tempory_directory/bvbrc/
+    mv $tempory_directory/manualDownload/BVBRC_genome_bacteria.csv $tempory_directory/bvbrc/BVBRC_genome_bacteria.csv 
+    mv $tempory_directory/manualDownload/BVBRC_genome_viruses.csv $tempory_directory/bvbrc/BVBRC_genome_viruses.csv
+    mv $tempory_directory/manualDownload/BVBRC_genome_archaea.csv $tempory_directory/bvbrc/BVBRC_genome_archaea.csv
     ## DIP [dip/*] (Have to register -> not updated automatically)
     # https://dip.doe-mbi.ucla.edu/dip/
     mkdir $tempory_directory/dip/
@@ -38,18 +38,18 @@ if $manualDatabases; then
     ## GMPD
     # no static link -> https://parasites.nunn-lab.org/data/
     mkdir gmpd
-    mv $tempory_directory/manualDownload/GMPD/gmpd-data-carnivores.csv $tempory_directory/gmpd  
+    mv $tempory_directory/manualDownload/GMPD/gmpd-data-carnivores.csv $tempory_directory/gmpd/  
     mv $tempory_directory/manualDownload/GMPD/gmpd-data-primates.csv $tempory_directory/gmpd
     mv $tempory_directory/manualDownload/GMPD/gmpd-data-ungulates.csv $tempory_directory/gmpd
     ## PHILM2Web
     # no static link -> https://phim2web.lailab.info/pages/index.html
-    mv $tempory_directory/manualDownload/philm2web.csv $tempory_directory
+    mv $tempory_directory/manualDownload/philm2web.csv $tempory_directory/philm2web.csv
     ## PHISTO
     # no static link -> https://phisto.org/search.xhtml
-    mv $tempory_directory/manualDownload/phisto_data.csv $tempory_directory
+    mv $tempory_directory/manualDownload/phisto_data.csv $tempory_directory/phisto_data.csv
     ## FGSCdb
     # no static link -> https://edelponte.shinyapps.io/FGSCdb/
-    mv $tempory_directory/manualDownload/FGSCdb_data.csv $tempory_directory
+    mv $tempory_directory/manualDownload/FGSCdb_data.csv $tempory_directory/FGSCdb_data.csv
 fi
 
 # ### Download files 
