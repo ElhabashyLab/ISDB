@@ -21,6 +21,7 @@ class uniprot_request:
         self.names = {}
         self.proteomes = {}
         self.ids = {}
+        self.uid = {}
 
     @staticmethod
     def _get_name(tax: dict) -> str:
@@ -279,3 +280,42 @@ class uniprot_request:
             return proteomes["proteome"][0]["@upid"]
         except Exception as e:
             return None
+
+    def protein_id_request(self, id: str) -> str:
+        """Returns the UniProt name and first accession number of a protein.
+
+        Args:
+            id (str): Either the UniProt protein name or the protein accession number
+
+        Returns:
+            str: UniProt name and first accession number of the protein
+        """
+
+        requestURL = f"https://rest.uniprot.org/uniprotkb/{str(id).strip()}.xml"
+        try:
+            r = requests.get(requestURL, headers={"Accept": "application/xml"})
+
+            values = xmltodict.parse(r.text)["uniprot"]["entry"]
+            if type(values["accession"]) == list:
+                return values["name"], values["accession"][0]
+            else:
+                return values["name"], values["accession"]
+        except Exception:
+            return None, None
+
+    def fast_protein_id_request(self, id: int) -> str:
+        """Returns the UniProt name and first accession number of a protein
+        with reusing quired IDs.
+
+        Args:
+            id (str): Either the UniProt protein name or the protein accession number
+
+        Returns:
+            str: UniProt name and first accession number of the protein
+        """
+        if id in self.uid.keys():
+            return self.uid[id]
+        else:
+            value = self.fast_protein_id_request(id)
+            self.uid[id] = value
+            return value

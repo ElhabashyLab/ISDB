@@ -161,6 +161,37 @@ class TestUniprotRequest(unittest.TestCase):
         self.assertEqual(name, "Homo sapiens")
         self.assertEqual(tax_id, "9606")
 
+    @patch("requests.get")
+    def test_protein_id_request(self, mock_get):
+        # Mock response for a scientific name
+        mock_response = MagicMock()
+        mock_response.ok = True
+        mock_response.text = """
+        <uniprot>
+            <entry>
+                <name>ABCD_EFGH</name>
+                <accession>P12345</accession>
+                <accession>G1SKL2</accession>
+            </entry>
+        </uniprot>
+        """
+        mock_get.return_value = mock_response
+
+        # Test
+        name, tax_id = self.uniprot.protein_id_request("G1SKL2 ")
+        self.assertEqual(name, "ABCD_EFGH")
+        self.assertEqual(tax_id, "P12345")
+
+    @patch("requests.get")
+    def test_fast_protein_id_request_cache(self, mock_get):
+        # Populate the cache
+        self.uniprot.uid["P12345"] = ("test", "P12345")
+
+        # Test
+        result = self.uniprot.fast_protein_id_request("P12345")
+        self.assertEqual(result, ("test", "P12345"))
+        mock_get.assert_not_called()  # Ensure no request was made since it was cached
+
 
 if __name__ == "__main__":
     unittest.main()
