@@ -316,6 +316,6 @@ class uniprot_request:
         if id in self.uid.keys():
             return self.uid[id]
         else:
-            value = self.fast_protein_id_request(id)
+            value = self.protein_id_request(id)
             self.uid[id] = value
             return value

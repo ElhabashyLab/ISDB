@@ -10,6 +10,10 @@ import pandas as pd
 import numpy as np
 import os
 from datetime import date
+import sys
+
+sys.path.insert(1, "./")
+from uniprot_api import uniprot_request
 
 # Get environment variables for temporary directory and additional data
 global tempory_directory
@@ -199,10 +203,21 @@ def main():
         "reference",
         "database",
     ]
+
+    # Adding UniProt names and accession number # TODO migrate later to processDB.py
+    uniprot = uniprot_request()
+    db["ProteinNameA"] = db["UidA"].apply(
+        lambda x: uniprot.fast_protein_id_request(x)[0]
+    )
+    db["ProteinNameB"] = db["UidB"].apply(
+        lambda x: uniprot.fast_protein_id_request(x)[0]
+    )
+    db["UidA"] = db["UidA"].apply(lambda x: uniprot.fast_protein_id_request(x)[1])
+    db["UidB"] = db["UidB"].apply(lambda x: uniprot.fast_protein_id_request(x)[1])
+
     # Remove redundancy by aggregating data
-    print(db[db["database"].apply(lambda x: "Intact" in x)].shape)
+    print("Removing redundancies")
     db = db.fillna("")
-    print(db[db["database"].apply(lambda x: "Intact" in x)].shape, "na")
 
     # Group by specific columns and aggregate unique values
     db = (
@@ -210,19 +225,17 @@ def main():
         .agg(lambda x: join_unique(x))
         .reset_index()
     )
-    print(db[db["database"].apply(lambda x: "Intact" in x)].shape, "drop_dup")
 
     # Filter rows where TaxId values are greater than 1
     db = db[
         db[["TaxIdA", "TaxIdB"]].apply(lambda x: all([int(i) > 1 for i in x]), axis=1)
     ]
-    print(db[db["database"].apply(lambda x: "Intact" in x)].shape, ">1")
 
     # Clean up TaxId values
     db["TaxIdA"] = db["TaxIdA"].apply(lambda x: str(x).replace("uniprotkb:", ""))
     db["TaxIdB"] = db["TaxIdB"].apply(lambda x: str(x).replace("uniprotkb:", ""))
 
-    # Create a single direction identifier for entries
+    # Create a single direction identifier for entriesgz
     db["direction"] = db[["TaxIdA", "TaxIdB", "UidA", "UidB"]].apply(
         lambda x: tuple(set(x.values)), axis=1
     )
@@ -232,8 +245,8 @@ def main():
     db = db.drop("direction", axis=1)
 
     # Add a serial number column at the first position
+    print("Adding serial number and exporting data")
     db.insert(0, "SerialNumber", range(1, len(db) + 1))
-    print(db[db["database"].apply(lambda x: "Intact" in x)].shape, "dir")
 
     # Export the aggregated DataFrame to CSV and TSV formats
     db.to_csv(

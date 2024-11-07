@@ -68,7 +68,9 @@ class TestAggregateDB(unittest.TestCase):
             ISDB_tsv = pd.read_csv(output_file + ".tsv", sep="\t")
 
             # Read the expected output from a separate CSV file
-            ISDB_csv_ref = pd.read_csv(self.reference_dir + "ISDB_2024_10_28.csv")
+            ISDB_csv_ref = pd.read_csv(
+                self.reference_dir + "ISDB_2024_10_28.csv"
+            )  # TODO Rework files
             ISDB_tsv_ref = pd.read_csv(
                 self.reference_dir + "ISDB_2024_10_28.tsv", sep="\t"
             )
