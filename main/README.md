@@ -5,7 +5,7 @@ Attention: Please do not change any parameter, not listed here if you are uncert
 - `export overwrite=false`: \
 If set `false` existing already processed sources will be reused, else if set on `true` each database is cleaned and processed from scratch.
 - `export addtional_data=""`: \
-`""` describes the path to a CSV file or a directory containing CSV files which should also be included during the aggregation process. If path is set to `""` no additional files are included.
+`""` describes the path to a CSV file or a directory containing CSV files which should also be included during the aggregation process. If path is set to `""` no additional files are included. Please make sure [columns](../README.md#how-to-build-isdb-locally) are correct named.
 - `delete=false`: \
 If set `false` already processed intermediate files are kept, else if set on `true` intermediated files are removed. Removing of intermediated files also leads to cleaning and processing each database from scratch on the next execution. 
 - `manualDatabases=false`: \

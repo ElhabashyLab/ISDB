@@ -58,14 +58,15 @@ To rebuild ISDB locally, Please follow these steps:
 Additional parameters, such as whether to overwrite existing files, remove intermediate files, or incorporate user-provided data, can also be configured within this script. More details can be found on the documentation on GitHub.
 
 The generated database will be available in CSV and TSV formats, with the following column descriptions:
-- SerialNumber: Interaction identifier inside ISDB
-- TaxId(A/B): NCBI Taxonomical identifer
-- Uid(A/B): UniProt protein identifier
-- ScientificName(A/B): Sientifc species name
-- interactionType: Phrase describing the interaction
-- ontology: Interaction identifier of the coresponding ontology
-- reference: Reference as defined by data source
-- database: Databank source of the interaction
+- `Serial Number`: Interaction identifier inside ISDB
+- `Taxonomy ID (A/B)`: NCBI Taxonomical identifer
+- `Organism (A/B)`: Sientifc species name
+- `UniProt ID (A/B)`: UniProt protein identifier
+- `Protein Name (A/B)`: UniProt protein name 
+- `Interaction Type`: Phrase describing the interaction
+- `Ontology ID`: Interaction identifier of the coresponding ontology
+- `Reference`: Reference as defined by data source
+- `Database`: Databank source of the interaction
 
 
 # How to deposite data to the ISDB?
