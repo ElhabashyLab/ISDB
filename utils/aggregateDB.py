@@ -192,28 +192,32 @@ def main():
         ]
     ]
     db.columns = [
-        "TaxIdA",
-        "ScientificNameA",
-        "UidA",
-        "TaxIdB",
-        "ScientificNameB",
-        "UidB",
-        "interactionType",
-        "ontology",
-        "reference",
-        "database",
+        "Taxonomy ID A",
+        "Organism A",
+        "UniProt ID A",
+        "Taxonomy ID B",
+        "Organism B",
+        "UniProt ID B",
+        "Interaction Type",
+        "Ontology ID",
+        "Reference",
+        "Database",
     ]
 
     # Adding UniProt names and accession number # TODO migrate later to processDB.py
     uniprot = uniprot_request()
-    db["ProteinNameA"] = db["UidA"].apply(
+    db["Protein Name A"] = db["UniProt ID A"].apply(
         lambda x: uniprot.fast_protein_id_request(x)[0]
     )
-    db["ProteinNameB"] = db["UidB"].apply(
+    db["Protein Name B"] = db["UniProt ID B"].apply(
         lambda x: uniprot.fast_protein_id_request(x)[0]
     )
-    db["UidA"] = db["UidA"].apply(lambda x: uniprot.fast_protein_id_request(x)[1])
-    db["UidB"] = db["UidB"].apply(lambda x: uniprot.fast_protein_id_request(x)[1])
+    db["UniProt ID A"] = db["UniProt ID A"].apply(
+        lambda x: uniprot.fast_protein_id_request(x)[1]
+    )
+    db["UniProt ID B"] = db["UniProt ID B"].apply(
+        lambda x: uniprot.fast_protein_id_request(x)[1]
+    )
 
     # Remove redundancy by aggregating data
     print("Removing redundancies")
@@ -221,24 +225,30 @@ def main():
 
     # Group by specific columns and aggregate unique values
     db = (
-        db.groupby(["TaxIdA", "TaxIdB", "UidA", "UidB"])
+        db.groupby(["Taxonomy ID A", "Taxonomy ID B", "UniProt ID A", "UniProt ID B"])
         .agg(lambda x: join_unique(x))
         .reset_index()
     )
 
     # Filter rows where TaxId values are greater than 1
     db = db[
-        db[["TaxIdA", "TaxIdB"]].apply(lambda x: all([int(i) > 1 for i in x]), axis=1)
+        db[["Taxonomy ID A", "Taxonomy ID B"]].apply(
+            lambda x: all([int(i) > 1 for i in x]), axis=1
+        )
     ]
 
     # Clean up TaxId values
-    db["TaxIdA"] = db["TaxIdA"].apply(lambda x: str(x).replace("uniprotkb:", ""))
-    db["TaxIdB"] = db["TaxIdB"].apply(lambda x: str(x).replace("uniprotkb:", ""))
+    db["Taxonomy ID A"] = db["Taxonomy ID A"].apply(
+        lambda x: str(x).replace("uniprotkb:", "")
+    )
+    db["Taxonomy ID B"] = db["Taxonomy ID B"].apply(
+        lambda x: str(x).replace("uniprotkb:", "")
+    )
 
     # Create a single direction identifier for entriesgz
-    db["direction"] = db[["TaxIdA", "TaxIdB", "UidA", "UidB"]].apply(
-        lambda x: tuple(set(x.values)), axis=1
-    )
+    db["direction"] = db[
+        ["Taxonomy ID A", "Taxonomy ID B", "UniProt ID A", "UniProt ID B"]
+    ].apply(lambda x: tuple(set(x.values)), axis=1)
 
     # Remove duplicate entries based on direction
     db = db.drop_duplicates(subset=["direction"])
@@ -246,7 +256,27 @@ def main():
 
     # Add a serial number column at the first position
     print("Adding serial number and exporting data")
-    db.insert(0, "SerialNumber", range(1, len(db) + 1))
+    db.insert(0, "Serial Number", range(1, len(db) + 1))
+
+    # reorder
+    db = db.loc[
+        :,
+        [
+            "Serial Number",
+            "Taxonomy ID A",
+            "Organism A",
+            "UniProt ID A",
+            "Protein Name A",
+            "Taxonomy ID B",
+            "Organism B",
+            "UniProt ID B",
+            "Protein Name B",
+            "Interaction Type",
+            "Ontology ID",
+            "Reference",
+            "Database",
+        ],
+    ]
 
     # Export the aggregated DataFrame to CSV and TSV formats
     db.to_csv(
@@ -255,6 +285,57 @@ def main():
     )
     db.to_csv(
         tempory_directory + "ISDB_" + str(date.today()).replace("-", "_") + ".tsv",
+        index=False,
+        sep="\t",
+    )
+
+    # Webpage query datasets
+    # Protein search
+    db.loc[
+        :,
+        [
+            "Serial Number",
+            "Taxonomy ID A",
+            "Organism A",
+            "UniProt ID A",
+            "Protein Name A",
+            "Taxonomy ID B",
+            "Organism B",
+            "UniProt ID B",
+            "Protein Name B",
+            "Interaction Type",
+            "Ontology ID",
+            "Reference",
+            "Database",
+        ],
+    ].dropna(subset=["UniProt ID A", "UniProt ID B"]).to_csv(
+        tempory_directory
+        + "ISDB_Protein_Search"
+        + str(date.today()).replace("-", "_")
+        + ".tsv",
+        index=False,
+        sep="\t",
+    )
+
+    # Species search
+    db.loc[
+        :,
+        [
+            "Serial Number",
+            "Taxonomy ID A",
+            "Organism A",
+            "Taxonomy ID B",
+            "Organism B",
+            "Interaction Type",
+            "Ontology ID",
+            "Reference",
+            "Database",
+        ],
+    ].drop_duplicates(subset=["Taxonomy ID A", "Taxonomy ID B"]).to_csv(
+        tempory_directory
+        + "ISDB_Species_Search_"
+        + str(date.today()).replace("-", "_")
+        + ".tsv",
         index=False,
         sep="\t",
     )
