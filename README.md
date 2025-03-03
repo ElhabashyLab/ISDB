@@ -37,7 +37,7 @@ To rebuild ISDB locally, Please follow these steps:
    - DIP (https://dip.doe-mbi.ucla.edu/dip/)
    - GMPD (https://parasites.nunn-lab.org/data/)
    - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
-   - PHISTO (https://parasites.nunn-lab.org/data/)
+   - PHISTO (https://www.phisto.org/browse.xhtml)
    - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 5. Edit the paths to the downloaded databases in the  `main/builtDB.sh` script. Further parameters are:
@@ -86,7 +86,7 @@ The database can be built automatically. However, some resources need to be down
 |[The Enhanced Infectious Diseases (EID2)](https://eid2.liverpool.ac.uk/) | 12,486 | 18,086 | 0 |  :heavy_check_mark:  |  :heavy_check_mark: | 
 |[Fusarium graminearum species complex database (FGSCdb)](https://emdelponte.github.io/FGSC/#:~:text=FGSCdb%20is%20a%20database%20of,and%20panicle%20blight%20in%20rice.) | 19 | 15 | 0 |  :heavy_check_mark:  |   X  |  
 |[Global Biotic Interactions (GloBI)](https://www.globalbioticinteractions.org/) | 89,994 | 461,385 | 0 | :heavy_check_mark:  |  :heavy_check_mark:  |
-|[Global Mammal Parasite Database (GMPD)](https://globalhealth.duke.edu/projects/global-mammal-parasite-database#:~:text=The%20Global%20Mammal%20Parasite%20Database,2700%20published%20scientific%20literature%20sources.) | 1,558 | 5,444 | 0 | X  |  X  |  
+|[Global Mammal Parasite Database (GMPD)](https://parasites.nunn-lab.org/data/) | 1,558 | 5,444 | 0 | X  |  X  |  
 |[Host-pathogen interactions database (HPIDB)](https://hpidb.igbb.msstate.edu/)  | 734 | 967 | 54,879 | :heavy_check_mark:  |  :heavy_check_mark:  |  
 |[IntAct](https://www.ebi.ac.uk/intact/home) | 1,819 | 3,575 | 1,079,255 | :heavy_check_mark:  |  :heavy_check_mark:  | 
 |[Interactome](https://pubmed.ncbi.nlm.nih.gov/36649176/) | 264 | 263 | 4,154 | :heavy_check_mark:  | :heavy_check_mark:  | 
