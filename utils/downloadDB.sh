@@ -9,7 +9,7 @@ wget -N -v "https://downloads.thebiogrid.org/Download/BioGRID/Latest-Release/BIO
 if [ $? -eq 0 ]; then
     echo "Download successful. Proceeding with unzip."
     # Unzip the file
-    unzip BIOGRID-ALL-LATEST.mitab.zip -d biogird_all_latest
+    unzip BIOGRID-ALL-LATEST.mitab.zip -d biogrid_all_latest
     rm BIOGRID-ALL-LATEST.mitab.zip
 else
     echo "Download failed. Using static file. Please try again later"
