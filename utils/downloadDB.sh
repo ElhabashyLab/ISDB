@@ -5,12 +5,12 @@ cd $tempory_directory
 # Download files
 echo "### Downloading files ###"
 # Biogrid [biogrid_all_latest] # TODO sometimes failes
-wget -N -v "https://downloads.thebiogrid.org/Download/BioGRID/Latest-Release/BIOGRID-ALL-LATEST.tab3.zip" 
+wget -N -v "https://downloads.thebiogrid.org/Download/BioGRID/Latest-Release/BIOGRID-ALL-LATEST.mitab.zip" 
 if [ $? -eq 0 ]; then
     echo "Download successful. Proceeding with unzip."
     # Unzip the file
-    unzip biogrid_latest_tab3.zip -d biogird_all_latest
-    rm biogrid_latest.tab3.zip
+    unzip BIOGRID-ALL-LATEST.mitab.zip -d biogird_all_latest
+    rm BIOGRID-ALL-LATEST.mitab.zip
 else
     echo "Download failed. Using static file. Please try again later"
     rm biogrid_latest.tab3.zip
