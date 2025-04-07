@@ -111,4 +111,4 @@ Mederer, M., Gautam, A., Kohlbacher, O., Lupas, A., Elhabashy, H. Interacting Sp
 - Hadeer Elhabashy
 
 # Contact
-If you have any questions or inquiries, please feel free to contact Hadeer Elhabashy at (Hadeer.elhabashy@tuebingen.mpg.de)
+If you have any questions or inquiries, please feel free to contact Hadeer Elhabashy at (Elhabashylab [@] gmail.com))
