@@ -102,10 +102,6 @@ The database can be built automatically. However, some resources need to be down
 |[Web of Life database](https://www.web-of-life.es/) | 172 | 1,007 | 0 | X  |    :heavy_check_mark: |  
 
 
-#License
-
-- The **ISDB code** in this repository is licensed under the [MIT License](./LICENSE).
-- The **ISDB data** in the `data/` folder is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](./LICENSE-data).
 
 
 # Cite
@@ -119,10 +115,12 @@ Mederer, M., Gautam, A., Kohlbacher, O., Lupas, A., Elhabashy, H. Interacting Sp
 # Contact
 If you have any questions or inquiries, please feel free to contact Hadeer Elhabashy at (Elhabashylab [@] gmail.com))
 
+# License
 
+- The **ISDB code** in this repository is licensed under the [MIT License](./LICENSE).
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
-This ISDB database is licensed under a
+- This **ISDB database** in the `versions/` folder is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
 
 [![CC BY 4.0][cc-by-image]][cc-by]
