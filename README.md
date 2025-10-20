@@ -70,19 +70,18 @@ To build and run **ISDB** locally, please follow these steps:
     - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 
-
- 7. **Edit Build Parameters**
+  7. **Edit Build Parameters**
    
-   After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
-   The following parameters can be customized:
+     After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
+     The following parameters can be customized:
 
-   a. **`temporary_directory`** — Directory in which ISDB is built.  
-   b. **`overwrite`** — Whether to overwrite pre-existing stages (`true` / `false`).  
-   c. **`additional_data`** — File or directory path containing additional data files.  
-      Each file must include at least **two species columns**.  
-   d. **`delete`** — Whether intermediate stages should be deleted after the build (`true` / `false`).  
-   e. **`manualDatabases`** — Include or exclude databases that cannot be downloaded automatically.  
-      If set to `true`, the user must specify their paths in the section below.
+     a. **`temporary_directory`** — Directory in which ISDB is built.  
+     b. **`overwrite`** — Whether to overwrite pre-existing stages (`true` / `false`).  
+     c. **`additional_data`** — File or directory path containing additional data files.  
+        Each file must include at least **two species columns**.  
+     d. **`delete`** — Whether intermediate stages should be deleted after the build (`true` / `false`).  
+     e. **`manualDatabases`** — Include or exclude databases that cannot be downloaded automatically.  
+        If set to `true`, the user must specify their paths in the section below.
 
    
    1. `tempory_directory`: Direction in which ISDB is build,
