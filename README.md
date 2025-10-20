@@ -94,12 +94,12 @@ To build and run **ISDB** locally, please follow these steps:
 
 8. **Build the ISDB Database**  
 
-To compile the ISDB database locally, execute the main build script from within the `main` directory:
+   To compile the ISDB database locally, execute the main build script from within the `main` directory:
 
-```bash
-cd main
-bash buildDB.sh
-```
+   ```bash
+   cd main
+   bash buildDB.sh
+   ```
 
    
 Additional parameters, such as whether to overwrite existing files, remove intermediate files, or incorporate user-provided data, can also be configured within this script. More details can be found on the documentation on GitHub.
