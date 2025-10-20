@@ -12,9 +12,26 @@ Built versions of ISDB can be found under the directory `versions` and be downlo
 wget https://github.com/ElhabashyLab/ISDB/tree/main/versions/ISDB_2024_09_13.<tsv/csv>.gz
 ```
 
-# How to build ISDB locally? 
 
-ISDB requires Python 3.8 - 3.11. Higher or lower versions may be incompatible. Consider creating an environment via conda (ex. with the python=3.10 parameter) or otherwise, if your local Python version does not fit the requirement.
+# How to build ISDB locally? 
+To build and run **ISDB** locally, please follow these steps:
+
+1. **Ensure internet connectivity**  
+   Make sure your computer is connected to the internet.
+
+2. **Clone the repository and navigate into it**
+   ```bash
+   git clone https://github.com/ElhabashyLab/ISDB.git
+   cd ISDB
+
+
+3. **Set up the Python environment**
+ISDB requires Python 3.11.
+If your local Python version differs, we recommend creating a dedicated Conda environment:
+ ```bash
+conda create --name isdb_env python=3.11
+conda activate isdb_env
+
 
 To rebuild ISDB locally, Please follow these steps:
 
@@ -25,7 +42,9 @@ To rebuild ISDB locally, Please follow these steps:
    clone https://github.com/ElhabashyLab/ISDB.git
    ```
 
-3. For successful execution please install the dependencies:
+3. ISDB requires Python 3.11 
+Consider creating an environment via conda (ex. with the python=3.11 parameter) or otherwise, if your local Python version does not fit the requirement.
+
    preferably in a conda enviroment
    ```
    conda create --name <my-env>
@@ -33,7 +52,23 @@ To rebuild ISDB locally, Please follow these steps:
    pip install -r requirements.txt
    ```
 
-4. Download resources. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in `updateDB.sh`. 
+4.  ISDB dependacies
+ISDB requires the following dependencies
+* biopython 1.79
+* click 8.1.3
+* matplotlib 3.6.3
+* pandas 1.5.3
+* requests 2.28.2
+* numpy==1.23.5
+
+
+which can be installed as follows
+```
+pip install -r requirements.txt
+```
+
+
+5. Download resources. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in `updateDB.sh`. 
    ISDB parces the most of the databases automatically. However, some resources need to be manually downloaded
    - Bat Eco-Interactions (https://www.batbase.org/explore)
    - BV-BRC (https://www.bv-brc.org)
