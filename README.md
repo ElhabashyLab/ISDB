@@ -33,7 +33,7 @@ conda create --name isdb_env python=3.11.7
 conda activate isdb_env
  ```
 
-3. **Set up the Python environment**
+4. **Install Dependencies**
 
 ISDB depends on the following Python packages:
 * biopython 1.79
@@ -48,10 +48,13 @@ You can install all required dependencies with:
   pip install -r requirements.txt
 ```
 
+ 5. **Download Resources**  
+To download the required databases, run the provided script:
 
-
-5. Download resources. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in `updateDB.sh`. 
-   ISDB parces the most of the databases automatically. However, some resources need to be manually downloaded
+```bash
+bash downloadDB.sh
+```
+ISDB automatically parses most of the databases. However, a few resources must be downloaded manually from their respective websites:
    - Bat Eco-Interactions (https://www.batbase.org/explore)
    - BV-BRC (https://www.bv-brc.org)
    - DIP (https://dip.doe-mbi.ucla.edu/dip/)
@@ -60,7 +63,19 @@ You can install all required dependencies with:
    - PHISTO (https://www.phisto.org/browse.xhtml)
    - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
-5. Edit the paths to the downloaded databases in the  `main/builtDB.sh` script. Further parameters are:
+
+6. **Edit Build Parameters**  
+After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
+The following parameters can be customized:
+
+1. **`temporary_directory`** — Directory in which ISDB is built.  
+2. **`overwrite`** — Whether to overwrite pre-existing stages (`true` / `false`).  
+3. **`additional_data`** — File or directory path containing additional data files.  
+   Each file must include at least **two species columns**.  
+4. **`delete`** — Whether intermediate stages should be deleted after the build (`true` / `false`).  
+5. **`manualDatabases`** — Include or exclude databases that cannot be downloaded automatically.  
+   If set to `true`, the user must specify their paths in the section below.
+
    
    1. `tempory_directory`: Direction in which ISDB is build,
    2. `overwrite`: Wether to overwrite pre-existing stages,
@@ -68,12 +83,16 @@ You can install all required dependencies with:
    4. `delete`: If intermediate stages should be deleted afterwards,
    5. `manualDatabases`: Exclude or include database which could not be downloaded automatically. If 'true' the user has specify their paths in the following section.
 
-6. Finally build ISDB database
-   To compile the database locally, the main script `main/builtDB.sh` should be executed inside the `main` directory.
-   ```
-   cd main
-   .bash /builtDB.sh
-   ```
+
+7. **Build the ISDB Database**  
+
+To compile the ISDB database locally, execute the main build script from within the `main` directory:
+
+```bash
+cd main
+bash buildDB.sh
+```
+
    
 Additional parameters, such as whether to overwrite existing files, remove intermediate files, or incorporate user-provided data, can also be configured within this script. More details can be found on the documentation on GitHub.
 
