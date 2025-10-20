@@ -13,6 +13,9 @@ wget https://github.com/ElhabashyLab/ISDB/tree/main/versions/ISDB_2024_09_13.<ts
 ```
 
 # How to build ISDB locally? 
+
+ISDB requires Python 3.8 - 3.11. Higher or lower versions may be incompatible. Consider creating an environment via conda (ex. with the python=3.10 parameter) or otherwise, if your local Python version does not fit the requirement.
+
 To rebuild ISDB locally, Please follow these steps:
 
 1. You computer should be connected to the internet.
