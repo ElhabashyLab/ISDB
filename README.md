@@ -48,6 +48,7 @@ To build and run **ISDB** locally, please follow these steps:
 
  5. **Download Resources**  
     To download the required databases, run the provided script:
+    
    ```bash
    bash downloadDB.sh
    ```
