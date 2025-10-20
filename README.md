@@ -23,6 +23,7 @@ To build and run **ISDB** locally, please follow these steps:
    ```bash
    git clone https://github.com/ElhabashyLab/ISDB.git
    cd ISDB
+   ```
 
 3. **Set up the Python environment**
 ISDB requires Python 3.11.7 or more
@@ -30,9 +31,10 @@ If your local Python version differs, we recommend creating a dedicated Conda en
  ```bash
 conda create --name isdb_env python=3.11.7
 conda activate isdb_env
+ ```
 
+3. **Set up the Python environment**
 
-4. **Install dependencies**
 ISDB depends on the following Python packages:
 * biopython 1.79
 * click 8.1.3
@@ -42,9 +44,10 @@ ISDB depends on the following Python packages:
 * numpy==1.23.5
 
 You can install all required dependencies with:
-  ```bash
+```bash
   pip install -r requirements.txt
 ```
+
 
 
 5. Download resources. While the database automatically parses information from most sources, certain datasets must be manually downloaded by the user, with their locations specified in `updateDB.sh`. 
