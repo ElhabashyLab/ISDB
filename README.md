@@ -24,57 +24,54 @@ To build and run **ISDB** locally, please follow these steps:
    git clone https://github.com/ElhabashyLab/ISDB.git
    cd ISDB
    ```
-
+   
 3. **Set up the Python environment**
-ISDB requires Python 3.11.7 or more
-If your local Python version differs, we recommend creating a dedicated Conda environment:
- ```bash
-conda create --name isdb_env python=3.11.7
-conda activate isdb_env
- ```
+   ISDB requires Python 3.11.7 or more
+   If your local Python version differs, we recommend creating a dedicated Conda environment:
+    ```bash
+   conda create --name isdb_env python=3.11.7
+   conda activate isdb_env
+   ```
 
 4. **Install Dependencies**
-
-ISDB depends on the following Python packages:
-* biopython 1.79
-* click 8.1.3
-* matplotlib 3.6.3
-* pandas 1.5.3
-* requests 2.28.2
-* numpy==1.23.5
-
-You can install all required dependencies with:
-```bash
-  pip install -r requirements.txt
-```
+   ISDB depends on the following Python packages:
+   * biopython 1.79
+   * click 8.1.3
+   * matplotlib 3.6.3
+   * pandas 1.5.3
+   * requests 2.28.2
+   * numpy==1.23.5
+   You can install all required dependencies with:
+   ```bash
+     pip install -r requirements.txt
+   ```
 
  5. **Download Resources**  
-To download the required databases, run the provided script:
-
-```bash
-bash downloadDB.sh
-```
-ISDB automatically parses most of the databases. However, a few resources must be downloaded manually from their respective websites:
-   - Bat Eco-Interactions (https://www.batbase.org/explore)
-   - BV-BRC (https://www.bv-brc.org)
-   - DIP (https://dip.doe-mbi.ucla.edu/dip/)
-   - GMPD (https://parasites.nunn-lab.org/data/)
-   - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
-   - PHISTO (https://www.phisto.org/browse.xhtml)
-   - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
+    To download the required databases, run the provided script:
+   ```bash
+   bash downloadDB.sh
+   ```
+   ISDB automatically parses most of the databases. However, a few resources must be downloaded manually from their respective websites:
+      - Bat Eco-Interactions (https://www.batbase.org/explore)
+      - BV-BRC (https://www.bv-brc.org)
+      - DIP (https://dip.doe-mbi.ucla.edu/dip/)
+      - GMPD (https://parasites.nunn-lab.org/data/)
+      - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
+      - PHISTO (https://www.phisto.org/browse.xhtml)
+      - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 
 6. **Edit Build Parameters**  
-After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
-The following parameters can be customized:
+   After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
+   The following parameters can be customized:
 
-1. **`temporary_directory`** — Directory in which ISDB is built.  
-2. **`overwrite`** — Whether to overwrite pre-existing stages (`true` / `false`).  
-3. **`additional_data`** — File or directory path containing additional data files.  
-   Each file must include at least **two species columns**.  
-4. **`delete`** — Whether intermediate stages should be deleted after the build (`true` / `false`).  
-5. **`manualDatabases`** — Include or exclude databases that cannot be downloaded automatically.  
-   If set to `true`, the user must specify their paths in the section below.
+   a. **`temporary_directory`** — Directory in which ISDB is built.  
+   b. **`overwrite`** — Whether to overwrite pre-existing stages (`true` / `false`).  
+   c. **`additional_data`** — File or directory path containing additional data files.  
+      Each file must include at least **two species columns**.  
+   d. **`delete`** — Whether intermediate stages should be deleted after the build (`true` / `false`).  
+   e. **`manualDatabases`** — Include or exclude databases that cannot be downloaded automatically.  
+      If set to `true`, the user must specify their paths in the section below.
 
    
    1. `tempory_directory`: Direction in which ISDB is build,
