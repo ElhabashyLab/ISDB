@@ -23,15 +23,14 @@ To build and run **ISDB** locally, please follow these steps:
    ```bash
    git clone https://github.com/ElhabashyLab/ISDB.git
    cd ISDB
-```
 
-3. **Install dependencies**
+3. **Set up the Python environment**
 ISDB requires Python 3.11.7 or more
 If your local Python version differs, we recommend creating a dedicated Conda environment:
  ```bash
 conda create --name isdb_env python=3.11.7
 conda activate isdb_env
-```
+
 
 4. **Install dependencies**
 ISDB depends on the following Python packages:
