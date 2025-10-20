@@ -84,21 +84,22 @@ To build and run **ISDB** locally, please follow these steps:
         If set to `true`, the user must specify their paths in the section below.
 
    
-   1. `tempory_directory`: Direction in which ISDB is build,
-   2. `overwrite`: Wether to overwrite pre-existing stages,
-   3. `addtional_data`: File path or directory path of additional data files. Each file should at least include two species columns,
-   4. `delete`: If intermediate stages should be deleted afterwards,
-   5. `manualDatabases`: Exclude or include database which could not be downloaded automatically. If 'true' the user has specify their paths in the following section.
+   a.`tempory_directory`: Direction in which ISDB is build,
+   b. `overwrite`: Wether to overwrite pre-existing stages,
+   c. `addtional_data`: File path or directory path of additional data files. Each file should at least include two species columns,
+   d. `delete`: If intermediate stages should be deleted afterwards,
+   e. `manualDatabases`: Exclude or include database which could not be downloaded automatically. If 'true' the user has specify their paths in the following section.
 
 
-8. **Build the ISDB Database**  
 
-   To compile the ISDB database locally, execute the main build script from within the `main` directory:
+   8. **Build the ISDB Database**  
 
-   ```bash
-   cd main
-   bash buildDB.sh
-   ```
+      To compile the ISDB database locally, execute the main build script from within the `main` directory:
+
+      ```bash
+      cd main
+      bash buildDB.sh
+      ```
 
    
 Additional parameters, such as whether to overwrite existing files, remove intermediate files, or incorporate user-provided data, can also be configured within this script. More details can be found on the documentation on GitHub.
