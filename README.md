@@ -16,16 +16,19 @@ wget https://github.com/ElhabashyLab/ISDB/tree/main/versions/ISDB_2024_09_13.<ts
 # How to build ISDB locally? 
 To build and run **ISDB** locally, please follow these steps:
 
-1. **Ensure internet connectivity**  
+1. **Ensure internet connectivity**
+     
    Make sure your computer is connected to the internet.
 
-2. **Clone the repository and navigate into it**
+3. **Clone the repository and navigate into it**
+   
    ```bash
    git clone https://github.com/ElhabashyLab/ISDB.git
    cd ISDB
    ```
    
-3. **Set up the Python environment**
+4. **Set up the Python environment**
+   
    ISDB requires Python 3.11.7 or more
    If your local Python version differs, we recommend creating a dedicated Conda environment:
     ```bash
@@ -33,7 +36,8 @@ To build and run **ISDB** locally, please follow these steps:
    conda activate isdb_env
    ```
 
-4. **Install Dependencies**
+5. **Install Dependencies**
+   
    ISDB depends on the following Python packages:
    * biopython 1.79
    * click 8.1.3
@@ -41,17 +45,20 @@ To build and run **ISDB** locally, please follow these steps:
    * pandas 1.5.3
    * requests 2.28.2
    * numpy==1.23.5
+     
    You can install all required dependencies with:
    ```bash
      pip install -r requirements.txt
    ```
 
- 5. **Download Resources**  
+ 6. **Download Resources**
+     
     To download the required databases, run the provided script:
     
    ```bash
    bash downloadDB.sh
    ```
+
    ISDB automatically parses most of the databases. However, a few resources must be downloaded manually from their respective websites:
       - Bat Eco-Interactions (https://www.batbase.org/explore)
       - BV-BRC (https://www.bv-brc.org)
