@@ -70,7 +70,8 @@ To build and run **ISDB** locally, please follow these steps:
     - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 
-7. **Edit Build Parameters**
+
+ 7. **Edit Build Parameters**
    
    After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
    The following parameters can be customized:
