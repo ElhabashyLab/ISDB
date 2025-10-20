@@ -23,37 +23,18 @@ To build and run **ISDB** locally, please follow these steps:
    ```bash
    git clone https://github.com/ElhabashyLab/ISDB.git
    cd ISDB
+```
 
-
-3. **Set up the Python environment**
-ISDB requires Python 3.11.
+3. **Install dependencies**
+ISDB requires Python 3.11.7 or more
 If your local Python version differs, we recommend creating a dedicated Conda environment:
  ```bash
-conda create --name isdb_env python=3.11
+conda create --name isdb_env python=3.11.7
 conda activate isdb_env
+```
 
-
-To rebuild ISDB locally, Please follow these steps:
-
-1. You computer should be connected to the internet.
-
-2. Clone this repository and change direction into it.
-    ```
-   clone https://github.com/ElhabashyLab/ISDB.git
-   ```
-
-3. ISDB requires Python 3.11 
-Consider creating an environment via conda (ex. with the python=3.11 parameter) or otherwise, if your local Python version does not fit the requirement.
-
-   preferably in a conda enviroment
-   ```
-   conda create --name <my-env>
-   conda activate <my-env>
-   pip install -r requirements.txt
-   ```
-
-4.  ISDB dependacies
-ISDB requires the following dependencies
+4. **Install dependencies**
+ISDB depends on the following Python packages:
 * biopython 1.79
 * click 8.1.3
 * matplotlib 3.6.3
@@ -61,10 +42,9 @@ ISDB requires the following dependencies
 * requests 2.28.2
 * numpy==1.23.5
 
-
-which can be installed as follows
-```
-pip install -r requirements.txt
+You can install all required dependencies with:
+  ```bash
+  pip install -r requirements.txt
 ```
 
 
