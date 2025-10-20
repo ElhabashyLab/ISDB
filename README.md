@@ -59,18 +59,19 @@ To build and run **ISDB** locally, please follow these steps:
     bash downloadDB.sh
     ```
 
-   ISDB automatically parses most of the databases. However, a few resources must be downloaded manually from their respective websites:
+    ISDB automatically parses most of the databases. However, a few resources must be downloaded manually from their respective websites:
    
-   - Bat Eco-Interactions (https://www.batbase.org/explore)
-   - BV-BRC (https://www.bv-brc.org)
-   - DIP (https://dip.doe-mbi.ucla.edu/dip/)
-   - GMPD (https://parasites.nunn-lab.org/data/)
-   - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
-   - PHISTO (https://www.phisto.org/browse.xhtml)
-   - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
+    - Bat Eco-Interactions (https://www.batbase.org/explore)
+    - BV-BRC (https://www.bv-brc.org)
+    - DIP (https://dip.doe-mbi.ucla.edu/dip/)
+    - GMPD (https://parasites.nunn-lab.org/data/)
+    - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
+    - PHISTO (https://www.phisto.org/browse.xhtml)
+    - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 
-6. **Edit Build Parameters**  
+7. **Edit Build Parameters**
+   
    After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
    The following parameters can be customized:
 
@@ -90,7 +91,7 @@ To build and run **ISDB** locally, please follow these steps:
    5. `manualDatabases`: Exclude or include database which could not be downloaded automatically. If 'true' the user has specify their paths in the following section.
 
 
-7. **Build the ISDB Database**  
+8. **Build the ISDB Database**  
 
 To compile the ISDB database locally, execute the main build script from within the `main` directory:
 
