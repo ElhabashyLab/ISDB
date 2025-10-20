@@ -52,12 +52,12 @@ To build and run **ISDB** locally, please follow these steps:
    ```
 
  6. **Download Resources**
-     
+    
     To download the required databases, run the provided script:
     
-   ```bash
-   bash downloadDB.sh
-   ```
+    ```bash
+    bash downloadDB.sh
+    ```
 
    ISDB automatically parses most of the databases. However, a few resources must be downloaded manually from their respective websites:
    
