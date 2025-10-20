@@ -61,13 +61,13 @@ To build and run **ISDB** locally, please follow these steps:
 
    ISDB automatically parses most of the databases. However, a few resources must be downloaded manually from their respective websites:
    
-      * Bat Eco-Interactions (https://www.batbase.org/explore)
-      * BV-BRC (https://www.bv-brc.org)
-      * DIP (https://dip.doe-mbi.ucla.edu/dip/)
-      * GMPD (https://parasites.nunn-lab.org/data/)
-      * PHILM2Web (https://phim2web.lailab.info/pages/index.html)
-      * PHISTO (https://www.phisto.org/browse.xhtml)
-      * FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
+   - `Bat Eco-Interactions (https://www.batbase.org/explore)
+   - `BV-BRC (https://www.bv-brc.org)
+   - `DIP (https://dip.doe-mbi.ucla.edu/dip/)
+   - `GMPD (https://parasites.nunn-lab.org/data/)
+   - `PHILM2Web (https://phim2web.lailab.info/pages/index.html)
+   - `PHISTO (https://www.phisto.org/browse.xhtml)
+   - `FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 
 6. **Edit Build Parameters**  
