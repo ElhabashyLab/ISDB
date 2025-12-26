@@ -1,4 +1,34 @@
 #!/usr/bin/env python3
+# =============================================================================
+# ISDB Statistics Generator
+# =============================================================================
+# Author  : Hadeer Elhabashy
+# Date    : 2025-12-26
+# Version : 1.0
+#
+# Description:
+#   This script computes comprehensive statistics from an ISDB (Interacting 
+#   Species Database) CSV file, including:
+#     - Total unique Taxonomy IDs (A and B)
+#     - Total unique Taxonomy pairs (A-B symmetric)
+#     - Total unique protein-protein interactions (PPIs, symmetric)
+#     - Per-database statistics, handling multi-database entries (split by "|")
+#   Empty cells in UniProt ID columns are treated as NA and filtered appropriately.
+#
+# Usage:
+#   1. Set the variable ISDB_FILE to the path of your ISDB CSV file.
+#   2. Run the script:
+#        python3 isdb_stats.py
+#   3. The statistics log will be written to 'ISDB_statistics.log'.
+#
+# Dependencies:
+#   - pandas
+#   - numpy
+#
+# Notes:
+#   - Designed for large datasets (3M+ entries)
+#   - Symmetric calculations ensure A-B == B-A for both Taxonomy IDs and PPIs
+# =============================================================================
 
 import pandas as pd
 import numpy as np
