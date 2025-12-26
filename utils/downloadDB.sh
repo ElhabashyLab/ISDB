@@ -11,7 +11,7 @@ set -euo pipefail
 # ===============================
 # CONFIGURATION
 # ===============================
-DATA_DIR="/media/elhabashy/Elements/interspecies_ev/isdb"
+DATA_DIR="<path to download the resources databases>"
 
 # the path to the script
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
