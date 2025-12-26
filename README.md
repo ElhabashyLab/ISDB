@@ -129,29 +129,29 @@ To submit data for inclusion in our system, please contact our [team](#authors) 
 # List of resources 
 
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
-| Database | #Species | #Species Pairs | #PPIs | Interaction Type | Batch Download | Database Type | Citation |
-|----------|-----------|----------------|-------|-----------------|----------------|---------------|---------|
-| [BioGRID](https://thebiogrid.org/) | 86 | 260 | 1,905,211 | ✔ | ✔ | M | \cite{biogrid} | 
-| [IntAct](https://www.ebi.ac.uk/intact/home) | 1,806 | 2,855 | 942,611 | ✔ | ✔ | M | \cite{intact} | 
-| [MINT](https://mint.bio.uniroma2.it/) | 697 | 1,018 | 79,223 | ✔ | ✔ | M | \cite{MINT} |
-| [DIP](https://dip.doe-mbi.ucla.edu/dip/Main.cgi) | 193 | 270 | 39,422 | ✔ | ✔ | M | \cite{xenarios2000dip} |
-| [Signor](https://signor.uniroma2.it/) | 7 | 7 | 14,959 | ✔ | ✔ | M | \cite{SIGNOR} |
-| [VirHostNet](https://virhostnet.prabi.fr/) | 331 | 465 | 41,422 | ✔ | ✔ | HP/M | \cite{VirHostNet} |
-| [PHISTO](https://www.phisto.org/) | 589 | 528 | 25,405 | ✔ | X | HP/M | \cite{PHISTO} | 
-| [Interactomics](https://doi.org/10.1093/molbev/msad012) | 294 | 293 | 3,958 | ✔ | ✔ | HP/M | \cite{Interactome} | 
-| [BV-BRC](https://www.bv-brc.org/) | 136,861 | 146,797 | 0 | X | X | HP | \cite{BVBRC} | 
-| [EID2](https://eid2.liverpool.ac.uk/) | 12,428 | 17,927 | 0 | ✔ | ✔ | HP | \cite{EID2} |
-| [GMPD](https://parasites.nunn-lab.org/) | 1,562 | 5,525 | 0 | X | X | HP | \cite{global_mammal_parasite} | 
-| [PHILM2Web](http://philm2web.live) | 411 | 1,167 | 0 | ✔ | X | HP | \cite{hilm2web} |
-| [PHI-base](http://www.phi-base.org/) | 538 | 1,061 | 0 | X | ✔ | HP | \cite{phi_base} | 
-| [HPIDB](https://hpidb.igbb.msstate.edu/) | 620 | 788 | 0 | ✔ | ✔ | HP | \cite{HPIDB} |
-| [GloBI](https://www.globalbioticinteractions.org/) | 87,958 | 436,911 | 0 | ✔ | ✔ | E | \cite{GloBI} |
-| [Bat Eco-Interactions](https://www.batbase.org/db) | 3,094 | 8,080 | 0 | ✔ | X | E | \cite{BEI} |
-| [SIAD](https://www.discoverlife.org/siad/) | 3,732 | 5,028 | 0 | ✔ | ✔ | E | \cite{belbin2021atlas} | 
-| [IWDB](https://iwdb.nceas.ucsb.edu/resources.html) | 593 | 3,440 | 0 | X | ✔ | E | - | 
-| [Web of Life database](https://www.web-of-life.es/map.php) | 172 | 1,050 | 0 | X | ✔ | E | \cite{WOF, WOF_hompage} |
-| [PIDA](https://github.com/ramalok/PIDA) | 598 | 757 | 0 | X | ✔ | E | \cite{PIDA} |
-| [FGSCdb](https://fgsc.netlify.app/) | 19 | 15 | 0 | ✔ | X | E | \cite{FGSCdb} | 
+| Database | #Species | #Species Pairs | #PPIs | Interaction Type | Batch Download | Database Type | 
+|----------|-----------|----------------|-------|-----------------|----------------|---------------|
+| [BioGRID](https://thebiogrid.org/) | 86 | 260 | 1,905,211 | ✔ | ✔ | M |
+| [IntAct](https://www.ebi.ac.uk/intact/home) | 1,806 | 2,855 | 942,611 | ✔ | ✔ | M | 
+| [MINT](https://mint.bio.uniroma2.it/) | 697 | 1,018 | 79,223 | ✔ | ✔ | M | 
+| [DIP](https://dip.doe-mbi.ucla.edu/dip/Main.cgi) | 193 | 270 | 39,422 | ✔ | ✔ | M | 
+| [Signor](https://signor.uniroma2.it/) | 7 | 7 | 14,959 | ✔ | ✔ | M | 
+| [VirHostNet](https://virhostnet.prabi.fr/) | 331 | 465 | 41,422 | ✔ | ✔ | HP/M |
+| [PHISTO](https://www.phisto.org/) | 589 | 528 | 25,405 | ✔ | X | HP/M |
+| [Interactomics](https://doi.org/10.1093/molbev/msad012) | 294 | 293 | 3,958 | ✔ | ✔ | HP/M | 
+| [BV-BRC](https://www.bv-brc.org/) | 136,861 | 146,797 | 0 | X | X | HP |
+| [EID2](https://eid2.liverpool.ac.uk/) | 12,428 | 17,927 | 0 | ✔ | ✔ | HP | 
+| [GMPD](https://parasites.nunn-lab.org/) | 1,562 | 5,525 | 0 | X | X | HP | 
+| [PHILM2Web](http://philm2web.live) | 411 | 1,167 | 0 | ✔ | X | HP | 
+| [PHI-base](http://www.phi-base.org/) | 538 | 1,061 | 0 | X | ✔ | HP | 
+| [HPIDB](https://hpidb.igbb.msstate.edu/) | 620 | 788 | 0 | ✔ | ✔ | HP | 
+| [GloBI](https://www.globalbioticinteractions.org/) | 87,958 | 436,911 | 0 | ✔ | ✔ | E | 
+| [Bat Eco-Interactions](https://www.batbase.org/db) | 3,094 | 8,080 | 0 | ✔ | X | E |
+| [SIAD](https://www.discoverlife.org/siad/) | 3,732 | 5,028 | 0 | ✔ | ✔ | E |
+| [IWDB](https://iwdb.nceas.ucsb.edu/resources.html) | 593 | 3,440 | 0 | X | ✔ | E |
+| [Web of Life database](https://www.web-of-life.es/map.php) | 172 | 1,050 | 0 | X | ✔ | E | 
+| [PIDA](https://github.com/ramalok/PIDA) | 598 | 757 | 0 | X | ✔ | E | 
+| [FGSCdb](https://fgsc.netlify.app/) | 19 | 15 | 0 | ✔ | X | E | 
 
 
 
