@@ -52,8 +52,13 @@ To build and run **ISDB** locally, please follow these steps:
    ```
 
  6. **Download Resources**
-    
-    To download the required databases, run the provided script:
+ 
+    Before downloading, **please update the path where the resources will be stored** in the `downloadDB.sh` script.
+    Set the directory by editing the following variable:
+    ```bash
+    DATA_DIR="<path where the resources will be stored>"
+
+    To download the required databases, then run the provided script:
     
     ```bash
     bash downloadDB.sh
