@@ -57,7 +57,8 @@ To build and run **ISDB** locally, please follow these steps:
     Set the directory by editing the following variable:
     ```bash
     DATA_DIR="<path where the resources will be stored>"
-
+    ```
+    
     To download the required databases, then run the provided script:
     
     ```bash
