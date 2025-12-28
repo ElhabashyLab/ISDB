@@ -1,6 +1,7 @@
 # The Interacting Species Database (ISDB)
 A Comprehensive Resource for Ecological Interactions at the Molecular Level.
 The ISDB compiles data on species interactions from 21 resources, including scientific names, Taxon IDs, UniProt IDs, interaction types, ontology identifiers, references, and original database sources. ISDB is developed using Python and Bash scripts and is available as an open-source under the MIT License.
+![Figure description](mainFigure_04_04_25.svg)
 
 # Web interface
 ISDB web interface can be found here (www.elhabashylab.org/isdb) which is hosted by the German Network for Bioinformatics Infrastructure (de.NBI).
