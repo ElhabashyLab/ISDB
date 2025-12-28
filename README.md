@@ -4,7 +4,7 @@ The ISDB compiles data on species interactions from 21 resources, including scie
 #![Figure description](mainFigure_04_04_25.svg)
 
 <p align="center">
-  <img src="mainFigure_04_04_25.svg" alt="Figure description" width="500">
+  <img src="mainFigure_04_04_25.svg" alt="Figure description" width=\linewidth>
 </p>
 <p align="center"><em>Figure 1.  (A) Flowchart outlining the key steps in ISDB creation, including data retrieval, standardization, taxonomy annotation, and aggregation. (B–D) Ring diagrams illustrating (B) the proportional distribution of species by superkingdom, (C) the classification of species interactions according to superkingdom, and (D) the predominant interaction types categorized by keywords. (E) Example of an ecological network depicting interconnected species within ISDB.</em></p>
 
