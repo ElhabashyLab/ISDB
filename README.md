@@ -173,6 +173,8 @@ If you have any questions or inquiries, please feel free to contact Hadeer Elhab
 
 # License
 - The **ISDB code** in this repository is licensed under the [MIT License](./LICENSE).
+- ⭐ If this tool helped your research, please consider starring the repository.
+
   
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 - This **ISDB database** in the versions/ folder is licensed under a
