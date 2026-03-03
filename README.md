@@ -16,32 +16,33 @@ wget https://github.com/ElhabashyLab/ISDB/tree/main/versions/ISDB_2024_09_13.<ts
 ```
 
 
-# How to build ISDB locally? 
-To build and run **ISDB** locally, please follow these steps:
+# Building ISDB Locally
+
+To build and run ISDB locally, follow these steps:
 
 1. **Ensure internet connectivity**
      
-   Make sure your computer is connected to the internet.
+   Verify that your system is connected to the internet.
 
-2. **Clone the repository and navigate into it**
+2. **Clone the Repository and navigate into it**
    
    ```bash
    git clone https://github.com/ElhabashyLab/ISDB.git
    cd ISDB
    ```
    
-3. **Set up the Python environment**
-   
-   ISDB requires Python 3.11.7 or more
-   If your local Python version differs, we recommend creating a dedicated Conda environment:
+3. **Set Up the Python Environment**
+
+   ISDB requires Python 3.11.7 or later. If your system has a different version, we recommend creating a dedicated Conda environme**
+
     ```bash
    conda create --name isdb_env python=3.11.7
    conda activate isdb_env
    ```
 
-4. **Install Dependencies**
+5. **Install Dependencies**
    
-   ISDB depends on the following Python packages:
+   ISDB relies on the following Python packages:
    * biopython 1.79
    * click 8.1.3
    * matplotlib 3.6.3
@@ -49,15 +50,13 @@ To build and run **ISDB** locally, please follow these steps:
    * requests 2.28.2
    * numpy==1.23.5
      
-   You can install all required dependencies with:
+   Install all dependencies via:
    ```bash
      pip install -r requirements.txt
    ```
 
- 5. **Download Resources**
- 
-    Before downloading, **please update the path where the resources will be stored** in the `downloadDB.sh` script.
-    Set the directory by editing the following variable:
+ 6. **Download Resources**
+    Before downloading, update the path for storing resources in the downloadDB.sh script:
     ```bash
     DATA_DIR="<path where the resources will be stored>"
     ```
@@ -79,7 +78,7 @@ To build and run **ISDB** locally, please follow these steps:
     - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 
-  6. **Edit Build Parameters**
+  7. **Edit Build Parameters**
    
      After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
      The following parameters can be customized:
