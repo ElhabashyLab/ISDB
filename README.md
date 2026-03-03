@@ -95,11 +95,11 @@ To build and run **ISDB** locally, please follow these steps:
         If set to `true`, the user must specify their paths in the section below.
 
    
-   a.`tempory_directory`: Direction in which ISDB is build,
-   b. `overwrite`: Wether to overwrite pre-existing stages,
-   c. `addtional_data`: File path or directory path of additional data files. Each file should at least include two species columns,
+   a.`temporary_directory`: Direction in which ISDB is build,
+   b. `overwrite`: Whether to overwrite pre-existing stages,
+   c. `additional_data`: File path or directory path of additional data files. Each file must include at least two species columns,
    d. `delete`: If intermediate stages should be deleted afterwards,
-   e. `manualDatabases`: Exclude or include database which could not be downloaded automatically. If 'true' the user has specify their paths in the following section.
+   e. `manualDatabases`: Exclude or include databases that cannot be downloaded automatically. If 'true' the user has specify their paths in the following section.
 
 
 
@@ -118,7 +118,7 @@ Additional parameters, such as whether to overwrite existing files, remove inter
 The generated database will be available in CSV and TSV formats, with the following column descriptions:
 - `Serial Number`: Interaction identifier inside ISDB
 - `Taxonomy ID (A/B)`: NCBI Taxonomical identifer
-- `Organism (A/B)`: Sientifc species name
+- `Organism (A/B)`: Scientific species name
 - `UniProt ID (A/B)`: UniProt protein identifier
 - `Protein Name (A/B)`: UniProt protein name 
 - `Interaction Type`: Phrase describing the interaction
@@ -169,7 +169,7 @@ Mederer, M., Gautam, A., Kohlbacher, O., Lupas, A., Elhabashy, H. Interacting Sp
 - Hadeer Elhabashy
 
 # Contact
-If you have any questions or inquiries, please feel free to contact Hadeer Elhabashy at (Elhabashylab [@] gmail.com))
+If you have any questions or inquiries, please feel free to contact Hadeer Elhabashy at (Elhabashylab [@] gmail.com)
 
 # License
 - The **ISDB code** in this repository is licensed under the [MIT License](./LICENSE).
