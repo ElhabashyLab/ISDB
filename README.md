@@ -8,7 +8,7 @@ The ISDB compiles data on species interactions from 21 resources, including scie
 <p align="center"><em>Figure 1.  (A) Flowchart outlining the key steps in ISDB creation, including data retrieval, standardization, taxonomy annotation, and aggregation. (B–D) Ring diagrams illustrating (B) the proportional distribution of species by superkingdom, (C) the classification of species interactions according to superkingdom, and (D) the predominant interaction types categorized by keywords. (E) Example of an ecological network depicting interconnected species within ISDB.</em></p>
 
 # Web interface
-ISDB web interface can be found here (www.elhabashylab.org/isdb) which is hosted by the German Network for Bioinformatics Infrastructure (de.NBI).
+The ISDB web interface (www.elhabashylab.org/isdb) is hosted by the German Network for Bioinformatics Infrastructure (de.NBI).
 The web interface provides functionalities for batch downloads, data search, result download, and data deposition.
 
 # How to download ISDB? 
@@ -25,14 +25,14 @@ To build and run **ISDB** locally, please follow these steps:
      
    Make sure your computer is connected to the internet.
 
-3. **Clone the repository and navigate into it**
+2. **Clone the repository and navigate into it**
    
    ```bash
    git clone https://github.com/ElhabashyLab/ISDB.git
    cd ISDB
    ```
    
-4. **Set up the Python environment**
+3. **Set up the Python environment**
    
    ISDB requires Python 3.11.7 or more
    If your local Python version differs, we recommend creating a dedicated Conda environment:
@@ -41,7 +41,7 @@ To build and run **ISDB** locally, please follow these steps:
    conda activate isdb_env
    ```
 
-5. **Install Dependencies**
+4. **Install Dependencies**
    
    ISDB depends on the following Python packages:
    * biopython 1.79
@@ -56,7 +56,7 @@ To build and run **ISDB** locally, please follow these steps:
      pip install -r requirements.txt
    ```
 
- 6. **Download Resources**
+ 5. **Download Resources**
  
     Before downloading, **please update the path where the resources will be stored** in the `downloadDB.sh` script.
     Set the directory by editing the following variable:
@@ -81,7 +81,7 @@ To build and run **ISDB** locally, please follow these steps:
     - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 
-  7. **Edit Build Parameters**
+  6. **Edit Build Parameters**
    
      After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
      The following parameters can be customized:
@@ -103,10 +103,9 @@ To build and run **ISDB** locally, please follow these steps:
 
 
 
-   8. **Build the ISDB Database**  
-
-      To compile the ISDB database locally, execute the main build script from within the `main` directory:
-
+   7. **Build the ISDB Database**  
+      To build the ISDB database locally, run the main build script from the main directory:
+      
       ```bash
       cd main
       bash buildDB.sh
@@ -122,7 +121,7 @@ The generated database will be available in CSV and TSV formats, with the follow
 - `UniProt ID (A/B)`: UniProt protein identifier
 - `Protein Name (A/B)`: UniProt protein name 
 - `Interaction Type`: Phrase describing the interaction
-- `Ontology ID`: Interaction identifier of the coresponding ontology
+- `Ontology ID`: Interaction identifier of the corresponding ontology
 - `Reference`: Reference as defined by data source
 - `Database`: Databank source of the interaction
 
