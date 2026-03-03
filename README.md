@@ -1,4 +1,14 @@
 # The Interacting Species Database (ISDB)
+
+A Comprehensive Resource for Ecological Interactions at the Molecular Level
+
+The Interacting Species Database (ISDB) aggregates data on species interactions from 21 distinct sources, including scientific names, Taxon IDs, UniProt IDs, interaction types, ontology identifiers, references, and original database sources. ISDB is implemented using Python and Bash scripts and is freely available as open-source software under the MIT License.
+
+<p align="center"> <img src="mainFigure_04_04_25.png" alt="Figure description" width=\linewidth> </p> <p align="center"><em>Figure 1. (A) Flowchart illustrating key steps in ISDB creation: data retrieval, standardization, taxonomy annotation, and aggregation. (B–D) Ring diagrams depicting (B) species distribution by superkingdom, (C) classification of interactions according to superkingdom, and (D) predominant interaction types categorized by keywords. (E) Example ecological network showing interconnected species within ISDB.</em></p>
+
+
+
+# The Interacting Species Database (ISDB)
 A Comprehensive Resource for Ecological Interactions at the Molecular Level.
 The ISDB compiles data on species interactions from 21 resources, including scientific names, Taxon IDs, UniProt IDs, interaction types, ontology identifiers, references, and original database sources. ISDB is developed using Python and Bash scripts and is available as an open-source under the MIT License.
 
