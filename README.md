@@ -15,7 +15,6 @@ Prebuilt versions of ISDB are available in the versions directory and can be acc
 wget https://github.com/ElhabashyLab/ISDB/tree/main/versions/ISDB_2024_09_13.<tsv/csv>.gz
 ```
 
-
 # Building ISDB Locally
 
 To build and run ISDB locally, follow these steps:
@@ -40,7 +39,7 @@ To build and run ISDB locally, follow these steps:
    conda activate isdb_env
    ```
 
-5. **Install Dependencies**
+4. **Install Dependencies**
    
    ISDB relies on the following Python packages:
    * biopython 1.79
@@ -55,20 +54,20 @@ To build and run ISDB locally, follow these steps:
      pip install -r requirements.txt
    ```
 
- 6. **Download Resources**
+ 5. **Download Resources**
+
     Before downloading, update the path for storing resources in the downloadDB.sh script:
     ```bash
     DATA_DIR="<path where the resources will be stored>"
     ```
     
-    To download the required databases, then run the provided script:
+   Run the download script:
     
     ```bash
     bash downloadDB.sh
     ```
-
-    ISDB automatically parses most of the databases. However, a few resources must be downloaded manually from their respective websites:
    
+   Most databases are parsed automatically. Some must be downloaded manually from their respective websites:
     - Bat Eco-Interactions (https://www.batbase.org/explore)
     - BV-BRC (https://www.bv-brc.org)
     - DIP (https://dip.doe-mbi.ucla.edu/dip/)
@@ -78,54 +77,45 @@ To build and run ISDB locally, follow these steps:
     - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 
-  7. **Edit Build Parameters**
+  6. **Configure Build Parameters**
    
-     After downloading the required databases, edit the paths and parameters in the `main/buildDB.sh` script.  
-     The following parameters can be customized:
+     After downloading the required databases, Eedit the main/buildDB.sh script to customize parameters: 
 
      a. **`temporary_directory`** — Directory in which ISDB is built.  
-     b. **`overwrite`** — Whether to overwrite pre-existing stages (`true` / `false`).  
-     c. **`additional_data`** — File or directory path containing additional data files.  
-        Each file must include at least **two species columns**.  
-     d. **`delete`** — Whether intermediate stages should be deleted after the build (`true` / `false`).  
-     e. **`manualDatabases`** — Include or exclude databases that cannot be downloaded automatically.  
-        If set to `true`, the user must specify their paths in the section below.
+     b. **`overwrite`** — Whether to overwrite existing stages (`true` / `false`).  
+     c. **`additional_data`** — Path to additional data files or directories. Each file must include at least two species columns.
+     d. **`delete`** — Whether to delete intermediate files after build (`true` / `false`).  
+     e. **`manualDatabases`** — Include databases that cannot be downloaded automatically  (`true` / `false`). If true, paths must be specified. 
 
-   
-   a.`temporary_directory`: Direction in which ISDB is build,
-   b. `overwrite`: Whether to overwrite pre-existing stages,
-   c. `additional_data`: File path or directory path of additional data files. Each file must include at least two species columns,
-   d. `delete`: If intermediate stages should be deleted afterwards,
-   e. `manualDatabases`: Exclude or include databases that cannot be downloaded automatically. If 'true' the user has specify their paths in the following section.
-
-
-
-   7. **Build the ISDB Database**  
-      To build the ISDB database locally, run the main build script from the main directory:
+   7. **Build the ISDB Database**
+      
+      From the main directory, execute
       
       ```bash
       cd main
       bash buildDB.sh
       ```
+   Additional options such as overwriting existing files, retaining intermediate files, or including user-provided data can be configured within the script.
 
-   
-Additional parameters, such as whether to overwrite existing files, remove intermediate files, or incorporate user-provided data, can also be configured within this script. More details can be found on the documentation on GitHub.
+**Database Output**
 
-The generated database will be available in CSV and TSV formats, with the following column descriptions:
-- `Serial Number`: Interaction identifier inside ISDB
-- `Taxonomy ID (A/B)`: NCBI Taxonomical identifer
-- `Organism (A/B)`: Scientific species name
-- `UniProt ID (A/B)`: UniProt protein identifier
-- `Protein Name (A/B)`: UniProt protein name 
-- `Interaction Type`: Phrase describing the interaction
-- `Ontology ID`: Interaction identifier of the corresponding ontology
-- `Reference`: Reference as defined by data source
-- `Database`: Databank source of the interaction
+The built database is available in CSV and TSV formats, with the following columns:
+
+- `Serial Number` — Unique identifier for each interaction
+- `Taxonomy ID (A/B)` — NCBI Taxonomy identifier
+- `Organism (A/B)` — Scientific species name
+- `UniProt ID (A/B)` — UniProt protein identifier
+- `Protein Name (A/B)` — UniProt protein name
+- `Interaction Type` — Description of the interaction
+- `Ontology ID` — Ontology identifier for the interaction
+- `Reference` — Reference as provided by the source
+- `Database `— Source database of the interaction 
 
 
 # How to deposite data to the ISDB?
 
-To submit data for inclusion in our system, please contact our [team](#authors) directly. To incorporate your own data into the database locally please follow the instruction on [*How to build ISDB locally?*](#how-to-build-isdb-locally)
+To submit data for inclusion in our system, please contact our [team](#authors) directly. 
+For local incorporation of your own data, refer to [*Building ISDB Locally*](#Building-ISDB-Locally) Building ISDB Locally instructions.
 
 # List of resources 
 
