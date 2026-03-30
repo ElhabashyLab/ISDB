@@ -10,18 +10,31 @@ will be None even if there are multiple feasible solutions.
 Author: Michael
 """
 
-# TODO migrate function from processDB.py here
 import requests
 import xmltodict
 from multipledispatch import dispatch
+from collections import OrderedDict
+
+
+class LimitedDict(OrderedDict):
+    def __init__(self, max_size):
+        super().__init__()
+        self.max_size = max_size
+
+    def __setitem__(self, key, value):
+        if key in self:
+            self.move_to_end(key)
+        super().__setitem__(key, value)
+        while len(self) > self.max_size:
+            self.popitem(last=False)
 
 
 class uniprot_request:
     def __init__(self):
-        self.names = {}
-        self.proteomes = {}
-        self.ids = {}
-        self.uid = {}
+        self.names = LimitedDict(2_000_000)
+        self.proteomes = LimitedDict(2_000_000)
+        self.ids = LimitedDict(2_000_000)
+        self.uid = LimitedDict(2_000_000)
 
     @staticmethod
     def _get_name(tax: dict) -> str:

@@ -1,66 +1,85 @@
-#! /bin/bash
-# Please adjust "tempory_directory" to the path in which the database can be built
-export tempory_directory="/etc/ISDB"
-# Overwrite existing out files: false, true
-export overwrite=false
-# Addtional data (optional): e.g. filepath: <myFile.csv> or directory: <myFiles/> 
-export addtional_data=""
-### Delete tempory files
-delete=false
-### For manually downloaded database files:
-# "false" -> no manual downloaded databases
-# "true" -> includes manual downloaded databases (file path need to be specified)
-manualDatabases=false
+#!/usr/bin/env bash
+# For parameters see .env
 
-export current_dir=$(pwd)
+set -euo pipefail
 
-# Please specify the path to the manual downloaded databases in the following section
-# 'mv <please-adjust-path> $tmepory_directory/<please-keep-as-is>'
-if $manualDatabases; then
+# Load environment variables
+set -a
+source config.env
+set +a
+
+CURRENT_DIR="$(pwd)"
+
+SRC="$OUT_DIRECTORY/manualDownload"
+DST="$OUT_DIRECTORY"
+
+# Helper functions
+copy_file() {
+    local src="$1"
+    local dst="$2"
+
+    if [ -f "$src" ]; then
+        cp "$src" "$dst"
+    else
+        echo "Warning: Missing file $src"
+    fi
+}
+
+copy_dir() {
+    local src_dir="$1"
+    local dst_dir="$2"
+
+    mkdir -p "$dst_dir"
+
+    if [ -d "$src_dir" ]; then
+        cp "$src_dir"/* "$dst_dir/" 2>/dev/null || true
+    else
+        echo "Warning: Missing directory $src_dir"
+    fi
+}
+
+# =========================
+# Manual databases handling
+# =========================
+if [ "$MANUAL_DATABASES" = "true" ]; then
+    echo "Processing manual databases..."
+
     ## Bat Eco-Interactions
-    # no static link -> https://www.batbase.org/explore
-    cp $tempory_directory/manualDownload/BatEco-InteractionRecords.csv $tempory_directory/BatEco-InteractionRecords.csv
-    ## BV-BRC 
-    # no static link -> https://www.bv-brc.org
-    mkdir $tempory_directory/bvbrc/
-    cp $tempory_directory/manualDownload/BVBRC_genome_bacteria.csv $tempory_directory/bvbrc/BVBRC_genome_bacteria.csv 
-    cp $tempory_directory/manualDownload/BVBRC_genome_viruses.csv $tempory_directory/bvbrc/BVBRC_genome_viruses.csv
-    cp $tempory_directory/manualDownload/BVBRC_genome_archaea.csv $tempory_directory/bvbrc/BVBRC_genome_archaea.csv
-    ## DIP [dip/*] (Have to register -> not updated automatically)
-    # https://dip.doe-mbi.ucla.edu/dip/
-    mkdir $tempory_directory/dip/
-    cp $tempory_directory/manualDownload/DIP/Celeg20170205.txt $tempory_directory/dip/
-    cp $tempory_directory/manualDownload/DIP/Ecoli20170205.txt $tempory_directory/dip/ 
-    cp $tempory_directory/manualDownload/DIP/Hsapi20170205.txt $tempory_directory/dip/ 
-    cp $tempory_directory/manualDownload/DIP/Rnorv20170205.txt $tempory_directory/dip/
-    cp $tempory_directory/manualDownload/DIP/Dmela20170205.txt $tempory_directory/dip/ 
-    cp $tempory_directory/manualDownload/DIP/Hpylo20170205.txt $tempory_directory/dip/ 
-    cp $tempory_directory/manualDownload/DIP/Mmusc20170205.txt $tempory_directory/dip/ 
-    cp $tempory_directory/manualDownload/DIP/Scere20170205.txt $tempory_directory/dip/
+    copy_file "$SRC/$BATECO_FILE" "$DST/$BATECO_FILE"
+
+    ## BV-BRC
+    mkdir -p "$DST/$BVBRC_DIR"
+    copy_dir "$SRC/$BVBRC_DIR" "$DST/$BVBRC_DIR"
+
+    ## DIP
+    copy_dir "$SRC/$DIP_DIR" "$DST/$DIP_DIR"
+
     ## GMPD
-    # no static link -> https://parasites.nunn-lab.org/data/
-    mkdir $tempory_directory/gmpd
-    cp $tempory_directory/manualDownload/GMPD/gmpd-data-carnivores.csv $tempory_directory/gmpd/  
-    cp $tempory_directory/manualDownload/GMPD/gmpd-data-primates.csv $tempory_directory/gmpd
-    cp $tempory_directory/manualDownload/GMPD/gmpd-data-ungulates.csv $tempory_directory/gmpd
-    ## PHILM2Web
-    # no static link -> https://phim2web.lailab.info/pages/index.html
-    cp $tempory_directory/manualDownload/philm2web.csv $tempory_directory/philm2web.csv
-    ## PHISTO
-    # no static link -> https://phisto.org/search.xhtml
-    cp $tempory_directory/manualDownload/phisto_data.csv $tempory_directory/phisto_data.csv
-    ## FGSCdb
-    # no static link -> https://edelponte.shinyapps.io/FGSCdb/
-    cp $tempory_directory/manualDownload/FGSCdb_data.csv $tempory_directory/FGSCdb_data.csv
+    copy_dir "$SRC/$GMPD_DIR" "$DST/$GMPD_DIR"
+
+    ## Single-file datasets
+    copy_file "$SRC/$PHILM2WEB_FILE" "$DST/$PHILM2WEB_FILE"
+    copy_file "$SRC/$PHISTO_FILE"    "$DST/$PHISTO_FILE"
+    copy_file "$SRC/$FGSCDB_FILE"    "$DST/$FGSCDB_FILE"
 fi
 
-# ### Download files 
+# =========================
+# Run pipeline
+# =========================
+
+echo "Downloading databases..."
 bash ../utils/downloadDB.sh
-# ### Clean files
+
+echo "Processing databases..."
 python ../utils/processDB.py
-# ### Build DB
+
+echo "Aggregating database..."
 python ../utils/aggregateDB.py
-##
-if $delete; then
-    rm *_out.*
+
+# =========================
+# Cleanup
+# =========================
+if [ "$DELETE" = "true" ]; then
+    echo "Cleaning temporary files..."
+    rm -f *_out.*
 fi
