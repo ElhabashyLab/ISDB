@@ -10,7 +10,7 @@ set +a
 
 CURRENT_DIR="$(pwd)"
 
-SRC="$OUT_DIRECTORY/manualDownload"
+SRC="$SOURCE_DIR/manualDownload"
 DST="$OUT_DIRECTORY"
 
 # Helper functions
