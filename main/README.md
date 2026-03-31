@@ -49,3 +49,4 @@ Attention: Please do not change any parameter, not listed here if you are uncert
     1. **`SIAD_URL`**
     1. **`MINT_URL`**
     1. **`PMC9897028_URL`**
+    1. **`SIGNOR_URL`**
