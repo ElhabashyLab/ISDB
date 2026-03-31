@@ -88,7 +88,11 @@ def clean_globi(
 
     # iterate over file in chunks
     for data in pd.read_csv(
-        tempory_directory + file, usecols=col, sep="\t", header=0, chunksize=slice_size
+        os.path.join(tempory_directory, file),
+        usecols=col,
+        sep="\t",
+        header=0,
+        chunksize=slice_size,
     ):
 
         data["sourceUid"] = ""
@@ -126,7 +130,7 @@ def clean_globi(
         # clean result
         data = clean_dataframe(data)
         # get Scientific Name
-        data = getSourceTargetNames(data)
+        data = getSourceTargetNames(data, uniprot)
         out.append(data)
     data = pd.concat(out)
     # clean
@@ -176,7 +180,7 @@ def clean_biogrid(
     # clean data
     data = clean_dataframe(data)
     # get Scientific Name
-    data = getSourceTargetNames(data)
+    data = getSourceTargetNames(data, uniprot)
     # export
     export_dataframe(data, name, tempory_directory, "tsv")
 
@@ -239,7 +243,7 @@ def clean_dip(prefix: str, name: str, tempory_directory: str, uniprot: uniprot_r
     # clean result
     data = clean_dataframe(data)
     # get Scientific Name
-    data = getSourceTargetNames(data)
+    data = getSourceTargetNames(data, uniprot)
     # export
     export_dataframe(data, name, tempory_directory, "tsv")
 
@@ -269,10 +273,10 @@ def clean_fgscdb(
             "targetTaxId": "targetTaxId",
             "targetName": "targetName",
             "targetUid": "targetUid",
-            "interactionType": "interactionType",
-            "ontology": "ontology",
+            # "interactionType": "interactionType",
+            # "ontology": "ontology",
             "Ref": "reference",
-            "database": "database",
+            # "database": "database",
         },
     )
     # export
@@ -288,7 +292,7 @@ def clean_web_of_life_database(
     species_columns = ["Host", "Parasite"]
     species_pairs = []
     # go through files
-    for file in os.listdir(os.path.join(tempory_directory, dir)):  # TODO
+    for file in os.listdir(os.path.join(tempory_directory, dir)):
         if file.startswith("A_HP"):
             data = pd.read_csv(
                 os.path.join(tempory_directory, dir, file), on_bad_lines="skip"
@@ -366,7 +370,7 @@ def clean_hpidb(dir: str, name: str, tempory_directory: str, uniprot: uniprot_re
     # clean result
     data = clean_dataframe(data)
     # get Scientific Name
-    data = getSourceTargetNames(data)
+    data = getSourceTargetNames(data, uniprot)
     # export
     export_dataframe(data, name, tempory_directory, "tsv")
 
@@ -412,7 +416,7 @@ def clean_intact(
         (data["targetTaxId"].astype(int) > 0) & (data["sourceTaxId"].astype(int) > 0)
     ]
     # Scientific names
-    data = getSourceTargetNames(data)
+    data = getSourceTargetNames(data, uniprot)
     # export
     export_dataframe(data, name, tempory_directory, "tsv")
 
@@ -500,7 +504,7 @@ def clean_phi_base(
     # clean data
     data = clean_dataframe(data)
     # Scientific names
-    data = getSourceTargetNames(data)
+    data = getSourceTargetNames(data, uniprot)
     # export
     data["interactionType"] = "pathogenHost"
     export_dataframe(data, name, tempory_directory, "tsv")
@@ -527,7 +531,7 @@ def clean_philm2web(
         },
     )
     data["reference"] = data["reference"].astype(str).apply(lambda x: "PMID:" + x)
-    data = getSourceTargetNames(data)
+    data = getSourceTargetNames(data, uniprot)
     # clean data
     data["sourceUid"] = ""
     data["targetUid"] = ""
@@ -613,7 +617,7 @@ def clean_virhostnet(
     # cleaning data
     data = clean_dataframe(data)
     # Scientific names
-    data = getSourceTargetNames(data)
+    data = getSourceTargetNames(data, uniprot)
     # export
     export_dataframe(data, name, tempory_directory, "tsv")
 
@@ -834,7 +838,7 @@ def clean_mint(file: str, name: str, tempory_directory: str, uniprot: uniprot_re
         lambda x: x.replace('"', "").split("(")[-1][:-1]
     )
     # scientific names
-    data = getSourceTargetNames(data)
+    data = getSourceTargetNames(data, uniprot)
     # clean data
     data = clean_dataframe(data)
     data = data[(data["targetTaxId"] != "-") & (data["sourceTaxId"] != "-")]
@@ -850,7 +854,7 @@ def clean_pmc9897028(
 ):
     """Cleaning a viral interactome (PMC9897028)"""
     data = pd.read_excel(
-        os.path.join(tempory_directory, dir, "/supplementary_table_S1.xls")
+        os.path.join(tempory_directory, dir, "supplementary_table_S1.xls")
     ).astype(str)
     rows = []
     for i, row in data.iterrows():
@@ -907,6 +911,6 @@ def clean_signor(
     # clean data
     data = clean_dataframe(data)
     # Scientific names
-    data = getSourceTargetNames(data)
+    data = getSourceTargetNames(data, uniprot)
     # export
     export_dataframe(data, name, tempory_directory, "tsv")

@@ -42,12 +42,16 @@ To build and run ISDB locally, follow these steps:
 4. **Install Dependencies**
    
    ISDB relies on the following Python packages:
-   * biopython 1.79
-   * click 8.1.3
-   * matplotlib 3.6.3
-   * pandas 1.5.3
-   * requests 2.28.2
-   * numpy==1.23.5
+   <!-- * biopython 1.79 -->
+   <!-- * click 8.1.3 -->
+   <!-- * matplotlib 3.6.3 -->
+   * pandas 2.0.3
+   * numpy 1.24.3
+   * requests
+   * xmltodict 0.14.2
+   * multipledispatch 0.6.0
+   * xlrd
+   * dotenv
      
    Install all dependencies via:
    ```bash
@@ -56,36 +60,30 @@ To build and run ISDB locally, follow these steps:
 
  5. **Download Resources**
 
-    Before downloading, update the path for storing resources in the downloadDB.sh script:
-    ```bash
-    DATA_DIR="<path where the resources will be stored>"
-    ```
-    
-   Run the download script:
-    
-    ```bash
-    bash downloadDB.sh
-    ```
-   
-   Most databases are parsed automatically. Some must be downloaded manually from their respective websites:
-    - Bat Eco-Interactions (https://www.batbase.org/explore)
-    - BV-BRC (https://www.bv-brc.org)
-    - DIP (https://dip.doe-mbi.ucla.edu/dip/)
-    - GMPD (https://parasites.nunn-lab.org/data/)
-    - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
-    - PHISTO (https://www.phisto.org/browse.xhtml)
-    - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
+      Most databases are parsed automatically. Some must be downloaded manually from their respective websites:
+      - Bat Eco-Interactions (https://www.batbase.org/explore)
+      - BV-BRC (https://www.bv-brc.org)
+      - DIP (https://dip.doe-mbi.ucla.edu/dip/)
+      - GMPD (https://parasites.nunn-lab.org/data/)
+      - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
+      - PHISTO (https://www.phisto.org/browse.xhtml)
+      - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
 
 
   6. **Configure Build Parameters**
    
-     After downloading the required databases, Eedit the main/buildDB.sh script to customize parameters: 
+     After downloading the required databases, Edit the main/config.env script to customize parameters: 
 
-     a. **`temporary_directory`** — Directory in which ISDB is built.  
-     b. **`overwrite`** — Whether to overwrite existing stages (`true` / `false`).  
-     c. **`additional_data`** — Path to additional data files or directories. Each file must include at least two species columns.
-     d. **`delete`** — Whether to delete intermediate files after build (`true` / `false`).  
-     e. **`manualDatabases`** — Include databases that cannot be downloaded automatically  (`true` / `false`). If true, paths must be specified. 
+      1. **`OUT_DIRECTORY`** — Directory in which ISDB is built.  
+      2. Decide which steps to (re)run
+         1. **`DOWNLOAD`** — Whether to download files from scratch (`true` / `false`).  
+         2. **`PROCESS`** — Whether to process downloaded files (`true` / `false`).  
+         3. **`AGGREGATE`** — Whether to summon processed files (`true` / `false`).  
+      3. **`OVERWRITE`** — Whether to overwrite existing stages (`true` / `false`).  
+      3. **`ADDITIONAL_DATA`** — Path to additional data files or directories. Each file must include at least two species columns.
+      4. **`DELETE`** — Whether to delete intermediate files after build (`true` / `false`).  
+      5. **`MANUAL_DATABASES`** — Include databases that cannot be downloaded automatically  (`true` / `false`). If true, paths must be specified. 
+      6. **`SOURCE_DIR`** — Directory where manual downloaded files are stored
 
    7. **Build the ISDB Database**
       

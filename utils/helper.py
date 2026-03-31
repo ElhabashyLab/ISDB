@@ -12,6 +12,10 @@ from datetime import date
 sys.path.insert(1, "./")
 from uniprot_api import uniprot_request
 
+# I/O dir suffixes
+input_dir = "inputs/"
+output_dir = "outputs/"
+
 # Columns for the final output tables
 table_columns = [
     "sourceTaxId",
@@ -42,11 +46,12 @@ env2name = {
     "PHI_BASE_FILE": "PHI_base",
     "PIDA_FILE": "Pida",
     "VIRHOSTNET_FILE": "VirHostNet",
-    "EID2": "EID2",
-    "SIAD": "Siad",
+    "EID2_FILE": "EID2",
+    "SIAD_FILE": "Siad",
     "MINT_FILE": "Mint",
     "SIGNOR_FILE": "Signor",
     # ===== Automatic directories =====
+    "HPIDB_DIR": "HPIDB",
     "BIOGRID_DIR": "BioGRID",
     "WEB_OF_LIFE_DATABASE_DIR": "Web_of_Life_database",
     "HPIDB_DIR": "HPIDB",
@@ -205,7 +210,7 @@ def export_for_protein_search(db: pd.DataFrame, tmp_dir: str) -> None:
         ],
     ].dropna(subset=["UniProt ID A", "UniProt ID B"]).to_csv(
         os.path.join(
-            tmp_dir, "ISDB_Protein_Search", str(date.today()).replace("-", "_"), ".tsv"
+            tmp_dir, f"ISDB_Protein_Search_{str(date.today()).replace('-', '_')}.tsv"
         ),
         index=False,
         sep="\t",
@@ -232,7 +237,7 @@ def export_for_species_search(db: pd.DataFrame, tmp_dir: str) -> None:
         ],
     ].drop_duplicates(subset=["Taxonomy ID A", "Taxonomy ID B"]).to_csv(
         os.path.join(
-            tmp_dir, "ISDB_Species_Search_", str(date.today()).replace("-", "_"), ".tsv"
+            tmp_dir, f"ISDB_Species_Search_{str(date.today()).replace('-', '_')}.tsv"
         ),
         index=False,
         sep="\t",
@@ -333,11 +338,14 @@ def export_dataframe(
     dataFrame = dataFrame[table_columns]
     if typ == "csv":
         dataFrame.to_csv(
-            os.path.join(tmp_dir, f"{database.lower()}_out.csv"), index=False
+            os.path.join(tmp_dir, "..", output_dir, f"{database.lower()}_out.csv"),
+            index=False,
         )
     elif typ == "tsv":
         dataFrame.to_csv(
-            os.path.join(tmp_dir, f"{database.lower()}_out.tsv"), sep="\t", index=False
+            os.path.join(tmp_dir, "..", output_dir, f"{database.lower()}_out.tsv"),
+            sep="\t",
+            index=False,
         )
     else:
         raise TypeError(f"{typ} is not a valid file format for export [csv/tsv]")

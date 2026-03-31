@@ -6,6 +6,7 @@ Changes should only be done it file paths
 if users know what they are doing.
 """
 
+from datetime import datetime
 import pandas as pd
 import numpy as np
 from dotenv import load_dotenv
@@ -22,7 +23,7 @@ from helper_processDB import *
 
 
 def check_and_process_db(
-    dir: str,
+    dir_fle: str,
     name: str,
     process_func: callable,
     overwrite: bool,
@@ -34,10 +35,13 @@ def check_and_process_db(
     """
     exception = None
     try:
-        file_exists(dir, tmp_dir, overwrite)
+        file_exists(dir_fle, os.path.join(tmp_dir, input_dir))
         print(f"# Processing {name}")
-        if not check_out_exists(name.lower(), tmp_dir) or overwrite:
-            process_func(dir, name, tmp_dir, uniprot)
+        if (
+            not check_out_exists(name.lower(), os.path.join(tmp_dir, output_dir))
+            or overwrite
+        ):
+            process_func(dir_fle, name, os.path.join(tmp_dir, input_dir), uniprot)
     except Exception as e:
         exception = f"# {name}\n"
         exception += str(e)
@@ -51,6 +55,7 @@ def main():
     # load environment variables from config.env
     load_dotenv("config.env")
     overwrite = True if os.getenv("OVERWRITE") == "true" else False
+    # Output directory for finding the downloaded files
     out_directory = os.getenv("OUT_DIRECTORY")
 
     for env, name in env2name.items():
@@ -68,7 +73,13 @@ def main():
             exceptions.append(exception)
 
     if exceptions:
-        with open("stderr.txt", "w") as f:
+        with open(
+            os.path.join(
+                out_directory,
+                f"process_{datetime.now().strftime('%Y_%m_%d__%H')}.stderr",
+            ),
+            "w",
+        ) as f:
             f.write("\n".join(exceptions))
 
 

@@ -316,7 +316,7 @@ class uniprot_request:
         except Exception:
             return None, None
 
-    def fast_protein_id_request(self, id: int) -> str:
+    def fast_protein_id_request(self, id: int) -> tuple:
         """Returns the UniProt name and first accession number of a protein
         with reusing quired IDs.
 

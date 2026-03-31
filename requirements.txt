@@ -4,3 +4,4 @@ requests
 xmltodict==0.14.2
 multipledispatch==0.6.0
 xlrd
+dotenv

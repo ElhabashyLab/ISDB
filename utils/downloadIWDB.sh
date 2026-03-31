@@ -13,8 +13,13 @@ set -euo pipefail
 # ----------------------------------------------------------------------
 
 # Allow external path argument, otherwise use default
-DATA_DIR="${1:-/vol/webapps/isdb_resourcesDB}"
-IWDB_DIR="${DATA_DIR}/iwdb"
+set -a
+source "$CURRENT_DIR/../main/config.env"
+set +a
+
+# use a subfolder for downloads (inputs)
+DOWNLOAD_DIR="${OUT_DIRECTORY%/}/inputs"
+IWDB_DIR="${DOWNLOAD_DIR%/}/iwdb"
 
 mkdir -p "${IWDB_DIR}"
 

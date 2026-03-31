@@ -9,9 +9,10 @@ source config.env
 set +a
 
 CURRENT_DIR="$(pwd)"
+export CURRENT_DIR
 
-SRC="$SOURCE_DIR/manualDownload"
-DST="$OUT_DIRECTORY"
+SRC="$SOURCE_DIR"
+DST="$OUT_DIRECTORY/inputs"
 
 # Helper functions
 copy_file() {
@@ -67,19 +68,26 @@ fi
 # Run pipeline
 # =========================
 
-echo "Downloading databases..."
-bash ../utils/downloadDB.sh
+if [ "$DOWNLOAD" = "true" ]; then
+    echo ">>> Started Step 1: Downloading databases <<<"
+    bash ../utils/downloadDB.sh
+fi
 
-echo "Processing databases..."
-python ../utils/processDB.py
+if [ "$PROCESS" = "true" ]; then
+    echo ">>> Started Step 2: Processing databases <<<"
+    mkdir -p "$SOURCE_DIR/outputs"
+    python ../utils/processDB.py
+fi
 
-echo "Aggregating database..."
-python ../utils/aggregateDB.py
+if [ "$AGGREGATE" = "true" ]; then  
+    echo ">>> Started Step 3: Aggregating databases <<<"
+    python ../utils/aggregateDB.py
+fi 
 
 # =========================
 # Cleanup
 # =========================
 if [ "$DELETE" = "true" ]; then
-    echo "Cleaning temporary files..."
-    rm -f *_out.*
+    echo ">>> Cleaning temporary files <<<"
+    rm -r "$OUT_DIRECTORY/outputs"
 fi
