@@ -300,7 +300,7 @@ def clean_web_of_life_database(
             for i, row in data.iterrows():
                 for j, index in enumerate(row.index[1:]):
                     if j > 0 and row.iloc[j] > 0:
-                        species_pairs.append([row["Unnamed: 0"], index])
+                        species_pairs.append([row.iloc[0], index])
                         ref.append(
                             references[references["ID"] == file.replace(".csv", "")][
                                 "Reference"

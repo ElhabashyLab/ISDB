@@ -58,6 +58,9 @@ if [ "$MANUAL_DATABASES" = "true" ]; then
     ## GMPD
     copy_dir "$SRC/$GMPD_DIR" "$DST/$GMPD_DIR"
 
+    ## EID2
+    copy_dir "$SRC/$EID2_FILE" "$DST/$EID2_FILE"
+
     ## Single-file datasets
     copy_file "$SRC/$PHILM2WEB_FILE" "$DST/$PHILM2WEB_FILE"
     copy_file "$SRC/$PHISTO_FILE"    "$DST/$PHISTO_FILE"
@@ -75,7 +78,7 @@ fi
 
 if [ "$PROCESS" = "true" ]; then
     echo ">>> Started Step 2: Processing databases <<<"
-    mkdir -p "$SOURCE_DIR/outputs"
+    mkdir -p "$OUT_DIRECTORY/outputs"
     python ../utils/processDB.py
 fi
 

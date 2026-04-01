@@ -14,7 +14,6 @@ import re
 import sys
 import os
 import requests
-import yaml
 
 sys.path.insert(1, "./")
 from uniprot_api import uniprot_request

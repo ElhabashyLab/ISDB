@@ -68,6 +68,7 @@ To build and run ISDB locally, follow these steps:
       - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
       - PHISTO (https://www.phisto.org/browse.xhtml)
       - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
+      - EID2 (https://figshare.com/ndownloader/files/2196534)
 
 
   6. **Configure Build Parameters**
