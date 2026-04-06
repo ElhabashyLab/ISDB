@@ -62,9 +62,9 @@ To build and run ISDB locally, follow these steps:
 
       Most databases are parsed automatically. Some must be downloaded manually from their respective websites:
       - FGSCdb
-        Go to (https://edelponte.shinyapps.io/FGSCdb/) 
-        Click Select All in each of the following filters: Species, Genotype, Host, Country, and Reference
-        Click the "Get Data" button to download the full dataset
+    Go to (https://edelponte.shinyapps.io/FGSCdb/) 
+    Click Select All in each of the following filters: Species, Genotype, Host, Country, and Reference
+    Click the "Get Data" button to download the full dataset
         
       - Bat Eco-Interactions (https://www.batbase.org/explore)
       - BV-BRC (https://www.bv-brc.org)
