@@ -66,6 +66,8 @@ To build and run ISDB locally, follow these steps:
       - DIP (https://dip.doe-mbi.ucla.edu/dip/) 
     (https://dip.doe-mbi.ucla.edu/dip/Download.cgi)
       - GMPD (https://parasites.nunn-lab.org/data/)
+      https://parasites.nunn-lab.org/primates/download/
+      
       - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
       - PHISTO (https://www.phisto.org/browse.xhtml)
       - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
