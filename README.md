@@ -66,6 +66,10 @@ To build and run ISDB locally, follow these steps:
            Click Select All in each of the following filters: Species, Genotype, Host, Country, and Reference
            Click the "Get Data" button to download the full dataset
         
+      - EID2 
+        Click this link to download the resource directly: (https://figshare.com/ndownloader/files/2196534)
+
+        
       - Bat Eco-Interactions (https://www.batbase.org/explore)
       - BV-BRC (https://www.bv-brc.org)
       - DIP (https://dip.doe-mbi.ucla.edu/dip/) 
@@ -76,8 +80,6 @@ To build and run ISDB locally, follow these steps:
       - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
       - PHISTO (https://www.phisto.org/browse.xhtml)
 
-
-      - EID2 (https://figshare.com/ndownloader/files/2196534)
 
 
   6. **Configure Build Parameters**
