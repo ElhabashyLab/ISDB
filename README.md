@@ -61,21 +61,21 @@ To build and run ISDB locally, follow these steps:
  5. **Download Resources**
 
       Most databases are parsed automatically. Some must be downloaded manually from their respective websites:
-      - **FGSCdb**
-           Go to (https://edelponte.shinyapps.io/FGSCdb/)
-           Click Select All in each of the following filters: Species, Genotype, Host, Country, and Reference
-           Click the "Get Data" button to download the full dataset
+      - **FGSCdb**.
+           Go to (https://edelponte.shinyapps.io/FGSCdb/).
+           Click Select All in each of the following filters: Species, Genotype, Host, Country, and Reference.
+           Click the "Get Data" button to download the full dataset.
         
-      - **EID2** 
+      - **EID2**. 
         Click this link to download the resource directly: (https://figshare.com/ndownloader/files/2196534)
 
-      - **DIP** 
-         Go to (https://dip.doe-mbi.ucla.edu/dip/Download.cgi)
-         Click on Full complete DIP data set
+      - **DIP**. 
+         Go to (https://dip.doe-mbi.ucla.edu/dip/Download.cgi).
+         Click on Full complete DIP data set.
 
-      - **GMPD**
-        Go to (https://parasites.nunn-lab.org/data/)
-        Download the data for primates, carnivore, and ungulate
+      - **GMPD**.
+        Go to (https://parasites.nunn-lab.org/data/).
+        Download the data for primates, carnivore, and ungulate.
         
       - Bat Eco-Interactions (https://www.batbase.org/explore)
       - BV-BRC (https://www.bv-brc.org)
