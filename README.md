@@ -61,6 +61,11 @@ To build and run ISDB locally, follow these steps:
  5. **Download Resources**
 
       Most databases are parsed automatically. Some must be downloaded manually from their respective websites:
+      - FGSCdb
+        Go to (https://edelponte.shinyapps.io/FGSCdb/) 
+        Click Select All in each of the following filters: Species, Genotype, Host, Country, and Reference
+        Click the "Get Data" button to download the full dataset
+        
       - Bat Eco-Interactions (https://www.batbase.org/explore)
       - BV-BRC (https://www.bv-brc.org)
       - DIP (https://dip.doe-mbi.ucla.edu/dip/) 
@@ -70,7 +75,8 @@ To build and run ISDB locally, follow these steps:
       
       - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
       - PHISTO (https://www.phisto.org/browse.xhtml)
-      - FGSCdb (https://edelponte.shinyapps.io/FGSCdb/)
+      - 
+
       - EID2 (https://figshare.com/ndownloader/files/2196534)
 
 
