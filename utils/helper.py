@@ -274,11 +274,9 @@ def clean_dataframe(dataFrame: pd.DataFrame) -> pd.DataFrame:
         return "|".join(unique_values)
 
     dataFrame = dataFrame.dropna(subset=["sourceTaxId", "targetTaxId"]).astype(str)
-    dataFrame = (
-        dataFrame.groupby(["sourceTaxId", "targetTaxId", "sourceUid", "targetUid"])
-        .agg(lambda x: join_unique(x))
-        .reset_index()
-    )
+    dataFrame = dataFrame.groupby(
+        ["sourceTaxId", "targetTaxId", "sourceUid", "targetUid"], as_index=False
+    ).agg(lambda x: join_unique(x))
     # dataFrame = dataFrame.drop_duplicates(
     #     subset=["sourceTaxId", "targetTaxId", "sourceUid", "targetUid"]
     # )

@@ -14,6 +14,7 @@ import re
 import sys
 import os
 import requests
+import traceback
 
 sys.path.insert(1, "./")
 from uniprot_api import uniprot_request
@@ -43,7 +44,9 @@ def check_and_process_db(
             process_func(dir_fle, name, os.path.join(tmp_dir, input_dir), uniprot)
     except Exception as e:
         exception = f"# {name}\n"
-        exception += str(e)
+        exception += f"{type(e).__name__}: {e}\n"
+        exception += traceback.format_exc()
+
     return exception
 
 
