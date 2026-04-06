@@ -63,7 +63,8 @@ To build and run ISDB locally, follow these steps:
       Most databases are parsed automatically. Some must be downloaded manually from their respective websites:
       - Bat Eco-Interactions (https://www.batbase.org/explore)
       - BV-BRC (https://www.bv-brc.org)
-      - DIP (https://dip.doe-mbi.ucla.edu/dip/)
+      - DIP (https://dip.doe-mbi.ucla.edu/dip/) 
+    (https://dip.doe-mbi.ucla.edu/dip/Download.cgi)
       - GMPD (https://parasites.nunn-lab.org/data/)
       - PHILM2Web (https://phim2web.lailab.info/pages/index.html)
       - PHISTO (https://www.phisto.org/browse.xhtml)
