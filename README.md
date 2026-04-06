@@ -69,11 +69,13 @@ To build and run ISDB locally, follow these steps:
       - EID2 
         Click this link to download the resource directly: (https://figshare.com/ndownloader/files/2196534)
 
+      - DIP 
+         Go to (https://dip.doe-mbi.ucla.edu/dip/Download.cgi)
+         Click on Full complete DIP data set
         
       - Bat Eco-Interactions (https://www.batbase.org/explore)
       - BV-BRC (https://www.bv-brc.org)
-      - DIP (https://dip.doe-mbi.ucla.edu/dip/) 
-    (https://dip.doe-mbi.ucla.edu/dip/Download.cgi)
+
       - GMPD (https://parasites.nunn-lab.org/data/)
       https://parasites.nunn-lab.org/primates/download/
       
