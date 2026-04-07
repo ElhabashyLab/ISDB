@@ -7,12 +7,13 @@ A Comprehensive Resource for Ecological Interactions at the Molecular Level. The
 
 # Web Interface
 The ISDB web interface (www.elhabashylab.org/isdb) is hosted by the German Network for Bioinformatics Infrastructure (de.NBI).The interface supports batch downloads, data search, result export, and data deposition.
+Manual can be found here: [ISDB Manual](https://www.elhabashylab.org/isdb/manual.html)
 
 
 # How to download ISDB? 
 Prebuilt versions of ISDB are available in the versions directory and can be accessed via the GitHub interface, the ISDB web interface, or directly via command line:
 ```
-wget https://github.com/ElhabashyLab/ISDB/tree/main/versions/ISDB_2024_09_13.<tsv/csv>.gz
+wget https://github.com/ElhabashyLab/ISDB/tree/main/versions/ISDB_2026_04_02.<tsv/csv>.gz
 ```
 
 # Building ISDB Locally
