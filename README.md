@@ -33,8 +33,17 @@ To build and run ISDB locally, follow these steps:
    
 3. **Set Up the Python Environment**
 
-   ISDB requires Python 3.11.7 or later. If your system has a different version, we recommend creating a dedicated Conda environme**
+   ISDB requires Python 3.11.7 or later. If your system has a different version, we recommend creating a dedicated Conda environment
 
+   pip:
+   ```
+   # Check version. Should return 3.11.7 or larger
+   python3 --version
+   python3 -m venv isdb_env
+   source isdb_env/bin/activate
+   ```
+
+   Conda:
     ```bash
    conda create --name isdb_env python=3.11.7
    conda activate isdb_env
@@ -46,16 +55,16 @@ To build and run ISDB locally, follow these steps:
    <!-- * biopython 1.79 -->
    <!-- * click 8.1.3 -->
    <!-- * matplotlib 3.6.3 -->
-   * pandas 2.0.3
-   * numpy 1.24.3
+   * pandas >= 2.0.3
+   * numpy >= 1.24.3
    * requests
-   * xmltodict 0.14.2
-   * multipledispatch 0.6.0
+   * xmltodict >= 0.14.2
+   * multipledispatch >= 0.6.0
    * xlrd
    * dotenv
      
    Install all dependencies via:
-   ```bash
+   ```
      pip install -r requirements.txt
    ```
 
