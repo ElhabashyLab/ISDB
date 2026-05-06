@@ -80,17 +80,19 @@ To build and run ISDB locally, follow these steps:
         Click this link to download the resource directly: (https://figshare.com/ndownloader/files/2196534)
 
       - **DIP**:
-         Go to (https://dip.doe-mbi.ucla.edu/dip/Download.cgi).
-         Click on Full complete DIP data set.
+         Go to (https://dip.doe-mbi.ucla.edu/dip/Download.cgi). Login or register. Go to "Files". Click on "SPECIES" -  - species-specific sets and download the latest full version for each species in MI TAB format. Place each file in a directory called "dip" or redefine the directory name in `main/config.env`.
 
       - **GMPD**:
         Go to (https://parasites.nunn-lab.org/data/).
-        Download the data for primates, carnivore, and ungulate.
+        Download the data for primates, carnivore, and ungulate. When selecting which data fields to include, please select every option from "Hosts & Parasite Taxonomy", "Parasite Type", "Citation", and "Full Reference".
         
-      - **Bat Eco-Interactions** (https://www.batbase.org/explore)
-      - **BV-BRC** (https://www.bv-brc.org)
-      - **PHILM2Web** (https://phim2web.lailab.info/pages/index.html)
-      - **PHISTO** (https://www.phisto.org/browse.xhtml)
+      - **Bat Eco-Interactions**: Go to (https://www.batbase.org/explore). Login or register. Afterwards go to "Explore" and click on the CSV icon with "CSV" label.
+         
+      - **BV-BRC**: Go to (https://www.bv-brc.org). Select "BACTERIA". Got to "Genomes" and lick on the "DOWNLOAD" button. Next repeat this process from the start for "ARCHAEA" and "VIRUSES". Lastly, place all files in a directory called "bvbrc" or redefine the directory name in `main/config.env`.
+
+      - **PHILM2Web**: Go to (https://phim2web.lailab.info/pages/index.html).Note: the website is currently not available. Further instructions will be added in the future.
+
+      - **PHISTO**: Go to (https://www.phisto.org/search.xhtml). Click on "Search"  until results appear. Click on "PHI Analysis Tool" and next on the "CSV" icon.
 
 
   6. **Configure Build Parameters**
