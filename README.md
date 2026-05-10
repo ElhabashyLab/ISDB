@@ -145,26 +145,26 @@ For local incorporation of your own data, refer to [*Building ISDB Locally*](#Bu
 The database can be built automatically. However, some resources need to be downloaded manually. This includes:
 | Database | #Species | #Species Pairs | #PPIs | Interaction Type | Batch Download | Database Type | 
 |----------|-----------|----------------|-------|-----------------|----------------|---------------|
-| [BioGRID](https://thebiogrid.org/) | 86 | 260 | 1,905,211 | ✔ | ✔ | M |
-| [IntAct](https://www.ebi.ac.uk/intact/home) | 1,806 | 2,855 | 942,611 | ✔ | ✔ | M | 
-| [MINT](https://mint.bio.uniroma2.it/) | 697 | 1,018 | 79,223 | ✔ | ✔ | M | 
-| [DIP](https://dip.doe-mbi.ucla.edu/dip/Main.cgi) | 193 | 270 | 39,422 | ✔ | ✔ | M | 
-| [Signor](https://signor.uniroma2.it/) | 7 | 7 | 14,959 | ✔ | ✔ | M | 
-| [VirHostNet](https://virhostnet.prabi.fr/) | 331 | 465 | 41,422 | ✔ | ✔ | HP/M |
-| [PHISTO](https://www.phisto.org/) | 589 | 528 | 25,405 | ✔ | X | HP/M |
-| [Interactomics](https://doi.org/10.1093/molbev/msad012) | 294 | 293 | 3,958 | ✔ | ✔ | HP/M | 
-| [BV-BRC](https://www.bv-brc.org/) | 136,861 | 146,797 | 0 | X | X | HP |
-| [EID2](https://eid2.liverpool.ac.uk/) | 12,428 | 17,927 | 0 | ✔ | ✔ | HP | 
-| [GMPD](https://parasites.nunn-lab.org/) | 1,562 | 5,525 | 0 | X | X | HP | 
-| [PHILM2Web](http://philm2web.live) | 411 | 1,167 | 0 | ✔ | X | HP | 
-| [PHI-base](http://www.phi-base.org/) | 538 | 1,061 | 0 | X | ✔ | HP | 
-| [HPIDB](https://hpidb.igbb.msstate.edu/) | 620 | 788 | 0 | ✔ | ✔ | HP | 
-| [GloBI](https://www.globalbioticinteractions.org/) | 87,958 | 436,911 | 0 | ✔ | ✔ | E | 
-| [Bat Eco-Interactions](https://www.batbase.org/db) | 3,094 | 8,080 | 0 | ✔ | X | E |
-| [SIAD](https://www.discoverlife.org/siad/) | 3,732 | 5,028 | 0 | ✔ | ✔ | E |
-| [IWDB](https://iwdb.nceas.ucsb.edu/resources.html) | 593 | 3,440 | 0 | X | ✔ | E |
-| [Web of Life database](https://www.web-of-life.es/map.php) | 172 | 1,050 | 0 | X | ✔ | E | 
-| [PIDA](https://github.com/ramalok/PIDA) | 598 | 757 | 0 | X | ✔ | E | 
+| [BioGRID](https://thebiogrid.org/) | 90 | 220| 70,983 | ✔ | ✔ | M |
+| [IntAct](https://www.ebi.ac.uk/intact/home) | 1,260 | 1,890 | 82,126 | ✔ | ✔ | M | 
+| [MINT](https://mint.bio.uniroma2.it/) | 482 | 1,890 | 17,624 | ✔ | ✔ | M | 
+| [DIP](https://dip.doe-mbi.ucla.edu/dip/Main.cgi) | 203 | 274 | 2,064 | ✔ | ✔ | M | 
+| [Signor](https://signor.uniroma2.it/) | 8 | 7 | 81 | ✔ | ✔ | M | 
+| [VirHostNet](https://virhostnet.prabi.fr/) | 293 | 347 | 36,225 | ✔ | ✔ | HP/M |
+| [PHISTO](https://www.phisto.org/) | 588 | 587 | 46,115 | ✔ | X | HP/M |
+| [Interactomics](https://doi.org/10.1093/molbev/msad012) | 294 | 293 | 3,976 | ✔ | ✔ | HP/M | 
+| [BV-BRC](https://www.bv-brc.org/) | 140,365 | 152,996 | 0 | X | X | HP |
+| [EID2](https://eid2.liverpool.ac.uk/) | 12,559 | 18,202 | 0 | ✔ | ✔ | HP | 
+| [GMPD](https://parasites.nunn-lab.org/) | 1,598 | 5,683 | 0 | X | X | HP | 
+| [PHILM2Web](http://philm2web.live) | 422 | 1,155 | 0 | ✔ | X | HP | 
+| [PHI-base](http://www.phi-base.org/) | 614 | 1,179 | 0 | X | ✔ | HP | 
+| [HPIDB](https://hpidb.igbb.msstate.edu/) | 734 | 967 | 0 | ✔ | ✔ | HP | 
+| [GloBI](https://www.globalbioticinteractions.org/) | 124,879 | 684,288 | 0 | ✔ | ✔ | E | 
+| [Bat Eco-Interactions](https://www.batbase.org/db) | 3,107 | 8,099 | 0 | ✔ | X | E |
+| [SIAD](https://www.discoverlife.org/siad/) | 3,783 | 5,104 | 0 | ✔ | ✔ | E |
+| [IWDB](https://iwdb.nceas.ucsb.edu/resources.html) | 602 | 3,533 | 0 | X | ✔ | E |
+| [Web of Life database](https://www.web-of-life.es/map.php) | 172 | 1,096 | 0 | X | ✔ | E | 
+| [PIDA](https://github.com/ramalok/PIDA) | 519 | 804 | 0 | X | ✔ | E | 
 | [FGSCdb](https://fgsc.netlify.app/) | 19 | 15 | 0 | ✔ | X | E | 
 
 
