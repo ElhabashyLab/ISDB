@@ -273,7 +273,10 @@ def clean_dataframe(dataFrame: pd.DataFrame) -> pd.DataFrame:
         unique_values = np.unique([i for v in values for i in str(v).split("|")])
         return "|".join(unique_values)
 
+    # drop NaN values
     dataFrame = dataFrame.dropna(subset=["sourceTaxId", "targetTaxId"]).astype(str)
+    # ensure interspecies interaction
+    dataFrame = dataFrame[dataFrame["sourceTaxId"] != dataFrame["targetTaxId"]]
     dataFrame = dataFrame.groupby(
         ["sourceTaxId", "targetTaxId", "sourceUid", "targetUid"], as_index=False
     ).agg(lambda x: join_unique(x))
