@@ -149,14 +149,14 @@ The database can be built automatically. However, some resources need to be down
 | [IntAct](https://www.ebi.ac.uk/intact/home) | 1,260 | 1,890 | 82,126 | ✔ | ✔ | M | 
 | [MINT](https://mint.bio.uniroma2.it/) | 482 | 1,890 | 17,624 | ✔ | ✔ | M | 
 | [DIP](https://dip.doe-mbi.ucla.edu/dip/Main.cgi) | 203 | 274 | 2,064 | ✔ | ✔ | M | 
-| [Signor](https://signor.uniroma2.it/) | 8 | 7 | 81 | ✔ | ✔ | M | 
+| [SIGNOR](https://signor.uniroma2.it/) | 8 | 7 | 81 | ✔ | ✔ | M | 
 | [VirHostNet](https://virhostnet.prabi.fr/) | 293 | 347 | 36,225 | ✔ | ✔ | HP/M |
 | [PHISTO](https://www.phisto.org/) | 588 | 587 | 46,115 | ✔ | X | HP/M |
 | [Interactomics](https://doi.org/10.1093/molbev/msad012) | 294 | 293 | 3,976 | ✔ | ✔ | HP/M | 
 | [BV-BRC](https://www.bv-brc.org/) | 140,365 | 152,996 | 0 | X | X | HP |
 | [EID2](https://eid2.liverpool.ac.uk/) | 12,559 | 18,202 | 0 | ✔ | ✔ | HP | 
 | [GMPD](https://parasites.nunn-lab.org/) | 1,598 | 5,683 | 0 | X | X | HP | 
-| [PHILM2Web](http://philm2web.live) | 422 | 1,155 | 0 | ✔ | X | HP | 
+| [PHILM2web](http://philm2web.live) | 422 | 1,155 | 0 | ✔ | X | HP | 
 | [PHI-base](http://www.phi-base.org/) | 614 | 1,179 | 0 | X | ✔ | HP | 
 | [HPIDB](https://hpidb.igbb.msstate.edu/) | 734 | 967 | 0 | ✔ | ✔ | HP | 
 | [GloBI](https://www.globalbioticinteractions.org/) | 124,879 | 684,288 | 0 | ✔ | ✔ | E | 
