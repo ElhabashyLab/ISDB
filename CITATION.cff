@@ -1,1 +1,24 @@
+cff-version: 1.2.0
+message: "If you use ISDB, please cite the associated publication."
+title: "Interacting Species Database (ISDB): Comprehensive Resource for Ecological Interactions at the Molecular Level"
+version: "1.0.1"
+date-released: 2026-05-13
 
+authors:
+  - family-names: "Mederer"
+    given-names: "Michael"
+
+  - family-names: "Gautam"
+    given-names: "Anupam"
+
+  - family-names: "Kohlbacher"
+    given-names: "Oliver"
+
+  - family-names: "Lupas"
+    given-names: "Andrei"
+
+  - family-names: "Elhabashy"
+    given-names: "Hadeer"
+
+repository-code: "https://github.com/ElhabashyLab/ISDB"
+license: "MIT"
