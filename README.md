@@ -90,7 +90,7 @@ To build and run ISDB locally, follow these steps:
          
       - **BV-BRC**: Go to (https://www.bv-brc.org). Select "BACTERIA". Got to "Genomes" and lick on the "DOWNLOAD" button. Next repeat this process from the start for "ARCHAEA" and "VIRUSES". Lastly, place all files in a directory called "bvbrc" or redefine the directory name in `main/config.env`.
 
-      - **PHILM2Web**: Go to (https://phim2web.lailab.info/pages/index.html).Note: the website is currently not available. Further instructions will be added in the future.
+      - **PHILM2web**: Go to (https://phim2web.lailab.info/pages/index.html).Note: the website is currently not available. Further instructions will be added in the future.
 
       - **PHISTO**: Go to (https://www.phisto.org/search.xhtml). Click on "Search"  until results appear. Click on "PHI Analysis Tool" and next on the "CSV" icon.
 
