@@ -7,7 +7,7 @@ A Comprehensive Resource for Ecological Interactions at the Molecular Level. The
 
 # Web Interface
 The ISDB web interface (www.elhabashylab.org/isdb) is hosted by the German Network for Bioinformatics Infrastructure (de.NBI).The interface supports batch downloads, data search, result export, and data deposition.
-Manual can be found here: [ISDB Manual](https://www.elhabashylab.org/isdb/manual.html)
+Manual can be found here: [ISDB Manual](https://www.elhabashylab.org/isdb/manual.php)
 
 
 # How to download ISDB? 
