@@ -170,7 +170,7 @@ The database can be built automatically. However, some resources need to be down
 
 
 # Cite
-Mederer, M., Gautam, A., Kohlbacher, O., Lupas, A., Elhabashy, H. Interacting Species Database (ISDB): A Comprehensive Resource for Ecological Interactions at the Molecular Level. Manuscript under review.
+Michael Mederer, Anupam Gautam, Oliver Kohlbacher, Andrei Lupas, Hadeer Elhabashy, Interacting Species Database (ISDB): Comprehensive Resource for Interspecies Interactions at the Molecular Level, Bioinformatics, 2026;, btag419, https://doi.org/10.1093/bioinformatics/btag419
 
 # Authors
 - Michael Mederer
