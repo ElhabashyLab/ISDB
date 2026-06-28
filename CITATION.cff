@@ -1,8 +1,6 @@
 cff-version: 1.2.0
 message: "If you use ISDB, please cite the associated publication."
-title: "Interacting Species Database (ISDB): Comprehensive Resource for Ecological Interactions at the Molecular Level"
-version: "1.0.1"
-date-released: 2026-05-13
+title: "Interacting Species Database (ISDB): Comprehensive Resource for Interspecies Interactions at the Molecular Level"
 
 authors:
   - family-names: "Mederer"
@@ -20,5 +18,31 @@ authors:
   - family-names: "Elhabashy"
     given-names: "Hadeer"
 
+version: "1.0.1"
+date-released: "2026-05-13"
+
 repository-code: "https://github.com/ElhabashyLab/ISDB"
+
 license: "MIT"
+
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Mederer"
+      given-names: "Michael"
+    - family-names: "Gautam"
+      given-names: "Anupam"
+    - family-names: "Kohlbacher"
+      given-names: "Oliver"
+    - family-names: "Lupas"
+      given-names: "Andrei"
+    - family-names: "Elhabashy"
+      given-names: "Hadeer"
+  title: "Interacting Species Database (ISDB): Comprehensive Resource for Interspecies Interactions at the Molecular Level"
+  journal: "Bioinformatics"
+  year: 2026
+  doi: "10.1093/bioinformatics/btag419"
+  identifiers:
+    - type: doi
+      value: "10.1093/bioinformatics/btag419"
+  article-number: "btag419"
